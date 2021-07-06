@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-// footer
 import Main from "./pages/Main/main.js";
 import List from "./pages/List/list.js";
 import Detail from "./pages/Detail/detail.js";
