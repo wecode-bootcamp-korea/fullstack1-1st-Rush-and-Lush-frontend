@@ -5,6 +5,14 @@
   text-decoration: none;
 }
 
+%nav-position {
+  display: block;
+  position: absolute;
+  top: -78px;
+  padding: 0 5px;
+  font-size: $font-icon-title;
+}
+
 .nav {
   position: fixed;
   top: 0;
@@ -41,8 +49,37 @@
       line-height: 120px;
       font-size: $font-nav-title;
       text-align: center;
-      word-spacing: 2px;
-      letter-spacing: 3px;
+      word-spacing: 1px;
+      letter-spacing: 2px;
     }
+  }
+}
+
+.headerIcon {
+  position: relative;
+  .navIcon {
+    @extend %nav-position;
+    right: 250px;
+    margin-right: 20px;
+  }
+  .navIcon2 {
+    @extend %nav-position;
+    right: 200px;
+    margin-left: 20px;
+    .statusZero {
+      position: absolute;
+      top: 18px;
+      right: 5px;
+      color: $white-color;
+      font-size: $font-icon-zero;
+    }
+  }
+  .navIcon3 {
+    @extend %nav-position;
+    right: 130px;
+  }
+
+  a {
+    @extend %link-style;
   }
 }
