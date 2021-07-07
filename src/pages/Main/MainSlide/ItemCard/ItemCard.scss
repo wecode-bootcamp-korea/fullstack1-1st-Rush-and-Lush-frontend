@@ -1,0 +1,54 @@
+.allContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-right: 400px;
+  .itemSlideContainer{
+    padding: 80px 0 120px 0;
+    h2 {
+      margin: 0 0 20px 50px;
+      font-size: 40px;
+      font-weight: 900;
+    };
+    .itemSlideWrap{
+      display: flex;
+      flex-direction: row;
+      .card {
+        text-align: center;
+        margin-left: 30px;
+        &:last-child {
+          margin-right: 30px;
+        }
+        .itemTitle {
+          margin-top: 10px;
+          font-size: 18px;
+          };
+        .itemDesc {
+          margin-top: 3px;
+          font-size: 14px;
+          font-weight: 100;
+          color: rgb(87, 87, 87);
+        };
+        .itemPrice {
+          margin-top: 10px;
+          font-size: 16px;
+          font-weight: 700;
+        };
+      };
+    };
+    
+    .itemSlideBtn {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      margin-top: 30px;
+      button {
+        padding-right: 6px;
+        border: none;
+        background-color: transparent;
+        color: black
+      };
+    };
+  };
+};
+
