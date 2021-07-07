@@ -1,25 +1,19 @@
 /* Color List */
 $black-color: #000000;
-$grey-color: #f2f2f2;
-$green-color: #287a28;
+$white-color: #f2f2f2;
+$tooltip-font-color: #b5b5b5;
+$tooltip-background-color: #333333;
 
 /* Font Size */
+$font-logo-size: 42px;
+$font-nav-title: 18px;
+$font-tooltip-title: 20px;
+$font-tooltip-items: 16px;
+// $font-tooltip-
 
 /* Font Stack */
+$font-logo-stack: sans-serif;
 
 /* Font Weight */
-
-/* Banner-large */
-$font-xxlarge: 68px;
-
-/* Banner-medium */
-$font-xlarge: 26px;
-
-/* Title */
-$font-large: 16px;
-$font-medium: 15px;
-
-/* Description */
-$font-small: 14px;
-$font-xsmall: 12px;
-$font-xxsmall: 10px;
+$font-tooltip-title-weight: 600;
+$font-logo-weight: 800;
