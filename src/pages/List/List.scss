@@ -1,0 +1,46 @@
+.productHeader {
+	width: auto;
+	height: 500px;
+	background: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	.subTxt {
+		text-align: center;
+		font-size: 68px;
+		color: white;
+	}
+
+	.subTxt2 {
+		text-align: center;
+		font-size: 26px;
+		letter-spacing: 0.2em;
+		color: white;
+	}
+
+}
+
+.productListContainer {
+	width: auto;
+	padding: 0, 26.9px;
+	// display: flex;
+	// justify-content: space-between;
+		.navInfo {
+			width: 1080px;
+			height: 44.6px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: red;
+			border: black solid 1px;
+		}
+
+}
+
+.a1 {
+	width: 295px;
+	height: 426.2px;
+	background-color: black;
+}
