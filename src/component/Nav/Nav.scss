@@ -1,0 +1,48 @@
+@import "../../styles/variables.scss";
+
+%link-style {
+  color: $white-color;
+  text-decoration: none;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 110px;
+  margin: 0 auto;
+  background-color: $black-color;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  left: 110px;
+  font-size: $font-logo-size;
+  font-weight: $font-logo-weight;
+  font-family: $font-logo-stack;
+  .mainLogo {
+    @extend %link-style;
+  }
+}
+
+.category {
+  display: flex;
+  width: 780px;
+  margin: auto;
+  padding-left: 80px;
+  .tooltip {
+    margin-right: 20px;
+    .navTitle {
+      @extend %link-style;
+      display: block;
+      width: 125px;
+      line-height: 120px;
+      font-size: $font-nav-title;
+      text-align: center;
+      word-spacing: 2px;
+      letter-spacing: 3px;
+    }
+  }
+}
