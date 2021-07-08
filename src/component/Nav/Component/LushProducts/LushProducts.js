@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import ProductList from "./LushProductsList";
-import "./LushProducts.scss";
+import LushProductsList from "./LushProductsList";
+import "./LushProductsList.scss";
 
-class Products extends Component {
+class LushProducts extends Component {
   constructor() {
     super();
     this.state = {
@@ -20,18 +20,24 @@ class Products extends Component {
   render() {
     const { subNav } = this.state;
     return (
-      <li className="tooltip">
-        <Link className="navTitle" to="/list">
-          제품
-        </Link>
-        <div className="tooltipWindow">
-          {subNav.map((el, index) => (
-            <ProductList key={index} title={el.title} elements={el.elements} />
-          ))}
-        </div>
-      </li>
+      <div className="LushProducts">
+        <li className="tooltip">
+          <Link className="navTitle" to="/list">
+            제품
+          </Link>
+          <div className="tooltipWindow">
+            {subNav.map((el, id) => (
+              <LushProductsList
+                key={id}
+                title={el.title}
+                elements={el.elements}
+              />
+            ))}
+          </div>
+        </li>
+      </div>
     );
   }
 }
 
-export default Products;
+export default LushProducts;
