@@ -21,20 +21,22 @@ class LushProducts extends Component {
     const { subNav } = this.state;
     return (
       <div className="LushProducts">
-        <li className="tooltip">
-          <Link className="navTitle" to="/list">
-            제품
-          </Link>
-          <div className="tooltipWindow">
-            {subNav.map((el, id) => (
-              <LushProductsList
-                key={id}
-                title={el.title}
-                elements={el.elements}
-              />
-            ))}
-          </div>
-        </li>
+        <div className="toolTipCategory">
+          <li className="tooltip">
+            <Link className="navTitle" to="/list">
+              제품
+            </Link>
+            <div className="tooltipWindow">
+              {subNav.map((el, id) => (
+                <LushProductsList
+                  key={id}
+                  title={el.title}
+                  elements={el.elements}
+                />
+              ))}
+            </div>
+          </li>
+        </div>
       </div>
     );
   }
