@@ -6,7 +6,7 @@ import "./Main.scss";
 class Main extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="Main">
         <MainSlide />
         <div className="imgWrap">
           <div className="imgLeft">
