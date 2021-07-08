@@ -1,0 +1,96 @@
+.NonMembersLogin {
+  .title {
+    padding-top: 55px;
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+  }
+
+  .selectMember {
+    display: flex;
+    justify-content: center;
+
+    .ulSpace {
+      padding-top: 55px;
+    }
+
+    li {
+      display: inline;
+      padding: 0 40px;
+      font-size: 18px;
+    }
+  }
+
+  .loginIconContainer {
+    position: relative;
+
+    .userIcon {
+      margin-left: 15px;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+
+  .inputDistance {
+    padding-top: 10px;
+  }
+
+  .pwIconContainer {
+    position: relative;
+
+    .lockIcon {
+      margin-left: 15px;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+
+  .loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 55px;
+
+    .loginIconContainer {
+      input {
+        width: 320px;
+        height: 50px;
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+    .pwIconContainer {
+      input {
+        width: 320px;
+        height: 50px;
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+  }
+
+  .loginButtonWrap {
+    padding-top: 20px;
+
+    .loginButton {
+      width: 320px;
+      height: 50px;
+      background-color: black;
+      color: white;
+      font-size: 18px;
+      border: 0;
+      outline: 0;
+    }
+    .loginButton:hover {
+      opacity: 0.8;
+    }
+  }
+  .caution {
+    padding-top: 20px;
+    text-align: center;
+    color: #8f8f8f;
+  }
+}

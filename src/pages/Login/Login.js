@@ -1,37 +1,23 @@
 import { Component } from "react";
 import "./Login.scss";
-import { FaUserCircle } from "react-icons/fa";
-import { MdLock } from "react-icons/md";
+import LoginComponet from "./component/LoginInput";
+import NonMembers from "./component/NonMembers";
+
 class Login extends Component {
+  constructor() {
+    super();
+    this.state = {
+      value: 0,
+    };
+  }
   render() {
     return (
-      <>
-        <div className="content">
-          <h2>로그인</h2>
-        </div>
-        <div className="selectMember">
-          <ul className="ulSpace">
-            <li>회원</li>
-            <li>비회원</li>
-          </ul>
-        </div>
+      <div className="Login">
+        <NonMembers text="확인" />
         <div className="loginWrap">
           <form className="loginForm">
-            <span className="loginIconContainer">
-              <FaUserCircle size="24" className="userIcon" />
-              <input classname="idInput" type="text" placeholder="아이디" />
-            </span>
-            <div className="inputDistance">
-              <span className="pwIconContainer">
-                <MdLock size="24" className="lockIcon" />
-                <input
-                  classname="pwInput"
-                  type="password"
-                  placeholder="비밀번호"
-                />
-              </span>
-            </div>
-            <div className="saveCheckBox">
+            <LoginComponet />
+            <div className="saveCheckBoxWrap">
               <input
                 className="inputCheckbox"
                 id="idSaveLabel"
@@ -43,13 +29,35 @@ class Login extends Component {
               <button className="loginButton">로그인</button>
             </div>
             <div className="loginMenu">
-              <button className="singUp">회원가입</button>
-              <button className="findId">아이디 찾기</button>
-              <button className="findPw">비밀번호 찾기</button>
+              <button type="button" className="singUp">
+                <em>회원가입</em>
+              </button>
+              <div className="divider"></div>
+              <button type="button" className="findId">
+                <em>아이디 찾기</em>
+              </button>
+              <div className="divider"></div>
+              <button type="button" className="findPw">
+                <em>비밀번호 찾기</em>
+              </button>
             </div>
+            <a
+              onClick={() => alert("여러분 미안하고 고맙습니다..")}
+              className="naverLogin"
+              href=""
+            >
+              <i>
+                <img
+                  className="naverLogo"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtfSR-h7jsc9ADW5NBa-KbcW_Mb4VpR6nj2KzJDeIDC5N8Nruxq2dJUgYXkjI_wuPB9TA&usqp=CAU"
+                  alt="웅디자인) 네이버 심벌 원클릭 무료 다운로드(AI, PNG)"
+                />
+              </i>
+              네이버 아이디로 로그인
+            </a>
           </form>
         </div>
-      </>
+      </div>
     );
   }
 }

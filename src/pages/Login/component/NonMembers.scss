@@ -1,0 +1,34 @@
+.NonMembers {
+  .title {
+    padding-top: 55px;
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+  }
+
+  .selectMember {
+    display: flex;
+    justify-content: center;
+
+    .ulSpace {
+      padding-top: 55px;
+    }
+
+    li {
+      display: inline;
+      padding: 0 40px;
+      font-size: 18px;
+    }
+  }
+  .clicked {
+    color: gold;
+  }
+
+  .selectedMember {
+    color: black;
+  }
+
+  .selectedNonMember {
+    color: #8f8f8f;
+  }
+}
