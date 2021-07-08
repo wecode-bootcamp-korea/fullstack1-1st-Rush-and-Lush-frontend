@@ -1,4 +1,4 @@
-/* Color List */
+/* Color List Navigation bar*/
 $black-color: #000000;
 $white-color: #f2f2f2;
 $tooltip-font-color: #b5b5b5;
@@ -6,7 +6,7 @@ $tooltip-background-color: #333333;
 $usertooltip-border-bottom-color: #dadadaf6;
 $usertooltip-background-color: #fbfafafb;
 
-/* Font Size */
+/* Font Size Navigation bar*/
 $font-logo-size: 42px;
 $font-nav-title: 18px;
 $font-tooltip-title: 20px;
@@ -15,11 +15,15 @@ $font-icon-title: 30px;
 $font-icon-zero: 15px;
 $font-usertooltip: 20px;
 $font-usertooltiplist: 15px;
-// $font-tooltip-
 
-/* Font Stack */
+/* Font Stack Navigation bar*/
 $font-logo-stack: sans-serif;
 
-/* Font Weight */
+/* Font Weight Navigation bar*/
 $font-tooltip-title-weight: 600;
 $font-logo-weight: 800;
+
+/* Color List Footer */
+
+/* Font Size Footer */
+$font-footercategorylink: 17px;
