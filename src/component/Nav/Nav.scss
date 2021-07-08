@@ -1,85 +1,144 @@
-@import "../../styles/variables.scss";
+@import "../../styles/common.scss";
 
-%link-style {
-  color: $white-color;
-  text-decoration: none;
-}
-
-%nav-position {
-  display: block;
-  position: absolute;
-  top: -78px;
-  padding: 0 5px;
-  font-size: $font-icon-title;
-}
-
-.nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 110px;
-  margin: 0 auto;
-  background-color: $black-color;
-}
-
-.logo {
-  position: absolute;
-  top: 40px;
-  left: 110px;
-  font-size: $font-logo-size;
-  font-weight: $font-logo-weight;
-  font-family: $font-logo-stack;
-  .mainLogo {
-    @extend %link-style;
+.Nav {
+  %link-style {
+    color: $white-color;
+    text-decoration: none;
   }
-}
 
-.category {
-  display: flex;
-  width: 780px;
-  margin: auto;
-  padding-left: 80px;
-  .tooltip {
-    margin-right: 20px;
-    .navTitle {
-      @extend %link-style;
-      display: block;
-      width: 125px;
-      line-height: 120px;
-      font-size: $font-nav-title;
-      text-align: center;
-      word-spacing: 1px;
-      letter-spacing: 2px;
-    }
+  %nav-position {
+    display: block;
+    position: absolute;
+    top: -78px;
+    padding: 0 5px;
+    font-size: $font-icon-title;
   }
-}
 
-.headerIcon {
-  position: relative;
-  .navIcon {
-    @extend %nav-position;
-    right: 250px;
-    margin-right: 20px;
+  %icon-style {
+    font-size: 30px;
+    padding: 30px;
+    padding-right: 25px;
   }
-  .navIcon2 {
-    @extend %nav-position;
-    right: 200px;
-    margin-left: 20px;
-    .statusZero {
+
+  %hover-style {
+    color: $white-color;
+    text-decoration: none;
+  }
+
+  %hoverout-style {
+    color: $black-color;
+    text-decoration: none;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+    background-color: $black-color;
+
+    .logo {
       position: absolute;
-      top: 18px;
-      right: 5px;
-      color: $white-color;
-      font-size: $font-icon-zero;
-    }
-  }
-  .navIcon3 {
-    @extend %nav-position;
-    right: 130px;
-  }
+      top: 40px;
+      left: 110px;
+      font-size: $font-logo-size;
+      font-weight: $font-logo-weight;
+      font-family: $font-logo-stack;
 
-  a {
-    @extend %link-style;
+      .mainLogo {
+        @extend %link-style;
+      }
+    }
+
+    .category {
+      display: flex;
+      width: 780px;
+      margin: 0 auto;
+      padding-left: 80px;
+
+      .tooltip {
+        margin-right: 20px;
+
+        .navTitle {
+          @extend %link-style;
+          display: block;
+          width: 125px;
+          line-height: 120px;
+          font-size: $font-nav-title;
+          text-align: center;
+          word-spacing: 1px;
+          letter-spacing: 2px;
+        }
+      }
+    }
+
+    .headerIcon {
+      display: flex;
+      position: absolute;
+      top: 15px;
+      right: 90px;
+
+      .navIcon {
+        @extend %icon-style;
+      }
+
+      .navIcon2 {
+        @extend %icon-style;
+
+        .statusZero {
+          position: absolute;
+          top: 48px;
+          right: 110px;
+          color: $white-color;
+          font-size: $font-icon-zero;
+        }
+      }
+      .navIcon3 {
+        @extend %icon-style;
+
+        .userToolTip {
+          display: none;
+        }
+
+        &:hover {
+          .userToolTip {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            right: 0;
+            width: 250px;
+            border: 0.2px solid $black-color;
+            font-size: $font-usertooltip;
+            text-align: center;
+
+            .userToolTipList {
+              padding: 0 30px;
+              border-bottom: 1px solid $usertooltip-border-bottom-color;
+              background-color: $usertooltip-background-color;
+              line-height: 60px;
+              font-size: $font-usertooltiplist;
+              text-align: center;
+
+              &:hover {
+                background-color: $black-color;
+                .usersLink {
+                  @extend %hover-style;
+                }
+              }
+            }
+            .usersLink {
+              display: block;
+              @extend %hoverout-style;
+            }
+          }
+        }
+      }
+
+      a {
+        @extend %link-style;
+      }
+    }
   }
 }
