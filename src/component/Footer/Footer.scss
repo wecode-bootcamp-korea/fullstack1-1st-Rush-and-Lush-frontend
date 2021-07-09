@@ -11,28 +11,54 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    padding: 35px 300px 220px;
+    padding: 40px 300px 300px;
     background-color: $black-color;
 
-    .footerCategory {
-      display: flex;
-      line-height: 100px;
+    .logo {
+      .footerCompanyInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        bottom: 80px;
+        left: 250px;
 
-      .footerMainLogo {
-        @extend %category-style;
-        margin-right: 85px;
-        font-size: $font-logo-size;
-        font-family: $font-logo-stack;
-        font-weight: $font-logo-weight;
+        .footerMainLogo {
+          @extend %category-style;
+          position: absolute;
+          bottom: 170px;
+          right: -7px;
+          margin-right: 85px;
+          font-size: $font-logo-size;
+          font-family: $font-logo-stack;
+          font-weight: $font-logo-weight;
+        }
+
+        .companyInfo {
+          padding-top: 15px;
+          color: $white-color;
+          font-weight: 500;
+        }
       }
+    }
 
-      .footerCategoryLink {
-        @extend %category-style;
-        font-size: $font-footercategorylink;
-      }
+    .category {
+      .footerCategory {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 220px;
+        right: 380px;
+        line-height: 100px;
 
-      .footerLink {
-        margin-left: 40px;
+        .footerCategoryLink {
+          @extend %category-style;
+          font-size: $font-footercategorylink;
+        }
+
+        .footerLink {
+          margin-left: 40px;
+        }
       }
     }
   }
