@@ -1,0 +1,28 @@
+@mixin sideSlideBtn {
+  padding-right: 10px;
+  border: none;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6)
+}
+
+.SideSlide{
+  z-index: 1px;
+  position: absolute;
+  top: 500px;
+  left : 70%;
+
+  .sideSlideCount {
+    z-index: 2px;
+    position: absolute;
+    top: 620px;
+    left : 63%;
+
+    .bxPrev {
+      @include sideSlideBtn;
+    };
+
+    .bxNext {
+      @include sideSlideBtn;
+    };
+  };
+};
