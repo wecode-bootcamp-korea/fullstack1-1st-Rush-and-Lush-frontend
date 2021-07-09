@@ -19,23 +19,3 @@
     letter-spacing: 0.2em;
   }
 }
-
-.listPageContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-
-  .listNav {
-    width: 1180px;
-    margin-top: 77px;
-  }
-
-  .listProductContainer {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 10px 0 100px;
-  }
-}

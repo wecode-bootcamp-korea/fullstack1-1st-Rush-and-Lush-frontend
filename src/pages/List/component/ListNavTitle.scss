@@ -1,0 +1,19 @@
+.listNavTitle {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: black solid 2px;
+  width: 100%;
+  // background-color: red;
+  padding-bottom: 15px;
+
+  h2 {
+    font-size: 28px;
+  }
+
+  select {
+    width: 110px;
+    height: 32px;
+    border: #8f8f8f solid 1px;
+    font-size: 14px;
+  }
+}
