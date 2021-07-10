@@ -1,6 +1,6 @@
 import { Component } from "react";
 import ItemCard from "./ItemCard/ItemCard";
-import { BiCircle } from "react-icons/bi";
+// import { BiCircle } from "react-icons/bi";
 import "./MainSlide.scss";
 import SideSlide from "./SideSlide/SideSlide";
 
@@ -24,6 +24,21 @@ class MainSlide extends Component {
     }
   };
 
+  imgSlideRight = () => {
+    this.setState({
+      img: 3,
+    });
+    if (this.state.img <= 1) {
+      this.setState({
+        img: 3,
+      });
+    } else {
+      this.setState({
+        img: this.state.img - 1,
+      });
+    }
+  };
+
   componentDidMount() {
     // fetch("http://localhost:3000/mainSlideData.json", {
     //   method: "GET",
@@ -38,21 +53,6 @@ class MainSlide extends Component {
     setInterval(this.imgSlideLeft, 3000);
   }
 
-  // imgSlideRight = () => {
-  //   this.setState({
-  //     img: 3,
-  //   });
-  //   if (this.state.img <= 1) {
-  //     this.setState({
-  //       img: 3,
-  //     });
-  //   } else {
-  //     this.setState({
-  //       img: this.state.img - 1,
-  //     });
-  //   }
-  // };
-
   render() {
     return (
       <div className="MainSlide">
@@ -61,9 +61,7 @@ class MainSlide extends Component {
             <a className="mainSlideClick" href="/">
               <img
                 className={
-                  this.state.img === 1
-                    ? "mainSlideImg firstImg active"
-                    : "mainSlideImg firstImg"
+                  this.state.img === 1 ? "mainSlideImg active" : "mainSlideImg"
                 }
                 src={`./images/main_slide_1.jpg`}
                 alt="비누"
@@ -72,9 +70,7 @@ class MainSlide extends Component {
             <a className="mainSlideClick" href="/">
               <img
                 className={
-                  this.state.img === 2
-                    ? "mainSlideImg secondImg active"
-                    : "mainSlideImg secondImg"
+                  this.state.img === 2 ? "mainSlideImg active" : "mainSlideImg"
                 }
                 src={`./images/main_slide_2.jpg`}
                 alt="비누"
@@ -83,9 +79,7 @@ class MainSlide extends Component {
             <a className="mainSlideClick" href="/">
               <img
                 className={
-                  this.state.img === 3
-                    ? "mainSlideImg thirdImg active"
-                    : "mainSlideImg thirdImg"
+                  this.state.img === 3 ? "mainSlideImg active" : "mainSlideImg"
                 }
                 src={`./images/main_slide_3.jpg`}
                 alt="비누"
@@ -95,18 +89,21 @@ class MainSlide extends Component {
           <div className="mainSlideBtn">
             <ul>
               <li>
-                <button className="mainBtn1st">
-                  <BiCircle size="16" />
+                <button
+                  className="mainBtn1st"
+                  type="button"
+                  onClick={this.imgSlideRight}
+                >
+                  <img src="./images/mainUpArrow.png" alt="mainUpArrow" />
                 </button>
               </li>
               <li>
-                <button className="mainBtn2nd">
-                  <BiCircle size="16" />
-                </button>
-              </li>
-              <li>
-                <button className="mainBtn3rd">
-                  <BiCircle size="16" />
+                <button className="mainBtn2nd" type="button">
+                  <img
+                    src="./images/mainDownArrow.png"
+                    alt="mainDownArrow"
+                    onClick={this.imgSlideLeft}
+                  />
                 </button>
               </li>
             </ul>

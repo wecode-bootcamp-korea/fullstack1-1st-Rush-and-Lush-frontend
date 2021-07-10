@@ -9,6 +9,8 @@
 
   .itemSlideContainer{
     padding: 660px 0 120px 0;
+    width: 930px;
+    overflow: hidden;
 
     h2 {
       margin: 0 0 20px 50px;
@@ -16,35 +18,83 @@
       font-weight: 900;
     };
 
-    .itemSlideWrap{
+    .wholeItemSlideWrap{
       display: flex;
 
-      .card {
-        text-align: center;
-        margin-left: 30px;
-        &:last-child {
-          margin-right: 30px;
-        }
+      .firstList {
+        display: flex;
 
-        .itemTitle {
-          margin-top: 10px;
-          font-size: 18px;
+        .firstCard {
+          text-align: center;
+          margin-left: 30px;
+          &:last-child {
+            margin-right: 30px;
+          }
+  
+          .itemTitle {
+            margin-top: 10px;
+            font-size: 18px;
+            };
+  
+          .itemDesc {
+            margin-top: 3px;
+            font-size: 14px;
+            font-weight: 100;
+            color: rgb(87, 87, 87);
           };
-
-        .itemDesc {
-          margin-top: 3px;
-          font-size: 14px;
-          font-weight: 100;
-          color: rgb(87, 87, 87);
+  
+          .itemPrice {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 700;
+          };
         };
+      };
 
-        .itemPrice {
-          margin-top: 10px;
-          font-size: 16px;
-          font-weight: 700;
+      .secondList {
+        display: flex;
+        
+        .secondCard {
+          text-align: center;
+          margin-left: 30px;
+          &:last-child {
+            margin-right: 30px;
+          }
+  
+          .itemTitle {
+            margin-top: 10px;
+            font-size: 18px;
+            };
+  
+          .itemDesc {
+            margin-top: 3px;
+            font-size: 14px;
+            font-weight: 100;
+            color: rgb(87, 87, 87);
+          };
+  
+          .itemPrice {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 700;
+          };
         };
       };
     };
+
+    .first {
+      transform: translateX(-930px);
+      transition-property: all;
+      transition-duration: 0.8s;
+      transition-delay: 0.3s;
+    };
+
+    .second {
+      transform: translateX(0);
+      transition-property: all;
+      transition-duration: 0.8s;
+      transition-delay: 0.3s;
+    }
     
     .itemSlideBtn {
       @include flex;

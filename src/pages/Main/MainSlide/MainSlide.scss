@@ -8,22 +8,11 @@
       .mainSlideImg {
         height: 580px !important;
         width: 100%;
+        position: absolute;
         text-align: center;
         object-fit: cover;
         opacity: 0;
         transition: opacity 1.5s ease-in-out;
-      };
-  
-      .firstImg {
-        position: absolute;
-      };
-  
-      .secondImg {
-        position: absolute;
-      };
-  
-      .thirdImg {
-        position: absolute;
       };
       
       .active{
@@ -33,7 +22,7 @@
   
     .mainSlideBtn {
       position: absolute;
-      top: 250px;
+      top: 200px;
       left : 90%;
   
       ul {
@@ -42,7 +31,18 @@
             padding-bottom: 6px;
             border: none;
             background-color: transparent;
-            color: rgba(255, 255, 255, 0.6)
+            color: rgba(255, 255, 255, 0.6);
+            opacity: 0.3;
+            transition: opacity 0.3s ease-in-out;
+
+            &:hover {
+              opacity: 1;
+            }
+
+            img {
+              width: 80px;
+              height: 80px;
+            }
           };
         };
       };
