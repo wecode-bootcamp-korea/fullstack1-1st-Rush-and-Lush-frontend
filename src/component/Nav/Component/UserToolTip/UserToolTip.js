@@ -13,9 +13,9 @@ class UserToolTip extends Component {
     return (
       <div className="UserToolTip">
         <div className="userToolTip">
-          {USER_TOOLTIP.map(el => {
+          {USER_TOOLTIP.map((el, id) => {
             return (
-              <div key={el.id} className="userToolTipList">
+              <div key={id} className="userToolTipList">
                 <Link className="usersLink" to={el.link}>
                   {el.subTitle}
                 </Link>

@@ -90,13 +90,14 @@
           top: 75px;
           right: 80px;
           width: 210px;
-          border: 0.2px solid $usertooltip-hover-color;
+          // border: 0.2px solid $usertooltip-hover-color;
           font-size: $font-usertooltip;
           text-align: center;
 
           .userToolTipList {
             padding: 0 30px;
-            border-bottom: 1px solid $usertooltip-border-bottom-color;
+            border-bottom: 0.3px solid $usertooltip-border-bottom-color;
+            border-radius: 5px;
             line-height: 50px;
             background-color: $usertooltip-background-color;
             font-size: $font-usertooltiplist;
