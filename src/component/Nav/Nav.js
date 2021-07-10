@@ -18,42 +18,40 @@ class Nav extends Component {
   render() {
     return (
       <nav className="Nav">
-        <div className="nav">
-          <Link className="mainLogo" to="/main">
-            WESH
-          </Link>
-          <ul className="category">
-            <LushProducts />
-            <LushIntro />
-            {CATEGORY.map((category, id) => {
-              return (
-                <li className="tooltip" key={id}>
-                  <Link className="navTitle" to={category.link}>
-                    {category.subTitle}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-          <ul className="headerIcon">
-            <li className="navIcon">
-              <Link className="navLink" to="/">
-                <IoMdSearch className="icon" />
-              </Link>
-            </li>
-            <li className="navIcon2">
-              <Link className="navLink" to="/">
-                <HiOutlineShoppingBag className="icon" />
-              </Link>
-            </li>
-            <li className="navIcon3">
-              <Link className="navLink" to="/">
-                <BsPersonFill className="icon" />
-              </Link>
-              <UserToolTip />
-            </li>
-          </ul>
-        </div>
+        <Link className="mainLogo" to="/main">
+          WESH
+        </Link>
+        <ul className="category">
+          <LushProducts />
+          <LushIntro />
+          {CATEGORY.map((category, id) => {
+            return (
+              <li className="tooltip" key={id}>
+                <Link className="navTitle" to={category.link}>
+                  {category.subTitle}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+        <ul className="headerIcon">
+          <li className="navIcon">
+            <Link className="navLink" to="/">
+              <IoMdSearch className="icon" />
+            </Link>
+          </li>
+          <li className="navIcon2">
+            <Link className="navLink" to="/">
+              <HiOutlineShoppingBag className="icon" />
+            </Link>
+          </li>
+          <li className="navIcon3">
+            <Link className="navLink" to="/">
+              <BsPersonFill className="icon" />
+            </Link>
+            <UserToolTip />
+          </li>
+        </ul>
       </nav>
     );
   }

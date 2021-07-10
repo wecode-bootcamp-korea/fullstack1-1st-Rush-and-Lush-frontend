@@ -22,107 +22,105 @@
     text-decoration: none;
   }
 
-  .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: $black-color;
+
+  .mainLogo {
+    @extend %link-style;
+    margin-left: 80px;
+    margin-right: 180px;
+    font-size: $font-logo-size;
+    font-weight: $font-logo-weight;
+    font-family: $font-logo-stack;
+    letter-spacing: 2px;
+  }
+
+  .category {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    background-color: $black-color;
 
-    .mainLogo {
-      @extend %link-style;
-      margin-left: 80px;
-      margin-right: 180px;
-      font-size: $font-logo-size;
-      font-weight: $font-logo-weight;
-      font-family: $font-logo-stack;
-      letter-spacing: 2px;
-    }
+    .tooltip {
+      margin-right: 20px;
 
-    .category {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-
-      .tooltip {
-        margin-right: 20px;
-
-        .navTitle {
-          @extend %link-style;
-          display: block;
-          width: 90px;
-          margin-right: 15px;
-          line-height: 100px;
-          font-size: $font-nav-title;
-          text-align: center;
-          word-spacing: 3px;
-          letter-spacing: 2px;
-        }
+      .navTitle {
+        @extend %link-style;
+        display: block;
+        width: 90px;
+        margin-right: 15px;
+        line-height: 100px;
+        font-size: $font-nav-title;
+        text-align: center;
+        word-spacing: 3px;
+        letter-spacing: 2px;
       }
     }
+  }
 
-    .headerIcon {
-      display: flex;
-      align-items: center;
-      margin-left: 60px;
+  .headerIcon {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
 
-      .navIcon {
-        @extend %icon-style;
+    .navIcon {
+      @extend %icon-style;
+    }
+
+    .navIcon2 {
+      @extend %icon-style;
+    }
+    .navIcon3 {
+      @extend %icon-style;
+
+      .userToolTip {
+        display: none;
       }
 
-      .navIcon2 {
-        @extend %icon-style;
-      }
-      .navIcon3 {
-        @extend %icon-style;
-
+      &:hover {
         .userToolTip {
-          display: none;
-        }
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 75px;
+          right: 80px;
+          width: 210px;
+          border: 0.2px solid $usertooltip-hover-color;
+          font-size: $font-usertooltip;
+          text-align: center;
 
-        &:hover {
-          .userToolTip {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 75px;
-            right: 80px;
-            width: 210px;
-            border: 0.2px solid $usertooltip-hover-color;
-            font-size: $font-usertooltip;
+          .userToolTipList {
+            padding: 0 30px;
+            border-bottom: 1px solid $usertooltip-border-bottom-color;
+            line-height: 50px;
+            background-color: $usertooltip-background-color;
+            font-size: $font-usertooltiplist;
             text-align: center;
 
-            .userToolTipList {
-              padding: 0 30px;
-              border-bottom: 1px solid $usertooltip-border-bottom-color;
-              line-height: 50px;
-              background-color: $usertooltip-background-color;
-              font-size: $font-usertooltiplist;
-              text-align: center;
+            &:hover {
+              background-color: $black-color;
 
-              &:hover {
-                background-color: $black-color;
-
-                .usersLink {
-                  @extend %hover-style;
-                }
+              .usersLink {
+                @extend %hover-style;
               }
             }
+          }
 
-            .usersLink {
-              @extend %hoverout-style;
-              display: block;
-            }
+          .usersLink {
+            @extend %hoverout-style;
+            display: block;
           }
         }
       }
+    }
 
-      a {
-        @extend %link-style;
-      }
+    a {
+      @extend %link-style;
     }
   }
 }
