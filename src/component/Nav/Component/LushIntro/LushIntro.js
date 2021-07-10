@@ -20,7 +20,7 @@ class LushIntro extends Component {
   render() {
     const { subNav } = this.state;
     return (
-      <div className="LushProducts">
+      <div className="LushIntro">
         <div className="toolTipCategory">
           <li className="tooltip">
             <Link className="navTitle" to="/">

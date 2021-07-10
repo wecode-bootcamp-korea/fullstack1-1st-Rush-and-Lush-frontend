@@ -1,6 +1,7 @@
 @import "../../Nav.scss";
 
-.LushProducts {
+.LushProducts,
+.LushIntro {
   .toolTipCategory {
     &:hover .tooltipWindow {
       display: flex;
@@ -9,7 +10,8 @@
       top: 100px;
       right: 0;
       width: 100%;
-      padding: 10px 15px 30px;
+      padding: 10px 35px 35px;
+      transition: 0.8s;
       background-color: $tooltip-background-color;
     }
 
