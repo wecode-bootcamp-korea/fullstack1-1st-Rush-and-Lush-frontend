@@ -7,30 +7,33 @@ import UserToolTip from "./Component/UserToolTip/UserToolTip";
 import { IoMdSearch } from "react-icons/io";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { BsPersonFill } from "react-icons/bs";
-import { RiCreativeCommonsZeroLine } from "react-icons/ri";
 
-const CATEGORY = ["매장 안내", "스파", "이벤트"];
+const CATEGORY = [
+  { link: "/", subTitle: "매장 안내" },
+  { link: "/", subTitle: "스파" },
+  { link: "/", subTitle: "이벤트" },
+];
 
 class Nav extends Component {
   render() {
     return (
       <nav className="Nav">
         <div className="nav">
-          <div className="logo">
-            <Link className="mainLogo" to="/main">
-              WESH
-            </Link>
-          </div>
+          <Link className="mainLogo" to="/main">
+            WESH
+          </Link>
           <ul className="category">
             <LushProducts />
             <LushIntro />
-            {CATEGORY.map((category, index) => (
-              <li className="tooltip" key={index}>
-                <Link className="navTitle" to="/">
-                  {category}
-                </Link>
-              </li>
-            ))}
+            {CATEGORY.map((category, id) => {
+              return (
+                <li className="tooltip" key={id}>
+                  <Link className="navTitle" to={category.link}>
+                    {category.subTitle}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
           <ul className="headerIcon">
             <li className="navIcon">
@@ -42,9 +45,6 @@ class Nav extends Component {
               <Link className="navLink" to="/">
                 <HiOutlineShoppingBag className="icon" />
               </Link>
-              <span className="statusZero">
-                <RiCreativeCommonsZeroLine className="icon" />
-              </span>
             </li>
             <li className="navIcon3">
               <Link className="navLink" to="/">
