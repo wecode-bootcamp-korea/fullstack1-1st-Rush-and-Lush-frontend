@@ -98,7 +98,7 @@ class Footer extends Component {
                 onSubmit={subScribeByEmail}
               >
                 <input
-                  type="text"
+                  type="email"
                   id="inputEmail"
                   name="inputEmail"
                   className="emailInput"
