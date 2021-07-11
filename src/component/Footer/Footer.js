@@ -7,6 +7,8 @@ import { FaYoutubeSquare } from "react-icons/fa";
 import { FaPinterestSquare } from "react-icons/fa";
 import { FaTumblrSquare } from "react-icons/fa";
 
+// this is footer
+
 const CATEGORY = [
   "스카우트",
   "회사소개",
