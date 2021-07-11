@@ -41,6 +41,8 @@ class Footer extends Component {
       event.target.reset();
     } else if (inputUserEmail) {
       alert("현재 지원되지 않는 기능입니다. 조금만 기다려주세요! ⏰");
+    } else {
+      return;
     }
   };
 
