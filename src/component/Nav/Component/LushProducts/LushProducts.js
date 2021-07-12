@@ -20,7 +20,7 @@ class LushProducts extends Component {
   render() {
     const { subNav } = this.state;
     return (
-      <div className="LushProducts">
+      <li className="LushProducts">
         <div className="toolTipCategory">
           <li className="tooltip">
             <Link className="navTitle" to="/list">
@@ -37,7 +37,7 @@ class LushProducts extends Component {
             </div>
           </li>
         </div>
-      </div>
+      </li>
     );
   }
 }
