@@ -48,8 +48,8 @@ class Nav extends Component {
           <li className="navIcon3">
             <Link className="navLink" to="/">
               <BsPersonFill className="icon" />
+              <UserToolTip />
             </Link>
-            <UserToolTip />
           </li>
         </ul>
       </nav>
