@@ -50,10 +50,10 @@ class SideSlide extends Component {
           }
         >
           <a href="/">
-            <img src="./images/side_slide_1.jpg" alt="사이드 슬라이드" />
+            <img src="./images/side_slide_3.jpg" alt="사이드 슬라이드" />
           </a>
           <a href="/">
-            <img src="./images/side_slide_2.jpg" alt="사이드 슬라이드" />
+            <img src="./images/side_slide_4.jpg" alt="사이드 슬라이드" />
           </a>
         </div>
         <div className="sideSlideCount">

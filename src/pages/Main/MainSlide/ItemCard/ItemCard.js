@@ -45,7 +45,7 @@ class ItemCard extends Component {
     return (
       <div className="ItemCard">
         <div className="itemSlideContainer">
-          <h2>나만 알고 싶은 향기</h2>
+          <h2>매일 쓰고 싶은 솝</h2>
           <div
             className={
               this.state.list === 1
@@ -55,19 +55,19 @@ class ItemCard extends Component {
           >
             <div className="firstList">
               <div className="firstCard">
-                <img src="./images/card.jpg" alt="서브1" />
+                <img src="./images/card_1.jpg" alt="서브1" />
                 <p className="itemTitle">뷰티슬립</p>
                 <p className="itemDesc">머이리 비싸 이거</p>
                 <p className="itemPrice">￦ 20,000</p>
               </div>
               <div className="firstCard">
-                <img src="./images/card.jpg" alt="서브2" />
+                <img src="./images/card_2.jpg" alt="서브2" />
                 <p className="itemTitle">뷰티슬립</p>
                 <p className="itemDesc">머이리 비싸 이거</p>
                 <p className="itemPrice">￦ 20,000</p>
               </div>
               <div className="firstCard">
-                <img src="./images/card.jpg" alt="서브3" />
+                <img src="./images/card_3.jpg" alt="서브3" />
                 <p className="itemTitle">뷰티슬립</p>
                 <p className="itemDesc">머이리 비싸 이거</p>
                 <p className="itemPrice">￦ 20,000</p>
@@ -75,19 +75,19 @@ class ItemCard extends Component {
             </div>
             <div className="secondList second">
               <div className="secondCard">
-                <img src="./images/card_2.jpg" alt="서브1" />
+                <img src="./images/card_4.jpg" alt="서브1" />
                 <p className="itemTitle">뷰티슬립</p>
                 <p className="itemDesc">머이리 비싸 이거</p>
                 <p className="itemPrice">￦ 20,000</p>
               </div>
               <div className="secondCard">
-                <img src="./images/card_2.jpg" alt="서브2" />
+                <img src="./images/card_5.jpg" alt="서브2" />
                 <p className="itemTitle">뷰티슬립</p>
                 <p className="itemDesc">머이리 비싸 이거</p>
                 <p className="itemPrice">￦ 20,000</p>
               </div>
               <div className="secondCard">
-                <img src="./images/card_2.jpg" alt="서브3" />
+                <img src="./images/card_6.jpg" alt="서브3" />
                 <p className="itemTitle">뷰티슬립</p>
                 <p className="itemDesc">머이리 비싸 이거</p>
                 <p className="itemPrice">￦ 20,000</p>

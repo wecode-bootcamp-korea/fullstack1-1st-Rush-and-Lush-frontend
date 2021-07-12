@@ -63,7 +63,7 @@ class MainSlide extends Component {
                 className={
                   this.state.img === 1 ? "mainSlideImg active" : "mainSlideImg"
                 }
-                src={`./images/main_slide_1.jpg`}
+                src={`./images/main_slide_4.jpg`}
                 alt="비누"
               />
             </a>
@@ -72,7 +72,7 @@ class MainSlide extends Component {
                 className={
                   this.state.img === 2 ? "mainSlideImg active" : "mainSlideImg"
                 }
-                src={`./images/main_slide_2.jpg`}
+                src={`./images/main_slide_5.jpg`}
                 alt="비누"
               />
             </a>
@@ -81,7 +81,7 @@ class MainSlide extends Component {
                 className={
                   this.state.img === 3 ? "mainSlideImg active" : "mainSlideImg"
                 }
-                src={`./images/main_slide_3.jpg`}
+                src={`./images/main_slide_6.jpg`}
                 alt="비누"
               />
             </a>

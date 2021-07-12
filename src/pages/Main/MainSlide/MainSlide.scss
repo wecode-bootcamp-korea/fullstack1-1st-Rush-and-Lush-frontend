@@ -27,10 +27,13 @@
   
       ul {
         li {
+          margin-bottom: 40px;
+          
           button {
             padding-bottom: 6px;
             border: none;
-            background-color: transparent;
+            border-radius: 100%;
+            background-color: #78ed64;
             color: rgba(255, 255, 255, 0.6);
             opacity: 0.3;
             transition: opacity 0.3s ease-in-out;
@@ -40,8 +43,8 @@
             }
 
             img {
-              width: 80px;
-              height: 80px;
+              width: 50px;
+              height: 50px;
             }
           };
         };

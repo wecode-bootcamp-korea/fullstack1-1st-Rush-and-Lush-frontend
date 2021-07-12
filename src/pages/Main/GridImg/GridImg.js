@@ -7,19 +7,19 @@ class GridImg extends Component {
       <div className="GridImg">
         <div className="imgLeft">
           <a href="/">
-            <img src="./images/img_left.jpg" alt="left" />
+            <img src="./images/img_left_2.jpg" alt="left" />
           </a>
         </div>
         <div className="imgRightUp">
           <a href="/">
-            <img src="./images/img_right_up.jpg" alt="right" />
+            <img src="./images/img_right_up_2.jpg" alt="right" />
           </a>
           <div className="imgRightBtm">
             <a href="/">
-              <img src="./images/img_right_btm_1.jpg" alt="right_bottom" />
+              <img src="./images/img_right_btm_3.jpg" alt="right_bottom" />
             </a>
             <a href="/">
-              <img src="./images/img_right_btm_2.jpg" alt="right_bottom" />
+              <img src="./images/img_right_btm_4.jpg" alt="right_bottom" />
             </a>
           </div>
         </div>
