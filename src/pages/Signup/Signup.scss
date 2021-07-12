@@ -8,15 +8,28 @@
 
     h2 {
       font-size: 42px;
+      font-weight: bold;
     }
 
-    div {
-      padding-top: 30px;
-    }
+    .step {
+      display: inline-flex;
+      justify-content: center;
+      font-weight: bold;
+      padding-top: 40px;
 
-    span {
-      margin: 0 12px 0 0;
-      padding: 0 27px 0 0;
+      .textColorMargin {
+        margin-right: 30px;
+        color: rgb(204, 204, 204);
+      }
+
+      .textMargin {
+        margin-right: 30px;
+      }
+
+      .angleBracket {
+        font-weight: bold;
+        margin-right: 30px;
+      }
     }
   }
 
@@ -28,26 +41,48 @@
 
     h3 {
       font-size: 28px;
+      font-weight: bold;
     }
 
     p {
       margin-top: 9px;
       font-size: 14px;
-      background: #fff
-        url(https://www.quia.com/files/quia/users/sandrarosado/FormaGeometricas/cuadrado-rojo)
-        no-repeat;
-      background-size: 10px;
-      background-position: left;
+    }
+
+    .redBoxWrap {
+      margin-top: 14px;
     }
   }
 
-  .tableWrap {
+  .redBox {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: red;
+    margin-right: 8px;
+  }
+
+  .inputRedBox {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: red;
+    margin-right: 8px;
+    margin-top: 3px;
+  }
+
+  .singupFormWrap {
     margin-top: 30px;
     font-size: 14px;
 
     .inputWidth {
       display: flex;
       margin-right: 40px;
+    }
+
+    .noneRedBox {
+      display: flex;
+      margin-left: 14px;
     }
 
     .inputBox {
@@ -122,25 +157,25 @@
 
     .inputBoxAddress {
       display: flex;
-      margin-right: 10px;
       width: 380px;
 
       input {
-        width: 100%;
+        width: 250px;
         height: 40px;
-        margin-bottom: 20px;
+        margin: 0 10px 20px 0;
+        padding: 0 0 0 0;
         border: 1px solid rgb(204, 204, 204);
       }
 
       button {
-        width: 160px;
+        width: 120px;
         height: 40px;
         margin-bottom: 20px;
-        margin-left: 10px;
         background-color: white;
         border: 1px solid #000;
       }
     }
+
     .inputBoxSubAddress {
       display: inline-flex;
       width: 420px;

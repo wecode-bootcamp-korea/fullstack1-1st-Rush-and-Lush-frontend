@@ -7,21 +7,27 @@ class Signup extends Component {
       <div className="join">
         <div className="signStep">
           <h2>JOIN US</h2>
-          <div>
-            <span>약관동의</span>
-            <span>정보입력</span>
-            <span>가입완료</span>
+          <div className="step">
+            <div className="textColorMargin">약관동의</div>
+            <div className="angleBracket">&gt;</div>
+            <div className="textMargin">정보입력</div>
+            <div className="angleBracket">&gt;</div>
+            <div className="textColorMargin">가입완료</div>
           </div>
         </div>
-
         <div className="signForm">
           <h3>기본정보</h3>
-          <p>표시는 반드시 입력하셔야 하는 항목입니다.</p>
+          <div className="redBoxWrap">
+            <div className="redBox"></div>표시는 반드시 입력하셔야 하는
+            항목입니다.
+          </div>
         </div>
-        <div className="tableWrap">
+        <div className="singupFormWrap">
           <table>
             <tr>
-              <th className="inputWidth">아이디</th>
+              <th className="inputWidth">
+                <div className="inputRedBox"></div>아이디
+              </th>
               <td>
                 <div className="inputBox">
                   <input />
@@ -29,7 +35,9 @@ class Signup extends Component {
               </td>
             </tr>
             <tr>
-              <th className="inputWidth">비밀번호</th>
+              <th className="inputWidth">
+                <div className="inputRedBox"></div>비밀번호
+              </th>
               <td>
                 <div className="inputBox">
                   <input />
@@ -37,7 +45,9 @@ class Signup extends Component {
               </td>
             </tr>
             <tr>
-              <th className="inputWidth">비밀번호 확인</th>
+              <th className="inputWidth">
+                <div className="inputRedBox"></div>비밀번호 확인
+              </th>
               <td>
                 <div className="inputBox">
                   <input />
@@ -45,7 +55,9 @@ class Signup extends Component {
               </td>
             </tr>
             <tr>
-              <th className="inputWidth">이름</th>
+              <th className="inputWidth">
+                <div className="inputRedBox"></div>이름
+              </th>
               <td>
                 <div className="inputBox">
                   <input />
@@ -53,7 +65,7 @@ class Signup extends Component {
               </td>
             </tr>
             <tr>
-              <th className="inputWidth">닉네임</th>
+              <th className="noneRedBox">닉네임</th>
               <td>
                 <div className="inputBox">
                   <input />
@@ -61,7 +73,9 @@ class Signup extends Component {
               </td>
             </tr>
             <tr>
-              <th className="inputWidth">이메일</th>
+              <th className="inputWidth">
+                <div className="inputRedBox"></div>이메일
+              </th>
               <td>
                 <div className="inputBoxEmail">
                   <input />
@@ -84,7 +98,9 @@ class Signup extends Component {
               </td>
             </tr>
             <tr>
-              <th className="inputPhoneNumber">휴대폰번호</th>
+              <th className="inputPhoneNumber">
+                <div className="inputRedBox"></div>휴대폰번호
+              </th>
               <td>
                 <div className="inputBoxPhoneNumber">
                   <input />
@@ -102,7 +118,7 @@ class Signup extends Component {
               </td>
             </tr>
             <tr>
-              <th className="inputWidth">주소</th>
+              <th className="noneRedBox">주소</th>
               <td>
                 <div className="inputBoxAddress">
                   <input readonly="readonly" />
