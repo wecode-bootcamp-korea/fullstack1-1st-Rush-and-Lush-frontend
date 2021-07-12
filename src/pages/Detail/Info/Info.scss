@@ -16,6 +16,12 @@
   };
 };
 
+@mixin orderBtn {
+  width: 285px;
+  height: 50px;
+  border: 1px solid black;
+};
+
 .Info {
   .detailInfo {
     width: 580px;
@@ -158,16 +164,12 @@
         padding-top: 35px;
 
         .cart {
-          width: 285px;
-          height: 50px;
-          border: 1px solid black;
+          @include orderBtn;
           background-color: white;
         };
 
         .order {
-          width: 285px;
-          height: 50px;
-          border: 1px solid black;
+          @include orderBtn;
           color: white;
           background-color: black;
         };

@@ -8,6 +8,25 @@ import ItemTab2 from "./ItemTab2/ItemTab2";
 import "./Detail.scss";
 
 class Detail extends Component {
+  constructor() {
+    super();
+    this.state = {
+      products: [],
+    };
+  }
+
+  componentDidMount() {
+    fetch("http://localhost:3000/itemInfoData.json", {
+      method: "GET",
+    })
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          products: data.itemInfoData,
+        });
+      });
+  }
+
   render() {
     return (
       <div className="Detail">
@@ -15,7 +34,18 @@ class Detail extends Component {
           <DetailNav />
           <div className="detailInfoWrap">
             <Banner />
-            <Info />
+            {this.state.products.map((product, index) => {
+              return (
+                <Info
+                  key={index}
+                  img={product.img}
+                  name={product.name}
+                  price={product.price}
+                  weight={product.weight}
+                  description={product.description}
+                />
+              );
+            })}
           </div>
         </div>
         <ItemTab />

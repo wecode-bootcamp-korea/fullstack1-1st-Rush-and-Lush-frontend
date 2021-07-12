@@ -3,14 +3,34 @@ import { IoShareOutline, IoHeartOutline } from "react-icons/io5";
 import "./Info.scss";
 
 class Info extends Component {
+  constructor() {
+    super();
+    this.state = {
+      qty: 1,
+      price: 0,
+    };
+  }
+
+  onClickHandler = () => {
+    this.setState({ qty: this.state.qty + 1 });
+  };
+
+  onClickHandlerRemove = () => {
+    this.setState({ qty: this.state.qty - 1 });
+  };
+
+  qtyMultiple = () => {
+    this.setState({ price: this.props.price * this.state.qty });
+  };
+
   render() {
     return (
       <div className="Info">
         <div className="detailInfo">
           <div className="itemHeader">
             <div>
-              <h2 className="itemName">레몬 제스트</h2>
-              <p className="hashtag">#솝 #레몬껍질송송</p>
+              <h2 className="itemName">{this.props.name}</h2>
+              <p className="hashtag">{this.props.description}</p>
             </div>
             <div className="icon">
               <div>
@@ -30,32 +50,32 @@ class Info extends Component {
             <div>
               <dl className="itemPrice">
                 <dt>판매가</dt>
-                <dd>₩9,000</dd>
+                <dd>₩{this.props.price.toLocaleString()}</dd>
               </dl>
               <dl className="itemWeight">
                 <dt>상품무게</dt>
-                <dd>100g</dd>
+                <dd>{this.props.weight}g</dd>
               </dl>
             </div>
             <div className="itemQuantity">
               <p>구매수량</p>
               <div className="count">
-                <button>-</button>
-                <p>1</p>
-                <button>+</button>
+                <button onClick={this.onClickHandlerRemove}>-</button>
+                <p>{this.state.qty}</p>
+                <button onClick={this.onClickHandler}>+</button>
               </div>
-              <p>₩9,000</p>
+              <p>₩{this.props.price.toLocaleString()}</p>
             </div>
             <div className="total">
               <dl className="totalItemPrice">
                 <dt>총 제품 금액</dt>
                 <dd>₩</dd>
-                <dd>9,000</dd>
+                <dd>{this.props.price.toLocaleString()}</dd>
               </dl>
               <dl className="totalPrice">
                 <dt>총 합계 금액</dt>
                 <dd>₩</dd>
-                <dd>9,000</dd>
+                <dd>{this.props.price.toLocaleString()}</dd>
               </dl>
             </div>
             <div className="orderBtn">

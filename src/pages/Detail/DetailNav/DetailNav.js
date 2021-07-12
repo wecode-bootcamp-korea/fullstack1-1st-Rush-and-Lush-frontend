@@ -8,7 +8,7 @@ class DetailNav extends Component {
     return (
       <div className="DetailNav">
         <nav>
-          <a href="/">
+          <a href="../../../Main/Main.js">
             <RiHome5Fill size="14" />
           </a>
           <p>
