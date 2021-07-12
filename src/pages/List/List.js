@@ -1,9 +1,9 @@
 import { Component } from "react";
 import "./List.scss";
 import ListProductItem from "./component/ListProductItem";
-import ListNavCategory from "./component/ListNavCategory";
-import ListNavTitle from "./component/ListNavTitle";
-import ListItemData from "./ListItemData";
+import ListNavCategory from "./component/ListNav/ListNavCategory";
+import ListNavTitle from "./component/ListNav/ListNavTitle";
+import ListProductItemData from "./component/ListProductItemData";
 import ListPageHeader from "./component/ListPageHeader";
 
 class List extends Component {
@@ -16,7 +16,7 @@ class List extends Component {
             <ListNavTitle />
             <ListNavCategory />
             <div className="listProductContainer">
-              {ListItemData.map(ListItems => (
+              {ListProductItemData.map(ListItems => (
                 <ListProductItem
                   key={ListItems.id}
                   image={ListItems.img}

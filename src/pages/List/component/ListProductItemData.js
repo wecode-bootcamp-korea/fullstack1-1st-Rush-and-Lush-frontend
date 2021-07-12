@@ -4,7 +4,8 @@ const ListItemData = [
     name: "레몬 제스트",
     subName: "#솝 #레몬껍질이송송",
     price: "₩ 14,000",
-    img: "",
+    img: "https://www.lush.co.kr/data/goods/11/01/19/5/5_main_09.jpg",
+    // tagButton: <ListTagBtnVegan></ListTagBtnVegan>,
   },
   {
     id: 2,
@@ -60,7 +61,7 @@ const ListItemData = [
     name: "밀키 바",
     subName: "#포근한향기의편안함 #부드러운 우유",
     price: "₩ 9,000",
-    img: "",
+    img: "./LuchTest/4.jpg",
   },
 ];
 

@@ -1,20 +1,29 @@
 import React, { Component } from "react";
 import "./ListProductItem.scss";
-import ListProductTagButton from "./ListProductTagButton";
+import ListProductTagButton from "../component/ListProductButton/ListTagBtnNew";
+import ListTagBtnVegan from "../component/ListProductButton/ListTagBtnVegan";
+import ListTagBtnSoldOut from "../component/ListProductButton/ListTagBtnSoldOut";
 
 class ListProductItem extends Component {
   render() {
     return (
       <>
         <div className="listProduct">
+          <div className="IconBox">
+            <a className="wishListIcon" href="http://www.naver.com">
+              {/* <p className="s11">11</p> */}
+            </a>
+          </div>
           <div className="listProductImageBox">
-            <a href="/">
-              <img src={this.props.img} />
+            <a href="/" target="_blank">
+              <img src={this.props.img} alt="" />
             </a>
           </div>
           <div className="listProductInfoBox">
             <div className="listProductTagBtnBox">
               <ListProductTagButton />
+              <ListTagBtnVegan />
+              <ListTagBtnSoldOut />
             </div>
             <div className="listProductNameBox">
               <a href="/">
