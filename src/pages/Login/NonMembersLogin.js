@@ -1,17 +1,37 @@
 import { Component } from "react";
 import "./Login.scss";
 import "./NonMembersLogin.scss";
-import LoginComponet from "./component/LoginInput";
-import NonMembers from "./component/NonMembers";
+import { FaUserCircle } from "react-icons/fa";
+import { MdLock } from "react-icons/md";
 
 class NonMembersLogin extends Component {
   render() {
     return (
       <div className="NonMembersLogin">
-        <NonMembers />
         <div className="loginWrap">
           <form className="loginForm">
-            <LoginComponet />
+            <div className="LoginInput">
+              <form className="loginForm">
+                <span className="loginIconContainer">
+                  <FaUserCircle size="24" className="userIcon" />
+                  <input
+                    classname="idInput"
+                    type="text"
+                    placeholder="주문자명"
+                  />
+                </span>
+                <div className="inputBoxSapce">
+                  <span className="loginIconContainer">
+                    <MdLock size="24" className="lockIcon" />
+                    <input
+                      classname="pwInput"
+                      type="password"
+                      placeholder="주문번호"
+                    />
+                  </span>
+                </div>
+              </form>
+            </div>
             <div className="loginButtonWrap">
               <button className="loginButton">로그인</button>
             </div>

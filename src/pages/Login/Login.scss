@@ -1,102 +1,42 @@
-.Login {
-  .saveCheckBoxWrap {
-    padding-top: 20px;
-    width: 320px;
-    color: #8f8f8f;
-    .inputCheckbox {
-      margin: 0 7px 0 0;
-      width: 22px;
-      height: 22px;
-      vertical-align: -5px;
-      border-color: #8f8f8f;
-    }
+.loginTitle {
+  padding-top: 55px;
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.selectMember {
+  display: flex;
+  justify-content: center;
+
+  .ulSpace {
+    padding-top: 55px;
   }
 
-  .loginButtonWrap {
-    padding-top: 20px;
-
-    .loginButton {
-      width: 320px;
-      height: 50px;
-      background-color: black;
-      color: white;
-      font-size: 18px;
-      border: 0;
-      outline: 0;
-    }
-    .loginButton:hover {
-      opacity: 0.8;
-    }
+  li {
+    display: inline;
+    padding: 0 40px;
   }
+}
 
-  .loginMenu {
-    padding-top: 20px;
-    width: 320px;
-    text-align: center;
+.memberActive {
+  color: black;
+  border: 0px;
+  outline: 0px;
+  background-color: white;
+  font-size: 18px;
+  border-bottom: 1px solid #000;
+  padding: 0 1px 0 1px;
+  cursor: pointer;
+}
 
-    .divider {
-      display: inline;
-      position: relative;
-      margin: 0 5px 0 5px;
-    }
-
-    .divider:after {
-      content: "";
-      height: 50%;
-      width: 1px;
-
-      position: absolute;
-      right: 0;
-      top: 4px;
-
-      background-color: #8f8f8f;
-    }
-
-    .singUp {
-      border: 0;
-      outline: 0;
-      background-color: white;
-      color: #8f8f8f;
-    }
-    .findId {
-      border: 0;
-      outline: 0;
-      background-color: white;
-      color: #8f8f8f;
-    }
-    .findPw {
-      border: 0;
-      outline: 0;
-      background-color: white;
-      color: #8f8f8f;
-    }
-  }
-
-  .naverLogin {
-    margin: 45px 0 0 0;
-    border: 1px solid #c3c3c3;
-    height: 50px;
-    width: 320px;
-    text-decoration: none;
-    color: #8f8f8f;
-    font-size: 13px;
-
-    i {
-      display: inline-block;
-      vertical-align: middle;
-      border-right: 1px solid #c3c3c3;
-      padding: 0 5px 0 8px;
-      margin: 8px 20px 8px 0;
-      line-height: 12px;
-
-      .naverLogo {
-        width: 32px;
-        height: 32px;
-        object-fit: cover;
-      }
-    }
-  }
-  .active {
-    background-color: rgb(252, 137, 122);
-  }
+.nonmemberActive {
+  color: #8f8f8f;
+  border: 0px;
+  outline: 0px;
+  background-color: white;
+  font-size: 18px;
+  border-bottom: 1px solid #8f8f8f;
+  padding: 0 1px 0 1px;
+  cursor: pointer;
 }
