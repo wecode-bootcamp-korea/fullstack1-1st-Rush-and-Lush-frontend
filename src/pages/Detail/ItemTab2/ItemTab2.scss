@@ -1,0 +1,35 @@
+.ItemTab2 {
+  display: flex;
+  justify-content: center;
+
+  .itemTab {
+    display: flex;
+    justify-content: center;
+    width: 1060px;
+    margin-top: 70px;
+  
+    button {
+      height: 47px;
+      margin-bottom: 50px;
+
+      &:first-child {
+        width: 50%;
+        background-color: white;
+        border: {
+          top: 1px solid rgb(202, 202, 202);
+          right: none;
+          bottom: 1px solid black;
+          left: 1px solid rgb(202, 202, 202);
+        };
+        font-weight: 300;
+      };
+  
+      &:last-child {
+        width: 50%;
+        background-color: white;
+        border: 1px solid black;
+        border-bottom: none;
+      };
+    };
+  };
+};

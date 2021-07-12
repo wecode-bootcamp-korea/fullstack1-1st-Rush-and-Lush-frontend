@@ -1,0 +1,31 @@
+.Banner {
+  .imgBannerWrap {
+    padding-right: 100px;
+  
+    .imgBanner{
+      img {
+        width: 380px;
+        height: 380px;
+        object-fit: cover;
+      };
+    }
+    
+    .thumbnailWrap {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 22px;
+  
+      div {
+        img {
+          width: 65px;
+          height: 65px;
+        }
+      }
+  
+      button {
+        background-color: transparent;
+        border: none;
+      }
+    }
+  };
+}

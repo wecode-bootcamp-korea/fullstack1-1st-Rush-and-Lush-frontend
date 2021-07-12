@@ -1,0 +1,85 @@
+.ItemDetail {
+  display: flex;
+  justify-content: center;
+  // flex-direction: column;
+  
+  .detailContainer{
+    // width: 1060px;
+
+    .detailDescWrap {
+      .detailDesc {
+       margin-top: 150px;
+       width: 1060px;
+       text-align: center;
+   
+       p {
+         padding-top: 15px;
+       }
+   
+       p:first-child {
+         font: {
+           size: 18px;
+         }
+       }
+   
+       p:nth-child(2) {
+         font: {
+           size: 28px;
+           weight: 500;
+         }
+       }
+   
+       p:last-child {
+         font: {
+           size: 20px;
+           weight: 500;
+         };
+       };
+     };
+   };
+ 
+   .detailDescImgWrap {
+     .detailDescImg {
+       display: flex;
+       position: relative;
+       padding-top: 100px;
+ 
+       .firstImg {
+         float: left;
+         width: 1060px;
+         height: 555px;
+         background-color: burlywood;
+       };
+ 
+       .firstParagraph {
+         position: absolute;
+         top: 70%;
+         padding: 50px;
+         line-height: 200%;
+         background-color: white;
+       };
+     };
+   };
+
+   .secondParagraph {
+     padding: 200px 0 150px 0;
+     text-align: center;
+     line-height: 200%;
+     font: {
+       size: 18px;
+       weight: 300;
+     };
+
+     p:last-child {
+       color: rgb(85, 85, 85)
+     };
+   };
+
+   .thirdImg {
+     margin-bottom: 200px;
+     width: 1060px;
+     height: 555px;
+     background-color: rgb(161, 196, 230);
+   }
+  };
+};
