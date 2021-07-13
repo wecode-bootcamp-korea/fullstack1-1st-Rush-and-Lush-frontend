@@ -1,1 +1,8 @@
 /* common using */
+@import "./reset.scss";
+@import "./variables.scss";
+
+%link-style {
+  color: $white-color;
+  text-decoration: none;
+}

@@ -1,0 +1,29 @@
+@import "./LushProducts.scss";
+
+.LushProductsList {
+  .productList {
+    padding: 15px 20px;
+
+    li {
+      padding-top: 28px;
+
+      .title {
+        @extend %link-style;
+        font-size: $font-tooltip-title;
+        font-weight: $font-tooltip-title-weight;
+      }
+
+      .elements {
+        display: table-row;
+        color: $tooltip-font-color;
+        font-size: $font-tooltip-items;
+        text-decoration: none;
+
+        &:hover {
+          color: $white-color;
+          transition: 0.8s;
+        }
+      }
+    }
+  }
+}

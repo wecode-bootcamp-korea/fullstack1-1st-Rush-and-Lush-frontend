@@ -1,0 +1,171 @@
+{
+  "PRODUCTS_DATA": [
+    {
+      "id": 1,
+      "title": "베스트",
+      "elements": [
+        { "id": 1, "sub_title": "주간 베스트" },
+        { "id": 2, "sub_title": "별 다섯개 후기" },
+        { "id": 3, "sub_title": "온라인 전용" },
+        { "id": 4, "sub_title": "국내 제조" },
+        { "id": 5, "sub_title": "네이키드" },
+        { "id": 6, "sub_title": "홈 스파" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "신제품",
+      "elements": [
+        { "id": 7, "sub_title": "디스커버리 키트" },
+        { "id": 8, "sub_title": "버블 바 큐레이션" },
+        { "id": 9, "sub_title": "비건 메이크업" },
+        { "id": 10, "sub_title": "기프트" },
+        { "id": 11, "sub_title": "립스틱" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "배쓰",
+      "elements": [
+        { "id": 12, "sub_title": "배쓰 밤" },
+        { "id": 13, "sub_title": "버블 바" },
+        { "id": 14, "sub_title": "배쓰 오일" },
+        { "id": 15, "sub_title": "펀" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "샤워",
+      "elements": [
+        { "id": 16, "sub_title": "솝" },
+        { "id": 17, "sub_title": "샤워 젤&젤리" },
+        { "id": 18, "sub_title": "보디 컨디셔너" },
+        { "id": 19, "sub_title": "샤워 밤" },
+        { "id": 20, "sub_title": "샤워 오일" },
+        { "id": 21, "sub_title": "스크럽&버터" },
+        { "id": 22, "sub_title": "펀" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "보디",
+      "elements": [
+        { "id": 23, "sub_title": "클렌저" },
+        { "id": 24, "sub_title": "로션" },
+        { "id": 25, "sub_title": "핸드 앤 풋" },
+        { "id": 26, "sub_title": "마사지 바" },
+        { "id": 27, "sub_title": "더스팅 파우더" },
+        { "id": 28, "sub_title": "쉐이빙 크림" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "페이스",
+      "elements": [
+        { "id": 29, "sub_title": "클렌저" },
+        { "id": 30, "sub_title": "페이스 마스크" },
+        { "id": 31, "sub_title": "토너" },
+        { "id": 32, "sub_title": "모이스춰라이저" },
+        { "id": 33, "sub_title": "프라이머" },
+        { "id": 34, "sub_title": "립" },
+        { "id": 35, "sub_title": "쉐이빙 크림" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "헤어",
+      "elements": [
+        { "id": 36, "sub_title": "샴푸 바" },
+        { "id": 37, "sub_title": "샴푸" },
+        { "id": 38, "sub_title": "컨디셔너" },
+        { "id": 39, "sub_title": "트리트먼트" },
+        { "id": 40, "sub_title": "스타일링" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "메이크업",
+      "elements": [
+        { "id": 41, "sub_title": "페이스 파우더" },
+        { "id": 42, "sub_title": "아이 메이크업" },
+        { "id": 43, "sub_title": "립" },
+        { "id": 44, "sub_title": "파운데이션" },
+        { "id": 45, "sub_title": "스킨 틴트" },
+        { "id": 46, "sub_title": "비건 브러쉬" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "퍼퓸",
+      "elements": [
+        { "id": 47, "sub_title": "보디 스프레이" },
+        { "id": 48, "sub_title": "퍼퓸 라이브러리" },
+        { "id": 49, "sub_title": "코어 레인지" },
+        { "id": 50, "sub_title": "솔리드 퍼퓸" },
+        { "id": 51, "sub_title": "위시 카드" },
+        { "id": 52, "sub_title": "퍼퓸 낫랩" },
+        { "id": 53, "sub_title": "르네상스 퍼퓸" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "기프트",
+      "elements": [
+        { "id": 54, "sub_title": "기프트 베스트" },
+        { "id": 55, "sub_title": "1-3만원대" },
+        { "id": 56, "sub_title": "4-6만원대" },
+        { "id": 57, "sub_title": "7만원 이상" },
+        { "id": 58, "sub_title": "낫랩" },
+        { "id": 59, "sub_title": "스웨그" },
+        { "id": 60, "sub_title": "악세서리" },
+        { "id": 61, "sub_title": "북" }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "비건",
+      "elements": [
+        { "id": 62, "sub_title": "배쓰" },
+        { "id": 63, "sub_title": "샤워" },
+        { "id": 64, "sub_title": "보디" },
+        { "id": 65, "sub_title": "페이스" },
+        { "id": 66, "sub_title": "헤어" },
+        { "id": 67, "sub_title": "메이크업" },
+        { "id": 68, "sub_title": "퍼퓸" }
+      ]
+    }
+  ],
+  "LUSH_INTRO": [
+    {
+      "id": 1,
+      "title": "러쉬 소개",
+      "elements": [
+        { "id": 1, "sub_title": "러쉬 역사" },
+        { "id": 2, "sub_title": "이념과 가치" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "러쉬이야기",
+      "elements": []
+    },
+    {
+      "id": 3,
+      "title": "채러티팟",
+      "elements": []
+    },
+    {
+      "id": 4,
+      "title": "커뮤니티",
+      "elements": [
+        { "id": 3, "sub_title": "젤러쉬" },
+        { "id": 4, "sub_title": "덕찌" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "기업 선물",
+      "elements": []
+    }
+  ]
+}
