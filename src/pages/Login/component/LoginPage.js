@@ -4,6 +4,15 @@ import { FaUserCircle } from "react-icons/fa";
 import { MdLock } from "react-icons/md";
 
 class LoginPage extends Component {
+  constructor() {
+    super();
+    this.state = {
+      idValue: "",
+      pwValue: "",
+      btnColorState: false,
+    };
+  }
+
   render() {
     return (
       <div className="Login">
@@ -14,7 +23,13 @@ class LoginPage extends Component {
               <form className="loginForm">
                 <span className="loginIconContainer">
                   <FaUserCircle size="24" className="userIcon" />
-                  <input classname="idInput" type="text" placeholder="아이디" />
+                  <input
+                    className="idInput"
+                    type="text"
+                    placeholder="아이디"
+                    onChange={this.handleIdInput}
+                  />
+                  <div>{this.state.name}</div>
                 </span>
                 <div className="inputBoxSapce">
                   <span className="loginIconContainer">
@@ -23,6 +38,7 @@ class LoginPage extends Component {
                       classname="pwInput"
                       type="password"
                       placeholder="비밀번호"
+                      onChange={this.handlePwInput}
                     />
                   </span>
                 </div>
@@ -37,7 +53,9 @@ class LoginPage extends Component {
               <label for="idSaveLabel">아이디 저장</label>
             </div>
             <div className="loginButtonWrap">
-              <button className="loginButton">로그인</button>
+              <button type="button" className="loginButton">
+                로그인
+              </button>
             </div>
             <div className="loginMenu">
               <button type="button" className="singUp">
