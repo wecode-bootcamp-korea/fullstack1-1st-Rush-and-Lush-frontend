@@ -5,19 +5,25 @@ $tooltip-font-color: #b5b5b5;
 $tooltip-background-color: #333333;
 $usertooltip-border-bottom-color: #dadadaf6;
 $usertooltip-background-color: #fbfafafb;
-$footer-icon-background-color: #808080;
-$footer-copyright-color: #9b9b9b;
-$footer-inputEmailBtn-color: #111010;
 
 /* Font Size Navigation bar*/
-$font-logo-size: 42px;
-$font-nav-title: 18px;
-$font-tooltip-title: 20px;
-$font-tooltip-items: 16px;
-$font-icon-title: 30px;
-$font-icon-zero: 15px;
-$font-usertooltip: 20px;
-$font-usertooltiplist: 15px;
+$font-logo-size: 40px;
+$font-nav-title: 16.5px;
+$font-tooltip-title: 18px;
+$font-tooltip-items: 14px;
+$font-icon-title: 20px;
+$font-usertooltip: 16px;
+$font-usertooltip-icon: 25px;
+$font-usertooltiplist: 12px;
+
+/* Font Stack Navigation bar*/
+$font-logo-stack: sans-serif;
+
+/* Font Weight Navigation bar*/
+$font-tooltip-title-weight: 600;
+$font-logo-weight: 800;
+
+/* Font Size Footer */
 $font-footer-size: 14px;
 $font-footer-icon-size: 30px;
 $font-footer-category-size: 15px;
@@ -25,16 +31,16 @@ $font-footer-lushtextforcustomer: 16px;
 $font-footer-lushtextforcustomer-span: 14px;
 $font-footer-copyright: 2px;
 
-/* Font Stack Navigation bar*/
-$font-logo-stack: sans-serif;
+/* Font Stack Footer */
 $font-footer-applegothic: AppleGothic;
 
-/* Font Weight Navigation bar*/
-$font-tooltip-title-weight: 600;
-$font-logo-weight: 800;
+/* Font Weight Footer */
 $font-footer-lushtextforcustomer-span-weight: 700;
 
 /* Color List Footer */
+$footer-icon-background-color: #808080;
+$footer-copyright-color: #9b9b9b;
+$footer-inputEmailBtn-color: #111010;
 
 /* Font Size Footer */
 $font-footercategorylink: 17px;

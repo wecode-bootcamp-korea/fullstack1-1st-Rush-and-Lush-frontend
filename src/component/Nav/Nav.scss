@@ -1,0 +1,132 @@
+@import "../../styles/common.scss";
+
+.Nav {
+  %link-style {
+    color: $white-color;
+    text-decoration: none;
+  }
+
+  %icon-style {
+    padding: 12px;
+    padding-right: 25px;
+    font-size: $font-usertooltip-icon;
+  }
+
+  %hover-style {
+    color: $white-color;
+    text-decoration: none;
+  }
+
+  %hoverout-style {
+    color: $black-color;
+    text-decoration: none;
+  }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: $black-color;
+  z-index: 1;
+
+  .mainLogo {
+    @extend %link-style;
+    margin-left: 80px;
+    margin-right: 180px;
+    font-size: $font-logo-size;
+    font-weight: $font-logo-weight;
+    font-family: $font-logo-stack;
+    letter-spacing: 2px;
+  }
+
+  .category {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .tooltip {
+      margin-right: 10px;
+
+      .navTitle {
+        @extend %link-style;
+        display: block;
+        width: 90px;
+        margin-right: 15px;
+        line-height: 100px;
+        font-size: $font-nav-title;
+        text-align: center;
+        word-spacing: 3px;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  .headerIcon {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+
+    .icon {
+      color: $white-color;
+      cursor: pointer;
+    }
+
+    .navIcon {
+      @extend %icon-style;
+    }
+
+    .navIcon2 {
+      @extend %icon-style;
+    }
+    .navIcon3 {
+      @extend %icon-style;
+
+      .userToolTip {
+        display: none;
+      }
+
+      &:hover {
+        .userToolTip {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 75px;
+          right: 80px;
+          width: 210px;
+          font-size: $font-usertooltip;
+          text-align: center;
+
+          .userToolTipList {
+            padding: 0 30px;
+            border-bottom: 0.3px solid $usertooltip-border-bottom-color;
+            border-radius: 5px;
+            line-height: 50px;
+            background-color: $usertooltip-background-color;
+            font-size: $font-usertooltiplist;
+            text-align: center;
+
+            &:hover {
+              background-color: $black-color;
+
+              .usersLink {
+                @extend %hover-style;
+              }
+            }
+          }
+
+          .usersLink {
+            @extend %hoverout-style;
+            display: block;
+          }
+        }
+      }
+    }
+
+    a {
+      @extend %link-style;
+    }
+  }
+}
