@@ -17,9 +17,7 @@ class Detail extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/itemInfoData.json", {
-      method: "GET",
-    })
+    fetch("http://localhost:3000/itemInfoData.json")
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -35,18 +33,20 @@ class Detail extends Component {
           <DetailNav />
           <div className="detailInfoWrap">
             <Banner />
-            {this.state.products.map((product, index) => {
-              return (
-                <Info
-                  key={index}
-                  img={product.img}
-                  name={product.name}
-                  price={product.price}
-                  weight={product.weight}
-                  description={product.description}
-                />
-              );
-            })}
+            {this.state.products.map(
+              ({ img, name, price, weight, description }, index) => {
+                return (
+                  <Info
+                    key={index}
+                    img={img}
+                    name={name}
+                    price={price}
+                    weight={weight}
+                    description={description}
+                  />
+                );
+              }
+            )}
           </div>
         </div>
         <ItemTab />

@@ -19,14 +19,15 @@ class Info extends Component {
   };
 
   render() {
-    console.log("넘버니?", typeof this.state.qty);
+    const { name, description, price, weight } = this.props;
+    const { qty } = this.state;
     return (
       <div className="Info">
         <div className="detailInfo">
           <div className="itemHeader">
             <div>
-              <h2 className="itemName">{this.props.name}</h2>
-              <p className="hashtag">{this.props.description}</p>
+              <h2 className="itemName">{name}</h2>
+              <p className="hashtag">{description}</p>
             </div>
             <div className="icon">
               <div>
@@ -46,37 +47,37 @@ class Info extends Component {
             <div>
               <dl className="itemPrice">
                 <dt>판매가</dt>
-                <dd>₩ {this.props.price.toLocaleString()}</dd>
+                <dd>₩ {price.toLocaleString()}</dd>
               </dl>
               <dl className="itemWeight">
                 <dt>상품무게</dt>
-                <dd>{this.props.weight}g</dd>
+                <dd>{weight}g</dd>
               </dl>
             </div>
             <div className="itemQuantity">
               <p>구매수량</p>
               <div className="count">
                 <button onClick={this.decreaseQtyHandler}>-</button>
-                <p>{this.state.qty >= 1 ? this.state.qty : 1}</p>
+                <p>{qty >= 1 ? qty : 1}</p>
                 <button onClick={this.increaseQtyHandler}>+</button>
               </div>
-              <p>₩{this.props.price.toLocaleString()}</p>
+              <p>₩{price.toLocaleString()}</p>
             </div>
             <div className="total">
               <dl className="totalItemPrice">
                 <dt>총 제품 금액</dt>
                 <dd>₩</dd>
-                <dd>{(this.props.price * this.state.qty).toLocaleString()}</dd>
+                <dd>{(price * qty).toLocaleString()}</dd>
               </dl>
               <dl className="totalPrice">
                 <dt>총 합계 금액</dt>
                 <dd>₩</dd>
                 <dd>
-                  {(this.props.price * this.state.qty + 2500 > 30000
-                    ? this.props.price * this.state.qty
-                    : this.props.price * this.state.qty + 2500 <= 2500
+                  {(price * qty + 2500 > 30000
+                    ? price * qty
+                    : price * qty + 2500 <= 2500
                     ? 0
-                    : this.props.price * this.state.qty + 2500
+                    : price * qty + 2500
                   ).toLocaleString()}
                 </dd>
               </dl>
