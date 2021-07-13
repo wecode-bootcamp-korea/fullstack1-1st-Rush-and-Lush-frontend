@@ -1,0 +1,91 @@
+@mixin flex {
+  display: flex;
+  justify-content: center;
+}
+
+.ItemCard {
+  @include flex;
+  padding-right: 400px;
+
+  .itemSlideContainer{
+    padding: 660px 0 120px 0;
+    width: 930px;
+    overflow: hidden;
+
+    h2 {
+      margin: 0 0 20px 50px;
+      font-size: 40px;
+      font-weight: 800;
+      color: rgb(53, 53, 53);
+      letter-spacing: 5px;
+    };
+
+    .wholeItemSlideWrap{
+      display: flex;
+
+      .firstList {
+        display: flex;
+
+        .firstCard {
+          text-align: center;
+          margin-left: 30px;
+
+          img {
+            width: 270px;
+            height: 270px;
+            object-fit: cover;
+          };
+
+          &:last-child {
+            margin-right: 30px;
+          };
+  
+          .itemTitle {
+            margin-top: 10px;
+            font-size: 18px;
+            };
+  
+          .itemDesc {
+            margin-top: 3px;
+            font-size: 14px;
+            font-weight: 100;
+            color: rgb(87, 87, 87);
+          };
+  
+          .itemPrice {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 700;
+          };
+        };
+      };
+    };
+
+    .first {
+      transform: translateX(-930px);
+      transition-property: all;
+      transition-duration: 0.8s;
+      transition-delay: 0.3s;
+    };
+
+    .second {
+      transform: translateX(0);
+      transition-property: all;
+      transition-duration: 0.8s;
+      transition-delay: 0.3s;
+    }
+    
+    .itemSlideBtn {
+      @include flex;
+      margin-top: 30px;
+
+      button {
+        padding-right: 6px;
+        border: none;
+        background-color: transparent;
+        color: black
+      };
+    };
+  };
+};
+
