@@ -1,25 +1,46 @@
-/* Color List */
+/* Color List Navigation bar*/
 $black-color: #000000;
-$grey-color: #f2f2f2;
-$green-color: #287a28;
+$white-color: #f2f2f2;
+$tooltip-font-color: #b5b5b5;
+$tooltip-background-color: #333333;
+$usertooltip-border-bottom-color: #dadadaf6;
+$usertooltip-background-color: #fbfafafb;
 
-/* Font Size */
+/* Font Size Navigation bar*/
+$font-logo-size: 40px;
+$font-nav-title: 16.5px;
+$font-tooltip-title: 18px;
+$font-tooltip-items: 14px;
+$font-icon-title: 20px;
+$font-usertooltip: 16px;
+$font-usertooltip-icon: 25px;
+$font-usertooltiplist: 12px;
 
-/* Font Stack */
+/* Font Stack Navigation bar*/
+$font-logo-stack: sans-serif;
 
-/* Font Weight */
+/* Font Weight Navigation bar*/
+$font-tooltip-title-weight: 600;
+$font-logo-weight: 800;
 
-/* Banner-large */
-$font-xxlarge: 68px;
+/* Font Size Footer */
+$font-footer-size: 14px;
+$font-footer-icon-size: 30px;
+$font-footer-category-size: 15px;
+$font-footer-lushtextforcustomer: 16px;
+$font-footer-lushtextforcustomer-span: 14px;
+$font-footer-copyright: 2px;
 
-/* Banner-medium */
-$font-xlarge: 26px;
+/* Font Stack Footer */
+$font-footer-applegothic: AppleGothic;
 
-/* Title */
-$font-large: 16px;
-$font-medium: 15px;
+/* Font Weight Footer */
+$font-footer-lushtextforcustomer-span-weight: 700;
 
-/* Description */
-$font-small: 14px;
-$font-xsmall: 12px;
-$font-xxsmall: 10px;
+/* Color List Footer */
+$footer-icon-background-color: #808080;
+$footer-copyright-color: #9b9b9b;
+$footer-inputEmailBtn-color: #111010;
+
+/* Font Size Footer */
+$font-footercategorylink: 17px;
