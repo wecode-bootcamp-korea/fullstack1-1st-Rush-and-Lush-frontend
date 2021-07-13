@@ -4,26 +4,6 @@
   align-items: center;
 }
 
-.listPageHeader {
-  @include display;
-  flex-direction: column;
-  width: auto;
-  height: 500px;
-  background: black;
-
-  .listPageHeaderTxt {
-    height: 80px;
-    color: white;
-    font-size: 68px;
-  }
-
-  .listPageHeaderTxt2 {
-    font-size: 26px;
-    color: white;
-    letter-spacing: 0.2em;
-  }
-}
-
 .listPageContainer {
   @include display;
   width: 100%;
