@@ -9,9 +9,43 @@ class LoginPage extends Component {
     this.state = {
       idValue: "",
       pwValue: "",
-      btnColorState: false,
     };
   }
+
+  handleIdInput = event => {
+    this.setState({ idValue: event.target.value });
+  };
+
+  handlePwInput = event => {
+    this.setState({ pwValue: event.target.value });
+  };
+
+  loginAlert = () => {
+    if (this.state.idValue === "") {
+      alert("ID를 입력하세요.");
+    } else if (this.state.pwValue === "") {
+      alert("PW를 입력하세요.");
+    }
+  };
+
+  loginPost = event => {
+    event.preventDefault();
+    fetch("/pages/Login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: this.state.idValue,
+        password: this.state.pwValue,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        console.log("결과: ", result);
+        localStorage.setItem("suho", result.token);
+      });
+  };
 
   render() {
     return (
@@ -42,21 +76,26 @@ class LoginPage extends Component {
                     />
                   </span>
                 </div>
+                <div className="saveCheckBoxWrap">
+                  <input
+                    className="inputCheckbox"
+                    id="idSaveLabel"
+                    type="checkbox"
+                  />
+                  <label for="idSaveLabel">아이디 저장</label>
+                </div>
+                <div className="loginButtonWrap">
+                  <button
+                    onClick={(this.loginAlert, this.loginPost)}
+                    type="button"
+                    className="loginButton"
+                  >
+                    로그인
+                  </button>
+                </div>
               </form>
             </div>
-            <div className="saveCheckBoxWrap">
-              <input
-                className="inputCheckbox"
-                id="idSaveLabel"
-                type="checkbox"
-              />
-              <label for="idSaveLabel">아이디 저장</label>
-            </div>
-            <div className="loginButtonWrap">
-              <button type="button" className="loginButton">
-                로그인
-              </button>
-            </div>
+
             <div className="loginMenu">
               <button type="button" className="singUp">
                 <em>회원가입</em>
