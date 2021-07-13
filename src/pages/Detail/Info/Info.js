@@ -7,23 +7,19 @@ class Info extends Component {
     super();
     this.state = {
       qty: 1,
-      price: 0,
     };
   }
 
-  onClickHandler = () => {
+  increaseQtyHandler = () => {
     this.setState({ qty: this.state.qty + 1 });
   };
 
-  onClickHandlerRemove = () => {
+  decreaseQtyHandler = () => {
     this.setState({ qty: this.state.qty - 1 });
   };
 
-  qtyMultiple = () => {
-    this.setState({ price: this.props.price * this.state.qty });
-  };
-
   render() {
+    console.log("넘버니?", typeof this.state.qty);
     return (
       <div className="Info">
         <div className="detailInfo">
@@ -50,7 +46,7 @@ class Info extends Component {
             <div>
               <dl className="itemPrice">
                 <dt>판매가</dt>
-                <dd>₩{this.props.price.toLocaleString()}</dd>
+                <dd>₩ {this.props.price.toLocaleString()}</dd>
               </dl>
               <dl className="itemWeight">
                 <dt>상품무게</dt>
@@ -60,9 +56,9 @@ class Info extends Component {
             <div className="itemQuantity">
               <p>구매수량</p>
               <div className="count">
-                <button onClick={this.onClickHandlerRemove}>-</button>
-                <p>{this.state.qty}</p>
-                <button onClick={this.onClickHandler}>+</button>
+                <button onClick={this.decreaseQtyHandler}>-</button>
+                <p>{this.state.qty >= 1 ? this.state.qty : 1}</p>
+                <button onClick={this.increaseQtyHandler}>+</button>
               </div>
               <p>₩{this.props.price.toLocaleString()}</p>
             </div>
@@ -70,12 +66,19 @@ class Info extends Component {
               <dl className="totalItemPrice">
                 <dt>총 제품 금액</dt>
                 <dd>₩</dd>
-                <dd>{this.props.price.toLocaleString()}</dd>
+                <dd>{(this.props.price * this.state.qty).toLocaleString()}</dd>
               </dl>
               <dl className="totalPrice">
                 <dt>총 합계 금액</dt>
                 <dd>₩</dd>
-                <dd>{this.props.price.toLocaleString()}</dd>
+                <dd>
+                  {(this.props.price * this.state.qty + 2500 > 30000
+                    ? this.props.price * this.state.qty
+                    : this.props.price * this.state.qty + 2500 <= 2500
+                    ? 0
+                    : this.props.price * this.state.qty + 2500
+                  ).toLocaleString()}
+                </dd>
               </dl>
             </div>
             <div className="orderBtn">
