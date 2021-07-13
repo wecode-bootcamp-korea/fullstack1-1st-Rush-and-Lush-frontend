@@ -21,7 +21,7 @@ class LushIntro extends Component {
     const { subNav } = this.state;
 
     return (
-      <li className="LushIntro">
+      <div className="LushIntro">
         <div className="toolTipCategory">
           <li className="tooltip">
             <Link className="navTitle" to="/">
@@ -38,7 +38,7 @@ class LushIntro extends Component {
             </div>
           </li>
         </div>
-      </li>
+      </div>
     );
   }
 }

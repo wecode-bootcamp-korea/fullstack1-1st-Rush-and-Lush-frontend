@@ -69,6 +69,11 @@
     align-items: center;
     margin-left: 60px;
 
+    .icon {
+      color: $white-color;
+      cursor: pointer;
+    }
+
     .navIcon {
       @extend %icon-style;
     }

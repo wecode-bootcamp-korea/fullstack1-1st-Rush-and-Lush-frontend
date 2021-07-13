@@ -36,20 +36,14 @@ class Nav extends Component {
         </ul>
         <ul className="headerIcon">
           <li className="navIcon">
-            <Link className="navLink" to="/">
-              <IoMdSearch className="icon" />
-            </Link>
+            <IoMdSearch className="icon" />
           </li>
           <li className="navIcon2">
-            <Link className="navLink" to="/">
-              <HiOutlineShoppingBag className="icon" />
-            </Link>
+            <HiOutlineShoppingBag className="icon" />
           </li>
           <li className="navIcon3">
-            <Link className="navLink" to="/">
-              <BsPersonFill className="icon" />
-              <UserToolTip />
-            </Link>
+            <BsPersonFill className="icon" />
+            <UserToolTip />
           </li>
         </ul>
       </nav>
