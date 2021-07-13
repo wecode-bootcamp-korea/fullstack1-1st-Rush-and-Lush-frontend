@@ -57,7 +57,11 @@ class SideSlide extends Component {
           </a>
         </div>
         <div className="sideSlideCount">
-          <button className="bxPrev" type="button" onClick={this.slideLeft}>
+          <button
+            className="sideSlideBtn"
+            type="button"
+            onClick={this.slideLeft}
+          >
             <IoIosArrowBack size="24" />
           </button>
           <div className="counter">
@@ -65,7 +69,11 @@ class SideSlide extends Component {
             <div className="part"> / </div>
             <div className="sideSlideIdxNext">2</div>
           </div>
-          <button className="bxNext" type="button" onClick={this.slideRight}>
+          <button
+            className="sideSlideBtn"
+            type="button"
+            onClick={this.slideRight}
+          >
             <IoIosArrowForward size="24" />
           </button>
         </div>

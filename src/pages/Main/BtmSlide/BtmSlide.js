@@ -6,18 +6,18 @@ class BtmSlide extends Component {
   constructor() {
     super();
     this.state = {
-      img: 1,
+      imgIndex: 1,
     };
   }
 
   fadeSlide = () => {
-    if (this.state.img > 1) {
+    if (this.state.imgIndex > 1) {
       this.setState({
-        img: 1,
+        imgIndex: 1,
       });
     } else {
       this.setState({
-        img: this.state.img + 1,
+        imgIndex: this.state.imgIndex + 1,
       });
     }
   };
@@ -39,9 +39,7 @@ class BtmSlide extends Component {
           <div className="btmSlideImg">
             <a
               className={
-                this.state.img === 1
-                  ? "btmSlide firstImg active"
-                  : "btmSlide firstImg"
+                this.state.imgIndex === 1 ? "btmSlide active" : "btmSlide"
               }
               href="/"
             >
@@ -52,9 +50,7 @@ class BtmSlide extends Component {
             </a>
             <a
               className={
-                this.state.img === 2
-                  ? "btmSlide secondImg active"
-                  : "btmSlide secondImg"
+                this.state.imgIndex === 2 ? "btmSlide active" : "btmSlide"
               }
               href="/"
             >

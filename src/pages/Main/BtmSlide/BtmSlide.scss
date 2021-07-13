@@ -33,16 +33,9 @@
       }
 
       .btmSlide {
+        position: absolute;
         opacity: 0;
         transition: opacity 1.5s ease-in-out;
-      }
-
-      .firstImg {
-        position: absolute;
-      }
-
-      .secondImg {
-        position: absolute;
       }
 
       .active {

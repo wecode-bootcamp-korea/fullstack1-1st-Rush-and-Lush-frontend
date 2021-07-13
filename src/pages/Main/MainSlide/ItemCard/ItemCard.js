@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Card from "./Card/Card";
 import { BiCircle } from "react-icons/bi";
 import "./ItemCard.scss";
 
@@ -7,6 +8,7 @@ class ItemCard extends Component {
     super();
     this.state = {
       list: 1,
+      products: [],
     };
   }
 
@@ -38,6 +40,16 @@ class ItemCard extends Component {
   };
 
   componentDidMount() {
+    fetch("http://localhost:3000/itemCardData.json", {
+      method: "GET",
+    })
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          products: data.itemCardData,
+        });
+      });
+
     setInterval(this.imgSlideLeft, 5000);
   }
 
@@ -54,44 +66,17 @@ class ItemCard extends Component {
             }
           >
             <div className="firstList">
-              <div className="firstCard">
-                <img src="./images/card_1.jpg" alt="서브1" />
-                <p className="itemTitle">뷰티슬립</p>
-                <p className="itemDesc">머이리 비싸 이거</p>
-                <p className="itemPrice">￦ 20,000</p>
-              </div>
-              <div className="firstCard">
-                <img src="./images/card_2.jpg" alt="서브2" />
-                <p className="itemTitle">뷰티슬립</p>
-                <p className="itemDesc">머이리 비싸 이거</p>
-                <p className="itemPrice">￦ 20,000</p>
-              </div>
-              <div className="firstCard">
-                <img src="./images/card_3.jpg" alt="서브3" />
-                <p className="itemTitle">뷰티슬립</p>
-                <p className="itemDesc">머이리 비싸 이거</p>
-                <p className="itemPrice">￦ 20,000</p>
-              </div>
-            </div>
-            <div className="secondList second">
-              <div className="secondCard">
-                <img src="./images/card_4.jpg" alt="서브1" />
-                <p className="itemTitle">뷰티슬립</p>
-                <p className="itemDesc">머이리 비싸 이거</p>
-                <p className="itemPrice">￦ 20,000</p>
-              </div>
-              <div className="secondCard">
-                <img src="./images/card_5.jpg" alt="서브2" />
-                <p className="itemTitle">뷰티슬립</p>
-                <p className="itemDesc">머이리 비싸 이거</p>
-                <p className="itemPrice">￦ 20,000</p>
-              </div>
-              <div className="secondCard">
-                <img src="./images/card_6.jpg" alt="서브3" />
-                <p className="itemTitle">뷰티슬립</p>
-                <p className="itemDesc">머이리 비싸 이거</p>
-                <p className="itemPrice">￦ 20,000</p>
-              </div>
+              {this.state.products.map((product, index) => {
+                return (
+                  <Card
+                    key={index}
+                    img={product.img}
+                    name={product.name}
+                    desc={product.description}
+                    price={product.price}
+                  />
+                );
+              })}
             </div>
           </div>
           <div className="itemSlideBtn">

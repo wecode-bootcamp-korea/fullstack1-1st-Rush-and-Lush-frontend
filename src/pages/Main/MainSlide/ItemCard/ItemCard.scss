@@ -29,58 +29,16 @@
         .firstCard {
           text-align: center;
           margin-left: 30px;
-          width: 270px;
-          height: 270px;
-          // object-fit: cover;
 
           img {
             width: 270px;
             height: 270px;
             object-fit: cover;
-          }
+          };
 
           &:last-child {
             margin-right: 30px;
-          }
-  
-          .itemTitle {
-            margin-top: 10px;
-            font-size: 18px;
-            };
-  
-          .itemDesc {
-            margin-top: 3px;
-            font-size: 14px;
-            font-weight: 100;
-            color: rgb(87, 87, 87);
           };
-  
-          .itemPrice {
-            margin-top: 10px;
-            font-size: 16px;
-            font-weight: 700;
-          };
-        };
-      };
-
-      .secondList {
-        display: flex;
-        
-        .secondCard {
-          text-align: center;
-          margin-left: 30px;
-          
-          // object-fit: cover;
-
-          img {
-            width: 270px;
-            height: 270px;
-            object-fit: cover;
-          }
-
-          &:last-child {
-            margin-right: 30px;
-          }
   
           .itemTitle {
             margin-top: 10px;

@@ -40,16 +40,6 @@ class MainSlide extends Component {
   };
 
   componentDidMount() {
-    // fetch("http://localhost:3000/mainSlideData.json", {
-    //   method: "GET",
-    // })
-    //   .then(res => res.json())
-    //   .then(data => {
-    //     this.setState({
-    //       id: data.mainSlideData.img,
-    //     });
-    //   });
-
     setInterval(this.imgSlideLeft, 3000);
   }
 
