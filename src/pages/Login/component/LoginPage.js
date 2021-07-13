@@ -28,24 +28,24 @@ class LoginPage extends Component {
     }
   };
 
-  loginPost = event => {
-    event.preventDefault();
-    fetch("/pages/Login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: this.state.idValue,
-        password: this.state.pwValue,
-      }),
-    })
-      .then(response => response.json())
-      .then(result => {
-        console.log("결과: ", result);
-        localStorage.setItem("suho", result.token);
-      });
-  };
+  // loginPost = event => {
+  //   event.preventDefault();
+  //   fetch("/pages/Login", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       email: this.state.idValue,
+  //       password: this.state.pwValue,
+  //     }),
+  //   })
+  //     .then(response => response.json())
+  //     .then(result => {
+  //       console.log("결과: ", result);
+  //       localStorage.setItem("suho", result.token);
+  //     });
+  // };
 
   render() {
     return (
@@ -86,7 +86,7 @@ class LoginPage extends Component {
                 </div>
                 <div className="loginButtonWrap">
                   <button
-                    onClick={(this.loginAlert, this.loginPost)}
+                    onClick={this.loginAlert}
                     type="button"
                     className="loginButton"
                   >
