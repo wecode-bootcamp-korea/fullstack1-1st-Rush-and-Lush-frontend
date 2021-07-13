@@ -3,6 +3,9 @@
   justify-content: center;
 
   .detailContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .detailDescWrap {
       .detailDesc {
@@ -43,26 +46,27 @@
        padding-top: 100px;
 
        .firstImg {
-         float: left;
-         width: 1060px;
+         width: 960px;
          height: 555px;
-         background-color: burlywood;
+         text-align: center;
        };
 
        .firstParagraph {
          position: absolute;
-         top: 70%;
+         top: 90%;
          padding: 50px;
          line-height: 200%;
          background-color: white;
+         font-size: 20px;
        };
      };
    };
 
    .secondParagraph {
-     padding: 200px 0 150px 0;
+     padding: 350px 0 120px 0;
      text-align: center;
      line-height: 200%;
+
      font: {
        size: 18px;
        weight: 300;
@@ -73,11 +77,22 @@
      };
    };
 
+   button {
+     margin-bottom: 150px;
+     padding: 0 50px;
+     height: 50px;
+     background-color: #fff;
+     border: 1px solid #78ed64;
+     border-radius: 3%;
+     font-size: 20px;
+     color: #78ed64;
+   }
+
    .thirdImg {
      margin-bottom: 200px;
      width: 1060px;
      height: 555px;
-     background-color: rgb(161, 196, 230);
+     text-align: center;
    }
   };
 }; 

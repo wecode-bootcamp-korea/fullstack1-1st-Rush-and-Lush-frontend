@@ -9,27 +9,30 @@ class ItemDetail extends Component {
           <div className="detailDescWrap">
             <div className="detailDesc">
               <p>솝</p>
-              <p>허니 아이 워시드 더 키즈</p>
+              <p>허니 제스트</p>
               <p>Honey I Washed The Kids</p>
             </div>
           </div>
           <div className="detailDescImgWrap">
             <div className="detailDescImg">
-              <div className="firstImg">d</div>
+              <div className="firstImg">
+                <img
+                  src="https://images.unsplash.com/photo-1555035900-54c17f3bc1eb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=925&q=80"
+                  alt="디테일이미지_1"
+                />
+              </div>
               <div className="firstParagraph">
                 <p>미리 써 본 후기</p>
                 <p>
-                  친구가 여행갈 때 가져온
+                  달콤한 향을 곁들인
                   <br />
-                  '카마' 솔리드 퍼퓸을 사용해보고
+                  '허니 제스트' 솝을 사용해보고
                   <br />
-                  넘 좋았습니다.
+                  이제껏 써봤던 비누들과 차원이 다른
                   <br />
-                  무게도 얼마 안나가는데
+                  경험을 느껴보세요.
                   <br />
-                  너무 비싼거 아니냐고 흑흑.
-                  <br />
-                  by. 민기
+                  by. WESH
                 </p>
               </div>
             </div>
@@ -49,12 +52,16 @@ class ItemDetail extends Component {
             </p>
             <p>
               <strong>TIP</strong>
-              <i>!</i> 홈페이지에서 '카마'를 검색하고 더욱 더 다양한 향기를
-              즐겨보세요!
+              <i>!</i> 홈페이지에서 '허니 제스트'를 검색하고 더욱 더 다양한
+              향기를 즐겨보세요!
             </p>
           </div>
+          <button>SHOP NOW</button>
           <div className="thirdImg">
-            <img src="" alt="" />
+            <img
+              src="https://images.unsplash.com/photo-1626080308407-16645977b12f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80"
+              alt="디테일이미지_2"
+            />
           </div>
         </div>
       </div>
