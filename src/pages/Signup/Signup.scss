@@ -49,12 +49,12 @@
       font-size: 14px;
     }
 
-    .redBoxWrap {
+    .requiredMarksWrap {
       margin-top: 14px;
     }
   }
 
-  .redBox {
+  .requiredMarks {
     display: inline-block;
     width: 6px;
     height: 6px;
@@ -80,7 +80,7 @@
       margin-right: 40px;
     }
 
-    .noneRedBox {
+    .noneRequiredMarks {
       display: flex;
       margin-left: 14px;
     }
@@ -118,9 +118,9 @@
         color: #8f8f8f;
 
         .inputCheckbox {
-          margin: 9px 7px 0 0;
           width: 22px;
           height: 22px;
+          margin: 9px 7px 0 0;
           vertical-align: -5px;
           border-color: #8f8f8f;
         }
@@ -196,7 +196,7 @@
   .signButton {
     display: flex;
     justify-content: center;
-    padding: 40px 0 40px 0;
+    padding: 40px 0 150px 0;
 
     button {
       width: 280px;
