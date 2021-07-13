@@ -38,6 +38,15 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     flex-direction: row;
-    margin: 10px 0 100px;
+    margin-top: 10px;
+  }
+
+  .ListPaging {
+    @include display;
+    margin: 40px 0 100px;
+    span {
+      padding: 10px 40px;
+      font-weight: 500;
+    }
   }
 }

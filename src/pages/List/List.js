@@ -15,6 +15,7 @@ class List extends Component {
           <div className="listNav">
             <ListNavTitle />
             <ListNavCategory />
+
             <div className="listProductContainer">
               {ListProductItemData.map(ListItems => (
                 <ListProductItem
@@ -27,6 +28,15 @@ class List extends Component {
                   tagButton={ListItems.tagButton}
                 />
               ))}
+            </div>
+            <div className="ListPaging">
+              <nav>
+                <ul className="ListPagination">
+                  <li>
+                    <span>1</span>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>
