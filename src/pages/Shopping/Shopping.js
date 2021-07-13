@@ -11,7 +11,9 @@ class Shopping extends Component {
               <p className="shoppingCartTitle">SHOPPING CART</p>
               <div className="shoppingCartContents">
                 <ul className="shoppingCartContentsList">
-                  <li>Cart</li>
+                  <li className="thisPage" title="현재 페이지">
+                    Cart
+                  </li>
                   <span>&gt;</span>
                   <li>Order</li>
                   <span>&gt;</span>
