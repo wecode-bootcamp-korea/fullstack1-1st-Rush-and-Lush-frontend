@@ -10,7 +10,7 @@ class ListProductItem extends Component {
         <div className="listProduct">
           <div className="listProductImageBox">
             <a href="/" target="_blank">
-              <img src={this.props.image} alt="" />
+              <img src={this.props.image} alt={this.props.alt} />
             </a>
           </div>
           <div className="listProductInfoBox">

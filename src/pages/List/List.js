@@ -20,6 +20,7 @@ class List extends Component {
                 <ListProductItem
                   key={ListItems.id}
                   image={ListItems.img}
+                  alt={ListItems.alt}
                   name={ListItems.name}
                   subName={ListItems.subName}
                   price={ListItems.price}

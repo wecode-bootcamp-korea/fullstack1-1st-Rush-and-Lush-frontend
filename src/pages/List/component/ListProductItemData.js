@@ -6,6 +6,7 @@ const ListItemData = [
     price: "14,000",
     img: "https://i.postimg.cc/zf2742n9/card-1.jpg",
     tagButton: "NEW",
+    alt: "레몬 제스트",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ const ListItemData = [
     price: "14,000",
     img: "https://i.postimg.cc/QMKKx6LL/card-2.jpg",
     tagButton: "NEW",
+    alt: "루밥 앤드 커스타",
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ const ListItemData = [
     price: "14,000",
     img: "https://i.postimg.cc/pVsW-4D7K/card-3.jpg",
     tagButton: "VEGAN",
+    alt: "13 솝 언럭키 포 더트",
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ const ListItemData = [
     price: "22,000",
     img: "https://i.postimg.cc/pLFPm3dB/card-4.jpg",
     tagButton: "VEGAN",
+    alt: "로즈 아르간",
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ const ListItemData = [
     price: "13,000",
     img: "https://i.postimg.cc/W4mjnrgF/card-5.jpg",
     tagButton: "VEGAN",
+    alt: "슬리피",
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ const ListItemData = [
     price: "13,000",
     img: "https://i.postimg.cc/j5sTk548/card-6.jpg",
     tagButton: "VEGAN",
+    alt: "카마",
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ const ListItemData = [
     price: "9,000",
     img: "https://i.postimg.cc/gJNp9WMG/card-7.jpg",
     tagButton: "VEGAN",
+    alt: "술타나 오브 솝",
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ const ListItemData = [
     price: "9,000",
     img: "https://i.postimg.cc/Bbb04VyH/card-8.jpg",
     tagButton: "품절",
+    alt: "보헤미안",
   },
   {
     id: 9,
@@ -70,6 +78,7 @@ const ListItemData = [
     price: "9,000",
     img: "https://ws.cconma.com/Upload/Product/400x350/2019/01/5c494690da390.jpeg",
     tagButton: "품절",
+    alt: "밀키 바",
   },
 ];
 
