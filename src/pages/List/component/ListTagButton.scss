@@ -1,0 +1,32 @@
+.tagButton {
+  width: 74px;
+  height: 27px;
+  margin: 0 2px 5px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  &.NEW {
+    background-color: #007a29;
+    &:hover {
+      background-color: #03c75a;
+    }
+  }
+
+  &.VEGAN {
+    background-color: #92ac00;
+    &:hover {
+      background-color: rgb(30, 173, 230);
+    }
+  }
+
+  &.품절 {
+    background-color: rgb(228, 108, 61);
+    &:hover {
+      background-color: rgb(255, 72, 0);
+    }
+  }
+}

@@ -1,127 +1,50 @@
+@mixin display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .listProduct {
   width: 285px;
   height: 396.2px;
   margin: 0 5px 30px;
   text-align: center;
-  position: relative;
-  z-index: 2;
-  overflow: hidden;
-  &:hover .IconBox::before {
-    content: "";
-  }
-
-  .IconBox {
-    width: 100%;
-    height: 360px;
-    position: absolute;
-    z-index: -1;
-    overflow: hidden;
-
-    &:hover .wishListIcon::before {
-      content: "";
-    }
-    // background-color: royalblue;
-
-    .wishListIcon {
-      // width: 10px;
-      // height: 10px;
-      background-color: red;
-      z-index: 3;
-      position: absolute;
-      // overflow: hidden;
-      // bottom: 80%;
-      // right: 40%;
-      &::before {
-        display: block;
-        background-color: rgba(255, 100, 10, 0.2);
-      }
-    }
-
-    &:before {
-      //   // position: relative;
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(255, 200, 0, 0.1);
-    }
-
-    // background-color: blue;
-  }
-  // background-color: black;}
-
-  // a {
-  //   display: block;
-  //   // width: auto;
-  //   text-decoration: none;
-  //   &:hover {
-  //     top: 52%;
-  //   }
-  // }
-  // .wishListIcon {
-  //   position: relative;
-  //   overflow: hidden;
-  //   background-color: yellow;
-  //   &:hover {
-  //     background-color: blue;
-  //   }
-
-  //   .s11 {
-  //     position: absolute;
-  //     // bottom: 150%;
-  //     left: 30px;
-  //     z-index: 2;
-  //     color: red;
-  //     font-size: 26px;
-  //     background-color: yellowgreen;
-  //   }
-  // }
 
   .listProductImageBox {
     img {
       width: 100%;
       height: 285px;
       border: none;
-      // background-color: #333333;
     }
   }
   .listProductInfoBox {
     height: 27px;
 
-    // .listProductButtonBox {
-    //   display: flex;
-    //   justify-content: space-between;
-    // }
     .listProductNameBox {
       a {
         text-decoration: none;
       }
 
       .listProductName {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include display;
         height: 21px;
         font-size: 16px;
         color: #333333;
       }
+
       .listProductSubName {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include display;
         height: 20px;
         font-size: 14px;
         color: #8f8f8f;
       }
     }
+
     .listProductPrice {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include display;
       height: 30px;
       margin-top: 10px;
       font-size: 16px;
-      // p {
-      // }
     }
   }
 }

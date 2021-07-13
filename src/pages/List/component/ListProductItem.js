@@ -1,29 +1,21 @@
 import React, { Component } from "react";
 import "./ListProductItem.scss";
-import ListProductTagButton from "../component/ListProductButton/ListTagBtnNew";
-import ListTagBtnVegan from "../component/ListProductButton/ListTagBtnVegan";
-import ListTagBtnSoldOut from "../component/ListProductButton/ListTagBtnSoldOut";
+import ListTagButton from "./ListTagButton";
 
 class ListProductItem extends Component {
   render() {
+    console.log("이미지확인", this.props.img);
     return (
-      <>
+      <div className="ListProductItem">
         <div className="listProduct">
-          <div className="IconBox">
-            <a className="wishListIcon" href="http://www.naver.com">
-              {/* <p className="s11">11</p> */}
-            </a>
-          </div>
           <div className="listProductImageBox">
             <a href="/" target="_blank">
-              <img src={this.props.img} alt="" />
+              <img src={this.props.image} alt="" />
             </a>
           </div>
           <div className="listProductInfoBox">
             <div className="listProductTagBtnBox">
-              <ListProductTagButton />
-              <ListTagBtnVegan />
-              <ListTagBtnSoldOut />
+              <ListTagButton tagButton={this.props.tagButton}></ListTagButton>
             </div>
             <div className="listProductNameBox">
               <a href="/">
@@ -33,12 +25,12 @@ class ListProductItem extends Component {
             </div>
             <div className="listProductPrice">
               <p>
-                <strong>{this.props.price}</strong>
+                <strong>₩ {this.props.price}</strong>
               </p>
             </div>
           </div>
         </div>
-      </>
+      </div>
     );
   }
 }

@@ -1,7 +1,11 @@
-.listPageHeader {
+@mixin display {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.listPageHeader {
+  @include display;
   flex-direction: column;
   width: auto;
   height: 500px;
@@ -21,9 +25,7 @@
 }
 
 .listPageContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include display;
   width: 100%;
 
   .listNav {

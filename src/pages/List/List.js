@@ -9,7 +9,7 @@ import ListPageHeader from "./component/ListPageHeader";
 class List extends Component {
   render() {
     return (
-      <>
+      <div className="List">
         <ListPageHeader />
         <div className="listPageContainer">
           <div className="listNav">
@@ -23,12 +23,13 @@ class List extends Component {
                   name={ListItems.name}
                   subName={ListItems.subName}
                   price={ListItems.price}
+                  tagButton={ListItems.tagButton}
                 />
               ))}
             </div>
           </div>
         </div>
-      </>
+      </div>
     );
   }
 }

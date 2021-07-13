@@ -5,17 +5,23 @@
   flex-direction: column;
   width: auto;
   height: 500px;
-  background: black;
+  background: url(https://cdn.pixabay.com/photo/2020/02/08/10/35/soap-4829708_960_720.jpg);
+  background-size: 1500px;
+  background-repeat: no-repeat;
+  background-position: center;
 
   .listPageHeaderTxt {
     height: 80px;
     color: white;
     font-size: 68px;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px rgb(226, 226, 226);
   }
 
   .listPageHeaderTxt2 {
     font-size: 26px;
     color: white;
     letter-spacing: 0.2em;
+    text-shadow: 1px 1px 1px rgb(219, 219, 219);
   }
 }
