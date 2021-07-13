@@ -5,6 +5,7 @@ import "./LushProductsList.scss";
 class LushProductsList extends Component {
   render() {
     const { title, elements } = this.props;
+
     return (
       <div className="LushProductsList">
         <ul className="productList">

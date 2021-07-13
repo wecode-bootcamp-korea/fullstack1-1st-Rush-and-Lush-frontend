@@ -19,6 +19,7 @@ class LushIntro extends Component {
 
   render() {
     const { subNav } = this.state;
+
     return (
       <li className="LushIntro">
         <div className="toolTipCategory">
