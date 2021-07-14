@@ -1,3 +1,17 @@
+@mixin inputStyle {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(204, 204, 204);
+}
+
+@mixin inputActiveStyle {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  border: 1px solid #78ed64;
+}
+
 .join {
   width: 1080px;
   margin: 0 auto;
@@ -60,15 +74,12 @@
     height: 6px;
     background: red;
     margin-right: 8px;
+    margin-top: 2px;
   }
 
-  .inputRedBox {
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    background: red;
-    margin-right: 8px;
-    margin-top: 3px;
+  .noneRequiredMarks {
+    display: flex;
+    margin-left: 14px;
   }
 
   .singupFormWrap {
@@ -80,19 +91,63 @@
       margin-right: 40px;
     }
 
-    .noneRequiredMarks {
-      display: flex;
-      margin-left: 14px;
-    }
-
     .inputBox {
       width: 380px;
 
-      input {
-        width: 100%;
-        height: 40px;
-        margin-bottom: 20px;
-        border: 1px solid rgb(204, 204, 204);
+      .idInputBox {
+        @include inputStyle;
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .idActiveBox {
+        @include inputActiveStyle;
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .pwInputBox {
+        @include inputStyle;
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .pwActiveBox {
+        @include inputActiveStyle;
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .pwCheckInputBox {
+        @include inputStyle;
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .pwCheckActiveBox {
+        @include inputActiveStyle;
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .nameInputBox {
+        @include inputStyle;
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .nickNameInputBox {
+        @include inputStyle;
+        &:focus {
+          outline: none;
+        }
       }
     }
 
