@@ -15,7 +15,7 @@ class NonMembersLogin extends Component {
                 <span className="loginIconContainer">
                   <FaUserCircle size="24" className="userIcon" />
                   <input
-                    classname="idInput"
+                    className="idInput"
                     type="text"
                     placeholder="주문자명"
                   />
@@ -24,7 +24,7 @@ class NonMembersLogin extends Component {
                   <span className="loginIconContainer">
                     <MdLock size="24" className="lockIcon" />
                     <input
-                      classname="pwInput"
+                      className="pwInput"
                       type="password"
                       placeholder="주문번호"
                     />

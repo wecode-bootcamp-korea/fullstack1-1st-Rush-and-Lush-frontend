@@ -6,7 +6,6 @@ import List from "./pages/List/List.js";
 import Detail from "./pages/Detail/Detail.js";
 import Login from "./pages/Login/Login.js";
 import Signup from "./pages/Signup/Signup.js";
-import NonMembersLogin from "./pages/Login/NonMembersLogin.js";
 import Footer from "./component/Footer/Footer.js";
 import Nav from "./component/Nav/Nav.js";
 
@@ -19,7 +18,6 @@ class Routes extends React.Component {
           <Route exact path="/list" component={List} />
           <Route exact path="/detail" component={Detail} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/nonMembersLogin" component={NonMembersLogin} />
           <Route exact path="/signup" component={Signup} />
         </Switch>
         <Nav />

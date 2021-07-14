@@ -2,6 +2,7 @@ import { Component } from "react";
 import "./LoginPage.scss";
 import { FaUserCircle } from "react-icons/fa";
 import { MdLock } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 class LoginPage extends Component {
   constructor() {
@@ -9,6 +10,8 @@ class LoginPage extends Component {
     this.state = {
       idValue: "",
       pwValue: "",
+      idBorderColorState: false,
+      pwBorderColorState: false,
     };
   }
 
@@ -22,30 +25,26 @@ class LoginPage extends Component {
 
   loginAlert = () => {
     if (this.state.idValue === "") {
-      alert("ID를 입력하세요.");
+      return alert("아이디를 입력하세요.");
+    }
+    if (!this.state.idValue.includes("@")) {
+      alert("@를 포함한 아이디를 입력하세요.");
     } else if (this.state.pwValue === "") {
-      alert("PW를 입력하세요.");
+      alert("비밀번호를 입력하세요.");
     }
   };
 
-  // loginPost = event => {
-  //   event.preventDefault();
-  //   fetch("/pages/Login", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({
-  //       email: this.state.idValue,
-  //       password: this.state.pwValue,
-  //     }),
-  //   })
-  //     .then(response => response.json())
-  //     .then(result => {
-  //       console.log("결과: ", result);
-  //       localStorage.setItem("suho", result.token);
-  //     });
-  // };
+  idBorderChangeColor = () => {
+    this.state.idValue.includes("@")
+      ? this.setState({ idBorderColorState: true })
+      : this.setState({ idBorderColorState: false });
+  };
+
+  pwBorderChangeColor = () => {
+    this.state.pwValue.length >= 8
+      ? this.setState({ pwBorderColorState: true })
+      : this.setState({ pwBorderColorState: false });
+  };
 
   render() {
     return (
@@ -58,10 +57,13 @@ class LoginPage extends Component {
                 <span className="loginIconContainer">
                   <FaUserCircle size="24" className="userIcon" />
                   <input
-                    className="idInput"
+                    className={
+                      this.state.idBorderColorState ? "idActive" : "idInput"
+                    }
                     type="text"
                     placeholder="아이디"
                     onChange={this.handleIdInput}
+                    onKeyUp={this.idBorderChangeColor}
                   />
                   <div>{this.state.name}</div>
                 </span>
@@ -69,10 +71,13 @@ class LoginPage extends Component {
                   <span className="loginIconContainer">
                     <MdLock size="24" className="lockIcon" />
                     <input
-                      classname="pwInput"
+                      className={
+                        this.state.pwBorderColorState ? "pwActive" : "pwInput"
+                      }
                       type="password"
                       placeholder="비밀번호"
                       onChange={this.handlePwInput}
+                      onKeyUp={this.pwBorderChangeColor}
                     />
                   </span>
                 </div>
@@ -82,7 +87,9 @@ class LoginPage extends Component {
                     id="idSaveLabel"
                     type="checkbox"
                   />
-                  <label for="idSaveLabel">아이디 저장</label>
+                  <label className="idCheckBoxText" htmlFor="idSaveLabel">
+                    아이디 저장
+                  </label>
                 </div>
                 <div className="loginButtonWrap">
                   <button
@@ -95,11 +102,12 @@ class LoginPage extends Component {
                 </div>
               </form>
             </div>
-
             <div className="loginMenu">
-              <button type="button" className="singUp">
-                <em>회원가입</em>
-              </button>
+              <Link to="signup">
+                <button type="button" className="singUp">
+                  <em>회원가입</em>
+                </button>
+              </Link>
               <div className="divider"></div>
               <button type="button" className="findId">
                 <em>아이디 찾기</em>

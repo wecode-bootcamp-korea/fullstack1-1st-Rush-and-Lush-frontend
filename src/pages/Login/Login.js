@@ -8,33 +8,33 @@ class Login extends Component {
     super();
     this.state = {
       currentId: 1,
-      suho: true,
-      suke: false,
+      memberLogin: true,
+      noneMemberLogin: false,
     };
   }
 
   changeId1 = id => {
     this.setState({ currentId: id });
-    if (this.state.suho !== this.state.suke) {
-      this.setState({ suho: true, suke: false });
+    if (this.state.memberLogin !== this.state.noneMemberLogin) {
+      this.setState({ memberLogin: true, noneMemberLogin: false });
     } else {
-      this.setState({ suho: false, suke: true });
+      this.setState({ memberLogin: false, noneMemberLogin: true });
     }
   };
 
   changeId2 = id => {
     this.setState({ currentId: id });
-    if (this.state.suho === this.state.suke) {
-      this.setState({ suho: true, suke: false });
+    if (this.state.memberLogin === this.state.noneMemberLogin) {
+      this.setState({ memberLogin: true, noneMemberLogin: false });
     } else {
-      this.setState({ suho: false, suke: true });
+      this.setState({ memberLogin: false, noneMemberLogin: true });
     }
   };
 
   render() {
-    const { currentId, suho, suke } = this.state;
+    const { currentId, memberLogin, noneMemberLogin } = this.state;
     return (
-      <div>
+      <div className="login">
         <div className="MembersTab">
           <div className="loginTitle">
             <h2>로그인</h2>
@@ -44,7 +44,7 @@ class Login extends Component {
               <li>
                 <button
                   type="button"
-                  className={suho ? "memberActive" : "nonmemberActive"}
+                  className={memberLogin ? "memberActive" : "nonmemberActive"}
                   onClick={() => this.changeId1(1)}
                 >
                   회원
@@ -53,7 +53,9 @@ class Login extends Component {
               <li>
                 <button
                   type="button"
-                  className={suke ? "memberActive" : "nonmemberActive"}
+                  className={
+                    noneMemberLogin ? "memberActive" : "nonmemberActive"
+                  }
                   onClick={() => this.changeId2(2)}
                 >
                   비회원

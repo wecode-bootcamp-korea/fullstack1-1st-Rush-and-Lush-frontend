@@ -8,11 +8,50 @@
       padding-top: 55px;
 
       .loginIconContainer {
-        input {
-          width: 320px;
+        .idInput {
+          width: 335px;
           height: 50px;
           font-size: 16px;
           text-align: center;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .idActive {
+          width: 335px;
+          height: 50px;
+          font-size: 16px;
+          text-align: center;
+          border: 1px solid #78ed64;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .pwInput {
+          width: 335px;
+          height: 50px;
+          font-size: 16px;
+          text-align: center;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .pwActive {
+          width: 335px;
+          height: 50px;
+          font-size: 16px;
+          text-align: center;
+          border: 1px solid #78ed64;
+
+          &:focus {
+            outline: none;
+          }
         }
       }
     }
@@ -47,14 +86,18 @@
   }
   .saveCheckBoxWrap {
     padding-top: 20px;
-    width: 320px;
+    width: 335px;
     color: #8f8f8f;
+    .idCheckBoxText {
+      font-size: 14px;
+    }
     .inputCheckbox {
       margin: 0 7px 0 0;
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
       vertical-align: -5px;
       border-color: #8f8f8f;
+      font-size: 13px;
     }
   }
 
@@ -62,7 +105,7 @@
     padding-top: 20px;
 
     .loginButton {
-      width: 320px;
+      width: 335px;
       height: 50px;
       background-color: black;
       color: white;
@@ -78,7 +121,7 @@
 
   .loginMenu {
     padding-top: 20px;
-    width: 320px;
+    width: 335px;
     text-align: center;
 
     .divider {
@@ -104,6 +147,7 @@
       outline: 0;
       background-color: white;
       color: #8f8f8f;
+      cursor: pointer;
     }
     .findId {
       border: 0;
@@ -125,7 +169,7 @@
     margin: 45px 0 150px 0;
     border: 1px solid #c3c3c3;
     height: 50px;
-    width: 320px;
+    width: 335px;
     text-decoration: none;
     color: #8f8f8f;
     font-size: 13px;
