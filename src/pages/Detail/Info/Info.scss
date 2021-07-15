@@ -1,0 +1,184 @@
+@mixin display {
+  display: flex;
+  padding-top: 25px;
+};
+
+@mixin dl {
+  display: flex;
+  align-items: center;
+
+  dt {
+    font: {
+      size: 14px;
+      weight: 300;
+    }
+  };
+
+  dd {
+    font-size: 24px;
+  };
+};
+
+@mixin orderBtn {
+  width: 285px;
+  height: 50px;
+  border: 1px solid black;
+  cursor: pointer;
+};
+
+.Info {
+  .detailInfo {
+    width: 580px;
+
+    .itemHeader {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgb(179, 179, 179);
+
+      .itemName {
+        font-size: 28px;
+      }
+
+      .hashtag {
+        padding: 12px 0 26px 0;
+        font-size: 16px;
+        color: rgb(143, 143, 143);
+      };
+
+      .icon {
+        display: flex;
+        flex-direction: row;
+
+        div {
+          padding-left: 6px;
+
+          &:last-child {
+            padding-top: 1px;
+          }
+        };
+      };
+    };
+
+    .itemInfo {
+      margin-top: 26px;
+
+      .reviewLink {
+        display: flex;
+        font-size: 14px;
+
+        a {
+          color: black;
+        };
+      };
+
+      .goodToKnow {
+        padding-top: 10px;
+        font-size: 14px;
+      };
+
+      .itemPrice {
+        @include display;
+
+        dt {
+          width: 80px;
+          font-size: 14px;
+        };
+
+        dd {
+          font-size: 16px;
+        };
+      };
+
+      .itemWeight {
+        @include display;
+        font-size: 14px;
+
+        dt {
+          width: 80px;
+        };
+      };
+
+      .itemQuantity {
+        @include display;
+        align-items: center;
+        padding-bottom: 10px;
+        font-size: 14px;
+        border-bottom: 1px solid rgb(179, 179, 179);
+
+        p:first-child {
+          width: 80px;
+        };
+
+        p:last-child {
+          padding-left: 14px;
+        }
+
+        .count {
+          display: flex;
+
+          p {
+            width: 40px;
+            height: 40px;
+            padding-top: 16px;
+            text-align: center;
+          }
+
+          button {
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 10%;
+            background-color: rgb(251, 251, 251);
+            transition: 0.2s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+              background-color: rgb(230, 230, 230);
+            }
+          }
+        };
+      };
+
+      .total {
+        @include display;
+        align-items: flex-end;
+        flex-direction: column;
+
+
+        .totalItemPrice {
+          @include dl;
+
+          dd:first-of-type{
+            padding: 0 5px 0 16px;
+          };
+        };
+
+        .totalPrice {
+          @include dl;
+          padding-top: 12px;
+
+          dd:first-of-type{
+            padding: 0 5px 0 16px;
+          };
+        };
+      };
+
+      .orderBtn {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 35px;
+
+        .cart {
+          @include orderBtn;
+          background-color: white;
+        };
+
+        .order {
+          @include orderBtn;
+          color: white;
+          background-color: black;
+        };
+      };
+    };
+  };
+}
