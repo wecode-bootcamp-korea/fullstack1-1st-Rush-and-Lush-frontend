@@ -13,6 +13,7 @@ class Detail extends Component {
     super();
     this.state = {
       products: [],
+      value: "",
     };
   }
 

@@ -3,7 +3,29 @@ import { BsImages } from "react-icons/bs";
 import "./Review.scss";
 
 class Review extends Component {
+  constructor() {
+    super();
+    this.state = {
+      value: "",
+      commentList: [],
+    };
+  }
+
+  getValue = event => {
+    this.setState({
+      value: event.target.value,
+    });
+  };
+
+  addComment = () => {
+    this.setState({
+      commentList: this.state.commentList.concat([this.state.value]),
+      value: "",
+    });
+  };
+
   render() {
+    console.log(this.state.value);
     return (
       <div className="Review">
         <div className="reviewContainer">
@@ -47,11 +69,14 @@ class Review extends Component {
               </div>
               <div className="textAreaBox">
                 <textarea
+                  onKeyPress={this.addCommEnter}
                   className="textArea"
                   name="review"
                   cols="50"
                   rows="10"
                   placeholder="여러분의 소중한 리뷰를 작성해주세요!"
+                  onChange={this.getValue}
+                  type="text"
                 ></textarea>
               </div>
               <div className="attachBox">
@@ -62,7 +87,18 @@ class Review extends Component {
                   <input type="file" id="upLoadFile" name="upLoad"></input>
                 </div>
                 <div className="reviewArttachButtonBox">
-                  <button className="reviewArttachButton">후기작성</button>
+                  <button
+                    className="reviewArttachButton"
+                    onClick={this.addComment}
+                  >
+                    후기작성
+                  </button>
+                  <ul>
+                    <li>hello</li>
+                    {this.state.commentList.map((comm, idx) => {
+                      return <li key={idx}>{comm}</li>;
+                    })}
+                  </ul>
                 </div>
               </div>
             </div>
