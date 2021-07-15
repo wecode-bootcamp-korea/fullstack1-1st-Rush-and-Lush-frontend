@@ -8,46 +8,49 @@ class Signup extends Component {
       idValue: "",
       pwValue: "",
       pwCheckValue: "",
-      idBorderColorState: false,
-      pwBorderColorState: false,
-      pwCheckBorderColorState: false,
     };
   }
-
-  handleIdInput = event => {
-    console.log("아이디 값", event.target.value);
-    this.setState({ idValue: event.target.value });
+  getIdValue = event => {
+    console.log(event.target.value);
+    this.setState({
+      idValue: event.target.value,
+    });
   };
 
-  handlePwInput = event => {
-    console.log("비번 값", event.target.value);
-    this.setState({ pwValue: event.target.value });
+  getPwValue = event => {
+    console.log(event.target.value);
+    this.setState({
+      pwValue: event.target.value,
+    });
   };
 
-  handlePwCheckInput = event => {
-    console.log("비번체크 값", event.target.value);
-    this.setState({ pwCheckValue: event.target.value });
+  getPwCheckValue = event => {
+    console.log(event.target.value);
+    this.setState({
+      pwCheckValue: event.target.value,
+    });
   };
 
-  idBorderChangeColor = () => {
-    this.state.idValue.includes("@") && this.state.idValue.includes(".com")
-      ? this.setState({ idBorderColorState: true })
-      : this.setState({ idBorderColorState: false });
-  };
-
-  pwBorderChangeColor = () => {
-    this.state.pwValue.length >= 8
-      ? this.setState({ pwBorderColorState: true })
-      : this.setState({ pwBorderColorState: false });
-  };
-
-  pwCheckBorderChangeColor = () => {
-    this.state.pwValue === this.state.pwCheckValue
-      ? this.setState({ pwCheckBorderColorState: true })
-      : this.setState({ pwCheckBorderColorState: false });
-  };
+  // goToSignUp = event => {
+  //   const { idValue, pwValue } = this.state;
+  //   event.preventDefault();
+  //   fetch("http://localhost:8000/users/signup", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       email: idValue,
+  //       password: pwValue,
+  //     }),
+  //   })
+  //     .then(response => response.json())
+  //     .then(result => console.log("회원 가입 response: ", result))
+  //     .catch(error => console.log(error));
+  // };
 
   render() {
+    const { idValue, pwValue, pwCheckValue } = this.state;
     return (
       <div className="join">
         <div className="signStep">
@@ -78,14 +81,12 @@ class Signup extends Component {
                 <td>
                   <div className="inputBox">
                     <input
-                      className={
-                        this.state.idBorderColorState
-                          ? "idActiveBox"
-                          : "idInputBox"
-                      }
+                      id="inputIDValue"
+                      onChange={this.getIdValue}
                       type="text"
-                      onChange={this.handleIdInput}
-                      onKeyUp={this.idBorderChangeColor}
+                      className={
+                        idValue.includes("@") ? "idActiveBox" : "idInputBox"
+                      }
                     />
                   </div>
                 </td>
@@ -98,14 +99,12 @@ class Signup extends Component {
                 <td>
                   <div className="inputBox">
                     <input
-                      className={
-                        this.state.pwBorderColorState
-                          ? "pwActiveBox"
-                          : "pwInputBox"
-                      }
+                      id="inputPWValue"
+                      onChange={this.getPwValue}
                       type="password"
-                      onChange={this.handlePwInput}
-                      onKeyUp={this.pwBorderChangeColor}
+                      className={
+                        pwValue.length >= 8 ? "pwActiveBox" : "pwInputBox"
+                      }
                     />
                   </div>
                 </td>
@@ -116,16 +115,17 @@ class Signup extends Component {
                   비밀번호 확인
                 </th>
                 <td>
+                  {/* this.state.pwValue === this.state.pwCheckValue */}
                   <div className="inputBox">
                     <input
-                      className={
-                        this.state.pwCheckBorderColorState
-                          ? "pwCheckActiveBox"
-                          : "pwInputBox"
-                      }
+                      id="inputPWCheckValue"
+                      onChange={this.getPwCheckValue}
                       type="password"
-                      onChange={this.handlePwCheckInput}
-                      onKeyUp={this.pwCheckBorderChangeColor}
+                      className={
+                        pwCheckValue.length >= 8
+                          ? "pwCheckActiveBox"
+                          : "pwCheckInputBox"
+                      }
                     />
                   </div>
                 </td>
@@ -158,9 +158,9 @@ class Signup extends Component {
                   <div className="inputBoxEmail">
                     <input />
                     <select>
-                      <option>여러분</option>
-                      <option>미안하고</option>
-                      <option>고맙습니다.</option>
+                      <option>naver.com</option>
+                      <option>gmail.com</option>
+                      <option>hanmail.net</option>
                     </select>
                     <div className="saveCheckBoxWrap">
                       <input
@@ -220,7 +220,7 @@ class Signup extends Component {
           </table>
           <div className="bottomBorderLine"></div>
           <div className="signButton">
-            <button>회원가입</button>
+            <button onClick={this.goToSignUp}>회원가입</button>
           </div>
         </div>
       </div>
