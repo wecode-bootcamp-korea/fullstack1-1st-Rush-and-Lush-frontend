@@ -1,0 +1,72 @@
+.NonMembersLogin {
+  .LoginInput {
+    .loginForm {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 55px;
+
+      .loginIconContainer {
+        input {
+          width: 335px;
+          height: 50px;
+          font-size: 16px;
+          text-align: center;
+        }
+      }
+    }
+
+    .loginIconContainer {
+      position: relative;
+
+      .userIcon {
+        margin-left: 15px;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+
+      .lockIcon {
+        margin-left: 15px;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+    }
+
+    .inputBoxSapce {
+      padding-top: 10px;
+    }
+  }
+  .loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loginButtonWrap {
+    padding-top: 20px;
+
+    .loginButton {
+      width: 335px;
+      height: 50px;
+      background-color: black;
+      color: white;
+      font-size: 18px;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+    }
+    .loginButton:hover {
+      opacity: 0.8;
+    }
+  }
+  .caution {
+    padding: 20px 0 150px 0;
+    text-align: center;
+    color: #8f8f8f;
+    font-size: 14px;
+  }
+}

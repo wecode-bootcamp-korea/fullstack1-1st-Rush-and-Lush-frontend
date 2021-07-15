@@ -13,6 +13,7 @@ class Routes extends React.Component {
   render() {
     return (
       <Router>
+        <Nav />
         <Switch>
           {/* <Nav /> */}
           <Route exact path="/main" component={Main} />
@@ -22,6 +23,8 @@ class Routes extends React.Component {
           <Route exact path="/signup" component={Signup} />
         </Switch>
         {/* <Footer /> */}
+        <Nav />
+        <Footer />
       </Router>
     );
   }
