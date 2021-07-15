@@ -13,15 +13,6 @@ class LoginPage extends Component {
     };
   }
 
-  //   <input
-  //   id="inputIDValue"
-  //   onChange={this.getIdValue}
-  //   type="text"
-  //   className={
-  //     idValue.includes("@") ? "idActiveBox" : "idInputBox"
-  //   }
-  // />
-
   goToLogin = event => {
     const { idValue, pwValue } = this.state;
     event.preventDefault();
