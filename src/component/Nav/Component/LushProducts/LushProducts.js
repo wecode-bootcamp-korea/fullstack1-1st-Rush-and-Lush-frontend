@@ -11,10 +11,21 @@ class LushProducts extends Component {
     };
   }
 
+  // componentDidMount() {
+  //   fetch("/data/productsList.json")
+  //     .then(res => res.json())
+  //     .then(res => this.setState({ subNav: res.PRODUCTS_DATA }));
+  // }
+
   componentDidMount() {
-    fetch("/data/productsList.json")
+    fetch("http://192.168.0.5:8000/category?menu_id=1", {
+      method: "GET",
+    })
       .then(res => res.json())
-      .then(res => this.setState({ subNav: res.PRODUCTS_DATA }));
+      .then(res => {
+        console.log("서브네브인트로", res);
+        this.setState(console.log("레스", res));
+      });
   }
 
   render() {
@@ -28,13 +39,25 @@ class LushProducts extends Component {
               제품
             </Link>
             <div className="tooltipWindow">
-              {subNav.map((el, id) => (
-                <LushProductsList
-                  key={id}
-                  title={el.title}
-                  elements={el.elements}
-                />
-              ))}
+              {subNav.map((el, id) => {
+                console.log("카테고리네임", el.catagoryName);
+                return (
+                  <LushProductsList
+                    key={id}
+                    catagoryName={el.catagoryName}
+                    subCategories={el.subCategories}
+                  />
+                );
+              })}
+              {subNav.map((el, id) => {
+                return (
+                  <LushProductsList
+                    key={id}
+                    categoryName={el.catagoryName}
+                    subCategories={el.subCategories}
+                  />
+                );
+              })}
             </div>
           </li>
         </div>

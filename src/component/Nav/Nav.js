@@ -15,6 +15,24 @@ const CATEGORY = [
 ];
 
 class Nav extends Component {
+  constructor() {
+    super();
+    this.state = {
+      subNav: [],
+    };
+  }
+
+  componentDidMount() {
+    fetch("http://192.168.0.5:8000/category", {
+      method: "GET",
+    })
+      .then(res => res.json())
+      .then(res => {
+        console.log("서브네브프로덕트", res);
+        this.setState({ subNav: res.categories });
+      });
+  }
+
   render() {
     return (
       <nav className="Nav">
