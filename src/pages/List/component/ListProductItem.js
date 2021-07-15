@@ -25,7 +25,7 @@ class ListProductItem extends Component {
             </div>
             <div className="listProductPrice">
               <p>
-                <strong>₩ {this.props.price}</strong>
+                <strong>₩ {this.props.price.toLocaleString()}</strong>
               </p>
             </div>
           </div>
