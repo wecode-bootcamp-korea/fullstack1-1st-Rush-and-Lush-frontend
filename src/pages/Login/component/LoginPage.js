@@ -10,12 +10,20 @@ class LoginPage extends Component {
     this.state = {
       idValue: "",
       pwValue: "",
-      idBorderColorState: false,
-      pwBorderColorState: false,
     };
   }
 
+  //   <input
+  //   id="inputIDValue"
+  //   onChange={this.getIdValue}
+  //   type="text"
+  //   className={
+  //     idValue.includes("@") ? "idActiveBox" : "idInputBox"
+  //   }
+  // />
+
   handleIdInput = event => {
+    console.log(event.target.value);
     this.setState({ idValue: event.target.value });
   };
 
@@ -34,19 +42,8 @@ class LoginPage extends Component {
     }
   };
 
-  idBorderChangeColor = () => {
-    this.state.idValue.includes("@")
-      ? this.setState({ idBorderColorState: true })
-      : this.setState({ idBorderColorState: false });
-  };
-
-  pwBorderChangeColor = () => {
-    this.state.pwValue.length >= 8
-      ? this.setState({ pwBorderColorState: true })
-      : this.setState({ pwBorderColorState: false });
-  };
-
   render() {
+    const { idValue, pwValue } = this.state;
     return (
       <div className="Login">
         {/* {this.state.isMemberLogin ? <p>회원로그인</p> : <p>비회원로그인</p>} */}
@@ -57,13 +54,11 @@ class LoginPage extends Component {
                 <span className="loginIconContainer">
                   <FaUserCircle size="24" className="userIcon" />
                   <input
-                    className={
-                      this.state.idBorderColorState ? "idActive" : "idInput"
-                    }
+                    id="inputIDValue"
+                    onChange={this.handleIdInput}
+                    className={idValue.includes("@") ? "idActive" : "idInput"}
                     type="text"
                     placeholder="아이디"
-                    onChange={this.handleIdInput}
-                    onKeyUp={this.idBorderChangeColor}
                   />
                   <div>{this.state.name}</div>
                 </span>
@@ -71,13 +66,11 @@ class LoginPage extends Component {
                   <span className="loginIconContainer">
                     <MdLock size="24" className="lockIcon" />
                     <input
-                      className={
-                        this.state.pwBorderColorState ? "pwActive" : "pwInput"
-                      }
+                      id="inputIDValue"
+                      onChange={this.handlePwInput}
+                      className={pwValue.length >= 8 ? "pwActive" : "pwInput"}
                       type="password"
                       placeholder="비밀번호"
-                      onChange={this.handlePwInput}
-                      onKeyUp={this.pwBorderChangeColor}
                     />
                   </span>
                 </div>
