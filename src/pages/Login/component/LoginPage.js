@@ -22,12 +22,31 @@ class LoginPage extends Component {
   //   }
   // />
 
+  goToLogin = event => {
+    const { idValue, pwValue } = this.state;
+    event.preventDefault();
+    fetch("http://10.89.0.248:8000/users/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: idValue,
+        password: pwValue,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => console.log("로그인 response: ", result))
+      .catch(error => console.log(error));
+  };
+
   handleIdInput = event => {
     console.log(event.target.value);
     this.setState({ idValue: event.target.value });
   };
 
   handlePwInput = event => {
+    console.log(event.target.value);
     this.setState({ pwValue: event.target.value });
   };
 
@@ -86,7 +105,7 @@ class LoginPage extends Component {
                 </div>
                 <div className="loginButtonWrap">
                   <button
-                    onClick={this.loginAlert}
+                    onClick={this.goToLogin}
                     type="button"
                     className="loginButton"
                   >
