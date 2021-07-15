@@ -1,145 +1,157 @@
 @import "../../styles/common.scss";
 
 .Footer {
-  %category-style {
-    color: $white-color;
-    text-decoration: none;
+  .iconWesh {
+    width: 1920px;
+    height: 170px;
+    background: url(http://img.lush.co.kr/images/core/footer-icons.svg);
+    background-color: #f2f2f2;
+    background-repeat: no-repeat;
+    background-position: center;
+    // background-size: cover;
   }
 
-  width: 100%;
-  line-height: 1.4;
-  padding: 40px 0 80px 70px;
-  color: $white-color;
-  background-color: $black-color;
-  font-size: $font-footer-size;
-  font-family: $font-footer-applegothic;
-  letter-spacing: -0.5px;
-
-  .footer {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-    .subWrap {
-      width: 230px;
-      margin-left: 80px;
-
-      .lushLogo {
-        margin-bottom: 30px;
-
-        .footerMainLogo {
-          @extend %category-style;
-          font-size: $font-logo-size;
-          font-family: $font-logo-stack;
-          font-weight: $font-logo-weight;
-        }
-      }
-
-      .companyInfoContent {
-        margin-bottom: 10px;
-      }
-
-      .companyInfo1,
-      .companyInfo2 {
-        margin-bottom: 20px;
-
-        span {
-          margin-left: 5px;
-        }
-
-        .lushEmail {
-          margin-bottom: 15px;
-          text-decoration: underline;
-          cursor: pointer;
-        }
-      }
-
-      .icon {
-        margin-right: 5px;
-        color: $footer-icon-background-color;
-        font-size: $font-footer-icon-size;
-        cursor: pointer;
-      }
+  .footerWrap {
+    %category-style {
+      color: $white-color;
+      text-decoration: none;
     }
 
-    .subWrapRight {
-      width: 815px;
-      margin-top: 20px;
-      margin-left: -30px;
+    width: 100%;
+    line-height: 1.4;
+    padding: 40px 0 80px 70px;
+    color: $white-color;
+    background-color: $black-color;
+    font-size: $font-footer-size;
+    font-family: $font-footer-applegothic;
+    letter-spacing: -0.5px;
 
-      .footerCategory {
-        width: 700px;
+    .footer {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
 
-        li {
-          display: inline;
-          margin-right: 36px;
-          font-size: $font-footer-category-size;
-          cursor: pointer;
+      .subWrap {
+        width: 230px;
+        margin-left: 80px;
 
-          a {
+        .lushLogo {
+          margin-bottom: 30px;
+
+          .footerMainLogo {
             @extend %category-style;
+            font-size: $font-logo-size;
+            font-family: $font-logo-stack;
+            font-weight: $font-logo-weight;
           }
+        }
+
+        .companyInfoContent {
+          margin-bottom: 10px;
+        }
+
+        .companyInfo1,
+        .companyInfo2 {
+          margin-bottom: 20px;
+
+          span {
+            margin-left: 5px;
+          }
+
+          .lushEmail {
+            margin-bottom: 15px;
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+
+        .icon {
+          margin-right: 5px;
+          color: $footer-icon-background-color;
+          font-size: $font-footer-icon-size;
+          cursor: pointer;
         }
       }
 
-      .footerInput {
-        margin-top: 43px;
-        margin-bottom: 25px;
+      .subWrapRight {
+        width: 815px;
+        margin-top: 20px;
+        margin-left: -30px;
 
-        .emailInput {
-          width: 342px;
-          height: 14px;
-          line-height: 14px;
-          padding: 19px 0 21px 21px;
-          border: 0;
-          font-size: $font-footer-size;
-          vertical-align: middle;
-          outline: 0;
+        .footerCategory {
+          width: 700px;
+
+          li {
+            display: inline;
+            margin-right: 36px;
+            font-size: $font-footer-category-size;
+            cursor: pointer;
+
+            a {
+              @extend %category-style;
+            }
+          }
         }
 
-        .emailBtn {
-          width: 90px;
-          height: 40px;
-          line-height: 38px;
-          margin-left: -2px;
-          border: 1px solid $white-color;
-          background-color: $footer-inputEmailBtn-color;
-          color: $white-color;
-          font-size: $font-footer-size;
-          vertical-align: middle;
-          cursor: pointer;
-          &.active {
-            background-color: $black-color;
+        .footerInput {
+          margin-top: 43px;
+          margin-bottom: 25px;
+
+          .emailInput {
+            width: 342px;
+            height: 14px;
+            line-height: 14px;
+            padding: 19px 0 21px 21px;
+            border: 0;
+            font-size: $font-footer-size;
+            vertical-align: middle;
+            outline: 0;
+          }
+
+          .emailBtn {
+            width: 90px;
+            height: 40px;
+            line-height: 38px;
+            margin-left: -2px;
+            border: 1px solid $white-color;
+            background-color: $footer-inputEmailBtn-color;
+            color: $white-color;
+            font-size: $font-footer-size;
+            vertical-align: middle;
+            cursor: pointer;
+            &.active {
+              background-color: $black-color;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .lushTextForCustom {
+          font-size: $font-footer-lushtextforcustomer;
+
+          span {
+            margin-left: 8px;
+            font-size: $font-footer-lushtextforcustomer-span;
+            font-weight: $font-footer-lushtextforcustomer-span-weight;
+            text-decoration: underline;
             cursor: pointer;
           }
         }
       }
-
-      .lushTextForCustom {
-        font-size: $font-footer-lushtextforcustomer;
-
-        span {
-          margin-left: 8px;
-          font-size: $font-footer-lushtextforcustomer-span;
-          font-weight: $font-footer-lushtextforcustomer-span-weight;
-          text-decoration: underline;
-          cursor: pointer;
-        }
-      }
     }
-  }
 
-  .companyAddressInfo {
-    line-height: 24px;
-    margin-top: 12px;
-    padding: 26px 0 0 0;
-    color: $footer-copyright-color;
-    letter-spacing: -1px;
+    .companyAddressInfo {
+      line-height: 24px;
+      margin-top: 12px;
+      padding: 26px 0 0 0;
+      color: $footer-copyright-color;
+      letter-spacing: -1px;
 
-    .copyright {
-      margin-top: 10px;
-      font-size: $font-footer-copyright;
-      letter-spacing: 2px;
+      .copyright {
+        margin-top: 10px;
+        font-size: $font-footer-copyright;
+        letter-spacing: 2px;
+      }
     }
   }
 }
