@@ -13,15 +13,6 @@ class LoginPage extends Component {
     };
   }
 
-  //   <input
-  //   id="inputIDValue"
-  //   onChange={this.getIdValue}
-  //   type="text"
-  //   className={
-  //     idValue.includes("@") ? "idActiveBox" : "idInputBox"
-  //   }
-  // />
-
   goToLogin = event => {
     const { idValue, pwValue } = this.state;
     event.preventDefault();
@@ -65,7 +56,6 @@ class LoginPage extends Component {
     const { idValue, pwValue } = this.state;
     return (
       <div className="Login">
-        {/* {this.state.isMemberLogin ? <p>회원로그인</p> : <p>비회원로그인</p>} */}
         <div className="loginWrap">
           <form className="loginForm">
             <div className="LoginInput">
