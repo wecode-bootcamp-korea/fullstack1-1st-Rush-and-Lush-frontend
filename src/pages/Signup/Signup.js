@@ -31,23 +31,23 @@ class Signup extends Component {
     });
   };
 
-  // goToSignUp = event => {
-  //   const { idValue, pwValue } = this.state;
-  //   event.preventDefault();
-  //   fetch("http://localhost:8000/users/signup", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({
-  //       email: idValue,
-  //       password: pwValue,
-  //     }),
-  //   })
-  //     .then(response => response.json())
-  //     .then(result => console.log("회원 가입 response: ", result))
-  //     .catch(error => console.log(error));
-  // };
+  goToSignUp = event => {
+    const { idValue, pwValue } = this.state;
+    event.preventDefault();
+    fetch("/users/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: idValue,
+        password: pwValue,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => console.log("회원 가입 response: ", result))
+      .catch(error => console.log(error));
+  };
 
   render() {
     const { idValue, pwValue, pwCheckValue } = this.state;
@@ -81,7 +81,7 @@ class Signup extends Component {
                 <td>
                   <div className="inputBox">
                     <input
-                      id="inputIDValue"
+                      id="idValue"
                       onChange={this.getIdValue}
                       type="text"
                       className={
@@ -99,7 +99,7 @@ class Signup extends Component {
                 <td>
                   <div className="inputBox">
                     <input
-                      id="inputPWValue"
+                      id="pwValue"
                       onChange={this.getPwValue}
                       type="password"
                       className={
@@ -118,7 +118,7 @@ class Signup extends Component {
                   {/* this.state.pwValue === this.state.pwCheckValue */}
                   <div className="inputBox">
                     <input
-                      id="inputPWCheckValue"
+                      id="pwCheckValue"
                       onChange={this.getPwCheckValue}
                       type="password"
                       className={
