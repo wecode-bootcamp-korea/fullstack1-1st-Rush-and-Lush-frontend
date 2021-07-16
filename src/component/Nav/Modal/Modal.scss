@@ -1,0 +1,55 @@
+.Modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  h1 {
+    text-align: center;
+    color: rgb(231, 231, 231);
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+
+    input {
+      margin-left: 20px;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      outline: none;
+
+      font: {
+        size: 30px;
+        weight: 700;
+      }
+
+      background: none;
+      border: 0;
+      border-bottom: 1px solid #fff;
+      z-index: 2;
+      cursor: text;
+    }
+
+    span {
+      margin-top: 10px;
+    }
+  }
+
+  .loginBg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300vh;
+    height: 300vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: -1;
+  }
+}
+
+.hideModal {
+  display: none;
+}
