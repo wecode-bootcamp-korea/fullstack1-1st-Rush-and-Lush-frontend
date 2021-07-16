@@ -1,7 +1,9 @@
 .BtmSlide {
   display: flex;
   justify-content: center;
-  margin: 90px 0 400px 0;
+  margin: 90px 100px 400px 0;
+  opacity: 0;
+  transition: 0.7s ease-in-out;
 
   dl {
     margin-top: 90px;
@@ -11,25 +13,25 @@
       padding-bottom: 20px;
       font-size: 42px;
       font-weight: 500;
-    };
+    }
 
     dd {
       width: 300px;
       font-size: 16px;
       font-weight: 300;
       line-height: 120%;
-    };
-  };
+    }
+  }
 
   .btmSlideContainer {
     position: relative;
-    display: block;
 
     .btmSlideImg {
       img {
         width: 380px;
         height: 490px;
         object-fit: cover;
+        overflow: hidden;
       }
 
       .btmSlide {
@@ -42,24 +44,9 @@
         opacity: 1;
       }
     }
-
-    .btmSlideBtn {
-      position: relative;
-      top: 430px;
-      left: 290%;
-
-      ul {
-        display: flex;
-
-        li {
-          button {
-            padding-right: 6px;
-            border: none;
-            background-color: transparent;
-            color: rgba(255, 255, 255, 0.6)
-          };
-        };
-      };
-    };
   }
-};
+}
+
+.active {
+  opacity: 1;
+}
