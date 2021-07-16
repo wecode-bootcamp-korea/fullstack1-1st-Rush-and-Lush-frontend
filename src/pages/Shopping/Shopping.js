@@ -1,7 +1,30 @@
 import { Component } from "react";
 import "./Shopping.scss";
+import Cart from "./component/Cart";
 
 class Shopping extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+    };
+  }
+  // async getData() {
+  //   const res = await fetch("./public/cart.json");
+  //   const data = res.json();
+  //   return this.setState({ data });
+  // }
+  callJson = () => {
+    fetch("public/data/cart.json");
+    .then(res => res.json())
+    .then(json => {
+      this.setstate({ data: json });
+    });
+  };
+
+  componentDidMount() {
+    this.callJson();
+  }
   render() {
     return (
       <div>
@@ -42,47 +65,24 @@ class Shopping extends Component {
                     <th className="th7">배송비</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td className="td1">
-                      <input type="checkbox" id="check[]"></input>
-                      <label for="check[]"></label>
-                    </td>
-                    <td className="td2">
-                      <a>
-                        <img></img>
-                      </a>
-                      <div>
-                        <a>레몬 제스트</a>
-                        <p>솝</p>
-                      </div>
-                    </td>
-                    <td className="td3">
-                      <div className="증가감소">
-                        <button className="downBtn">-</button>
-                        <input className="showNum" type="text"></input>
-                        <button className="upBtn">+</button>
-                      </div>
-                    </td>
-                    <td className="td4">₩28,000</td>
-                    <td className="td5"></td>
-                    <td className="td6">₩28,000</td>
-                    <td className="td7" rowSpan="10">
-                      <span>
-                        ₩2,500
-                        <br />
-                        (택배)
-                      </span>
-                    </td>
-                  </tr>
-                </tbody>
+                <div>
+                  {this.state.data.map(cartData => (
+                    <Cart
+                      key={cartData.id}
+                      name={cartData.name}
+                      subname={cartData.subname}
+                      price={cartData.price}
+                      img={cartData.img}
+                    />
+                  ))}
+                </div>
               </table>
             </div>
             <div className="가격박스">
               <p>
                 <span>
                   <em>
-                    총 <em> 1 </em>
+                    총 <strong> 1 </strong>
                     개의 금액
                   </em>
                   ₩ <strong>10,000</strong>
