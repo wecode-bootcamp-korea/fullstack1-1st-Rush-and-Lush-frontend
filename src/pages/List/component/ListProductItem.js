@@ -1,12 +1,15 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import "./ListProductItem.scss";
 import ListTagButton from "./ListTagButton";
 
 class ListProductItem extends Component {
   render() {
     return (
-      <div className="ListProductItem">
+      <div
+        className="ListProductItem"
+        onClick={() => this.props.history.push("/detail")}
+      >
         <div className="listProduct">
           <div className="listProductImageBox">
             <Link to="/detail">
@@ -38,4 +41,4 @@ class ListProductItem extends Component {
     );
   }
 }
-export default ListProductItem;
+export default withRouter(ListProductItem);
