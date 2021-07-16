@@ -21,6 +21,7 @@ class Footer extends Component {
     super();
     this.state = {
       inputEmail: "",
+      isFooterModalOn: false,
     };
   }
 
