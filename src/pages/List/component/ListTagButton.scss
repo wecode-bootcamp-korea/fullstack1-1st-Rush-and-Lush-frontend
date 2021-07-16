@@ -23,8 +23,9 @@
     }
   }
 
-  &.품절 {
+  &.SOLD.OUT {
     background-color: rgb(228, 108, 61);
+    font-size: 10px;
     &:hover {
       background-color: rgb(255, 72, 0);
     }
