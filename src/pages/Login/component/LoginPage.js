@@ -16,7 +16,7 @@ class LoginPage extends Component {
   goToLogin = event => {
     const { idValue, pwValue } = this.state;
     event.preventDefault();
-    fetch("http://10.89.0.248:8000/users/login", {
+    fetch("http://10.89.1.164:8000/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -96,7 +96,7 @@ class LoginPage extends Component {
                 </div>
                 <div className="loginButtonWrap">
                   <button
-                    onClick={this.goToLogin}
+                    onClick={(this.goToLogin, this.loginAlert)}
                     type="button"
                     className="loginButton"
                   >
