@@ -1,0 +1,25 @@
+.listNavCategoryBox {
+  display: flex;
+  height: 60px;
+
+  .listNavCategory {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+
+    li {
+      margin-right: 32px;
+      letter-spacing: 0.5px;
+
+      a {
+        color: #8f8f8f;
+        text-decoration: none;
+
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+}
