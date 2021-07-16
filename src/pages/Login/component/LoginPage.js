@@ -2,7 +2,7 @@ import { Component } from "react";
 import "./LoginPage.scss";
 import { FaUserCircle } from "react-icons/fa";
 import { MdLock } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 class LoginPage extends Component {
   constructor() {
@@ -13,19 +13,10 @@ class LoginPage extends Component {
     };
   }
 
-  //   <input
-  //   id="inputIDValue"
-  //   onChange={this.getIdValue}
-  //   type="text"
-  //   className={
-  //     idValue.includes("@") ? "idActiveBox" : "idInputBox"
-  //   }
-  // />
-
   goToLogin = event => {
     const { idValue, pwValue } = this.state;
     event.preventDefault();
-    fetch("http://10.89.0.248:8000/users/login", {
+    fetch("http://10.89.1.164:8000/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -35,9 +26,15 @@ class LoginPage extends Component {
         password: pwValue,
       }),
     })
-      .then(response => response.json())
-      .then(result => console.log("로그인 response: ", result))
-      .catch(error => console.log(error));
+      .then(res => res.json())
+      .then(json => {
+        if (json.token) {
+          alert("로그인 마 됬다~");
+          this.props.history.push("/main");
+        } else {
+          alert("로그인 안됬음 ㅅㄱ");
+        }
+      });
   };
 
   handleIdInput = event => {
@@ -150,4 +147,4 @@ class LoginPage extends Component {
   }
 }
 
-export default LoginPage;
+export default withRouter(LoginPage);

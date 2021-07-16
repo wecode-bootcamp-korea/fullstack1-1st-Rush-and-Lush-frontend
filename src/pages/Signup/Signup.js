@@ -34,7 +34,7 @@ class Signup extends Component {
   goToSignUp = event => {
     const { idValue, pwValue } = this.state;
     event.preventDefault();
-    fetch("/users/signup", {
+    fetch("http://10.89.1.164:8000/users/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -45,12 +45,19 @@ class Signup extends Component {
       }),
     })
       .then(response => response.json())
+      .then(result => {
+        if (result.message === "USER_CREATED_SUCCESSFULLY") {
+          alert("회원가입 축하드립니다.");
+          this.props.history.push("/main");
+        }
+      })
       .then(result => console.log("회원 가입 response: ", result))
       .catch(error => console.log(error));
   };
 
   render() {
     const { idValue, pwValue, pwCheckValue } = this.state;
+
     return (
       <div className="join">
         <div className="signStep">
