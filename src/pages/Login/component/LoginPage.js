@@ -95,7 +95,7 @@ class LoginPage extends Component {
                 </div>
                 <div className="loginButtonWrap">
                   <button
-                    onClick={this.goToLogin}
+                    onClick={(this.goToLogin, this.loginAlert)}
                     type="button"
                     className="loginButton"
                   >
