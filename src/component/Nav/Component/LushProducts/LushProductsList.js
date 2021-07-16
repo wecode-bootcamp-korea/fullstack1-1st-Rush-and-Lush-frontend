@@ -16,7 +16,7 @@ class LushProductsList extends Component {
           </li>
           {elements.map(el => (
             <li key={el.id}>
-              <Link className="elements" to="/">
+              <Link className="elements" to={`/list?subCategoryId=${el.id}`}>
                 {el.sub_title}
               </Link>
             </li>

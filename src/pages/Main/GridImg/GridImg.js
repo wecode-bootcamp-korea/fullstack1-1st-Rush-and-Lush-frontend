@@ -2,9 +2,33 @@ import { Component } from "react";
 import "./GridImg.scss";
 
 class GridImg extends Component {
+  constructor() {
+    super();
+    this.state = {
+      scrollTop: 0,
+    };
+  }
+
+  handleScroll = e => {
+    const scrollTop = ("scroll", e.srcElement.scrollingElement.scrollTop);
+    this.setState({
+      scrollTop,
+    });
+  };
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnMount = () => {
+    window.removeEventListener("scroll", this.handleScroll);
+  };
+
   render() {
     return (
-      <div className="GridImg">
+      <div
+        className={this.state.scrollTop > 650 ? "GridImg active" : "GridImg"}
+      >
         <div className="imgLeft">
           <a href="/">
             <img src="./images/img_left_2.jpg" alt="left" />

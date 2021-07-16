@@ -3,10 +3,28 @@ import "./List.scss";
 import ListProductItem from "./component/ListProductItem";
 import ListNavCategory from "./component/ListNav/ListNavCategory";
 import ListNavTitle from "./component/ListNav/ListNavTitle";
-import ListProductItemData from "./component/ListProductItemData";
 import ListPageHeader from "./component/ListPageHeader";
 
 class List extends Component {
+  constructor() {
+    super();
+    this.state = {
+      products: [],
+    };
+  }
+
+  componentDidMount() {
+    console.log(this.props.location.search);
+    fetch(`http://10.89.1.179:8000/products`)
+      .then(res => res.json())
+      .then(data => {
+        // console.log("이거", data.products, data);
+        this.setState({
+          products: data.products,
+        });
+      });
+  }
+
   render() {
     return (
       <div className="List">
@@ -15,17 +33,16 @@ class List extends Component {
           <div className="listNav">
             <ListNavTitle />
             <ListNavCategory />
-
             <div className="listProductContainer">
-              {ListProductItemData.map(ListItems => (
+              {this.state.products.map(listItems => (
                 <ListProductItem
-                  key={ListItems.id}
-                  image={ListItems.img}
-                  alt={ListItems.alt}
-                  name={ListItems.name}
-                  subName={ListItems.subName}
-                  price={ListItems.price}
-                  tagButton={ListItems.tagButton}
+                  key={listItems.id}
+                  image={listItems.image_url}
+                  alt={listItems.name}
+                  name={listItems.name}
+                  subName={listItems.description}
+                  price={listItems.price}
+                  tags={listItems.tags}
                 />
               ))}
             </div>
