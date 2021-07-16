@@ -51,6 +51,7 @@ class Signup extends Component {
           this.props.history.push("/main");
         }
       })
+      .then(result => console.log("회원 가입 response: ", result))
       .catch(error => console.log(error));
   };
 
