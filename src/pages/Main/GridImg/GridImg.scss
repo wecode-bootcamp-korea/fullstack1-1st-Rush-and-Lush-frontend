@@ -1,8 +1,14 @@
 .GridImg {
   display: flex;
   justify-content: center;
+  opacity: 0;
+  transition: 1s ease-in-out;
 
   .imgRightUp {
     font-size: 0;
-  };
-};
+  }
+}
+
+.active {
+  opacity: 1;
+}

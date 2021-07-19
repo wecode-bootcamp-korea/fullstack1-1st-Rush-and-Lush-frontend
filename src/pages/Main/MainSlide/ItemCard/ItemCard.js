@@ -1,6 +1,6 @@
 import { Component } from "react";
 import Card from "./Card/Card";
-import { BiCircle } from "react-icons/bi";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import "./ItemCard.scss";
 
 class ItemCard extends Component {
@@ -86,7 +86,7 @@ class ItemCard extends Component {
                 type="button"
                 onClick={this.imgSlideLeft}
               >
-                <BiCircle size="16" />
+                <IoIosArrowBack size="24" />
               </button>
             </div>
             <div>
@@ -95,7 +95,7 @@ class ItemCard extends Component {
                 type="button"
                 onClick={this.imgSlideLeft}
               >
-                <BiCircle size="16" />
+                <IoIosArrowForward size="24" />
               </button>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Nav.scss";
+import Modal from "./Modal/Modal";
 import LushProducts from "./Component/LushProducts/LushProducts";
 import LushIntro from "./Component/LushIntro/LushIntro";
 import UserToolTip from "./Component/UserToolTip/UserToolTip";
@@ -18,12 +19,21 @@ class Nav extends Component {
   constructor() {
     super();
     this.state = {
-      subNav: [],
+      modalVisible: false,
     };
   }
+
+  showModal = () => {
+    this.setState({ modalVisible: !this.state.modalVisible });
+  };
+
   render() {
     return (
       <nav className="Nav">
+        <Modal
+          showModal={this.showModal}
+          modalVisible={this.state.modalVisible}
+        />
         <Link className="mainLogo" to="/main">
           WESH
         </Link>
@@ -41,7 +51,7 @@ class Nav extends Component {
           })}
         </ul>
         <ul className="headerIcon">
-          <li className="navIcon">
+          <li className="navIcon" onClick={this.showModal}>
             <IoMdSearch className="icon" />
           </li>
           <li className="navIcon2">
