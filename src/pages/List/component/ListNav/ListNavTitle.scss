@@ -1,0 +1,20 @@
+.listNavTitle {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: black solid 2px;
+  width: 100%;
+  padding-bottom: 15px;
+
+  h2 {
+    font-size: 28px;
+  }
+
+  select {
+    width: 110px;
+    height: 32px;
+    border: none;
+    background-color: white;
+    font-size: 14px;
+    outline: transparent;
+  }
+}
