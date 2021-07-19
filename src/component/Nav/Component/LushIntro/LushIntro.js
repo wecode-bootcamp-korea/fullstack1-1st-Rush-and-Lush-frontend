@@ -13,9 +13,7 @@ class LushIntro extends Component {
   }
 
   componentDidMount() {
-    fetch(`${API}${CATEGORY_PATH}`, {
-      method: "GET",
-    })
+    fetch(`${API}${CATEGORY_PATH}`)
       .then(res => res.json())
       .then(res => {
         this.setState({ subNav: res.categories });
