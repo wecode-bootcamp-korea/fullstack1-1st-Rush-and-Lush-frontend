@@ -1,30 +1,9 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Footer.scss";
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaInstagramSquare } from "react-icons/fa";
-import { FaYoutubeSquare } from "react-icons/fa";
-import { FaPinterestSquare } from "react-icons/fa";
-import { FaTumblrSquare } from "react-icons/fa";
+import { CATEGORY, FOOTER_ICONS } from "./data";
 
-const CATEGORY = [
-  "스카우트",
-  "회사소개",
-  "개인정보처리방침",
-  "영상정보관리지침",
-  "이용약관",
-  "고객센터",
-];
-
-const FOOTER_ICONS = [
-  <FaFacebookSquare />,
-  <FaInstagramSquare />,
-  <FaYoutubeSquare />,
-  <FaPinterestSquare />,
-  <FaTumblrSquare />,
-];
-
-const KEY_CODE = 13;
+const ENTER_KEY_CODE = 13;
 
 class Footer extends Component {
   constructor() {
@@ -40,7 +19,7 @@ class Footer extends Component {
   };
 
   onKeyDown = keyEvent => {
-    if ((keyEvent.charCode || keyEvent.keyCode) === KEY_CODE) {
+    if ((keyEvent.charCode || keyEvent.keyCode) === ENTER_KEY_CODE) {
       keyEvent.preventDefault();
     }
   };
