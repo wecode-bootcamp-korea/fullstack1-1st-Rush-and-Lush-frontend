@@ -23,7 +23,7 @@ class Nav extends Component {
     };
   }
 
-  showModal = () => {
+  toggleModal = () => {
     this.setState({ modalVisible: !this.state.modalVisible });
   };
 
@@ -31,7 +31,7 @@ class Nav extends Component {
     return (
       <nav className="Nav">
         <Modal
-          showModal={this.showModal}
+          toggleModal={this.toggleModal}
           modalVisible={this.state.modalVisible}
         />
         <Link className="mainLogo" to="/main">
@@ -51,7 +51,7 @@ class Nav extends Component {
           })}
         </ul>
         <ul className="headerIcon">
-          <li className="navIcon" onClick={this.showModal}>
+          <li className="navIcon" onClick={this.toggleModal}>
             <IoMdSearch className="icon" />
           </li>
           <li className="navIcon2">

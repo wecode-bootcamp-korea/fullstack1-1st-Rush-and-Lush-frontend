@@ -15,10 +15,10 @@ class List extends Component {
 
   componentDidMount() {
     console.log(this.props.location.search);
-    fetch(`http://localhost:8000/products${this.props.location.search}`)
+    fetch(`http://10.89.1.179:8000/products`)
       .then(res => res.json())
       .then(data => {
-        console.log("이거", data.products, data);
+        // console.log("이거", data.products, data);
         this.setState({
           products: data.products,
         });
@@ -42,7 +42,7 @@ class List extends Component {
                   name={listItems.name}
                   subName={listItems.description}
                   price={listItems.price}
-                  tagButton={listItems.tagButton}
+                  tags={listItems.tags}
                 />
               ))}
             </div>

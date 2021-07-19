@@ -20,12 +20,19 @@
   .listProductInfoBox {
     height: 27px;
 
+    .listProductTagBtnBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 33px;
+    }
+
     .listProductNameBox {
       a {
         text-decoration: none;
       }
 
-      .listProductName {
+      .listProduct .listProductName {
         @include display;
         height: 21px;
         font-size: 16px;

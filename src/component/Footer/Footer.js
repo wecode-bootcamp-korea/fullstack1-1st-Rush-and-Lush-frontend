@@ -16,6 +16,16 @@ const CATEGORY = [
   "고객센터",
 ];
 
+const FOOTER_ICONS = [
+  <FaFacebookSquare />,
+  <FaInstagramSquare />,
+  <FaYoutubeSquare />,
+  <FaPinterestSquare />,
+  <FaTumblrSquare />,
+];
+
+const KEY_CODE = 13;
+
 class Footer extends Component {
   constructor() {
     super();
@@ -30,7 +40,7 @@ class Footer extends Component {
   };
 
   onKeyDown = keyEvent => {
-    if ((keyEvent.charCode || keyEvent.keyCode) === 13) {
+    if ((keyEvent.charCode || keyEvent.keyCode) === KEY_CODE) {
       keyEvent.preventDefault();
     }
   };
@@ -42,17 +52,25 @@ class Footer extends Component {
       event.target.reset();
     } else if (inputUserEmail) {
       alert("현재 지원되지 않는 기능입니다. 조금만 기다려주세요! ⏰");
-    } else {
-      return;
     }
   };
 
   render() {
     const { inputEmail } = this.state;
     const { handleInput, onKeyDown, subScribeByEmail } = this;
+    const USER_VALIDATION = {
+      isValidatedEmail: () =>
+        inputEmail.includes("@") && inputEmail.length >= 8,
+    };
+
     return (
       <footer className="Footer">
-        <div className="iconWesh"></div>
+        <div className="iconWesh">
+          <img
+            src="http://img.lush.co.kr/images/core/footer-icons.svg"
+            alt="러쉬 하단 이미지"
+          ></img>
+        </div>
         <div className="footerWrap">
           <div className="footer">
             <div className="subWrap">
@@ -77,20 +95,20 @@ class Footer extends Component {
                 <dd className="lushEmail">wesh@order.com</dd>
               </dl>
               <div className="iconWrap">
-                <FaFacebookSquare className="icon" />
-                <FaInstagramSquare className="icon" />
-                <FaYoutubeSquare className="icon" />
-                <FaPinterestSquare className="icon" />
-                <FaTumblrSquare className="icon" />
+                {FOOTER_ICONS.map((icons, index) => (
+                  <span className="icon" key={index}>
+                    {icons}
+                  </span>
+                ))}
               </div>
             </div>
             <div className="subWrapRight">
               <div className="footerCategory">
                 <ul>
-                  {CATEGORY.map((el, index) => (
+                  {CATEGORY.map((category, index) => (
                     <li className="footerLink" key={index}>
                       <Link className="footerCategoryLink" to="/">
-                        {el}
+                        {category}
                       </Link>
                     </li>
                   ))}
@@ -113,7 +131,7 @@ class Footer extends Component {
                   <button
                     type="submit"
                     className={
-                      inputEmail.includes("@") && inputEmail.length >= 8
+                      USER_VALIDATION.isValidatedEmail()
                         ? "emailBtn active"
                         : "emailBtn "
                     }
@@ -144,4 +162,5 @@ class Footer extends Component {
     );
   }
 }
+
 export default Footer;
