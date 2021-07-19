@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import LushProductsList from "./LushProductsList";
 import "./LushProductsList.scss";
+import { API, CATEGORY_PATH } from "../../../../utils/api";
 
 class LushProducts extends Component {
   constructor() {
@@ -12,31 +13,42 @@ class LushProducts extends Component {
   }
 
   componentDidMount() {
-    fetch("/data/productsList.json")
+    fetch(`${API}${CATEGORY_PATH}`, {
+      method: "GET",
+    })
       .then(res => res.json())
-      .then(res => this.setState({ subNav: res.PRODUCTS_DATA }));
+      .then(res => {
+        this.setState({ subNav: res.categories });
+      });
   }
 
   render() {
     const { subNav } = this.state;
+    const productCategory = [];
+
+    for (let category of subNav) {
+      if (category.menuId === 1) {
+        productCategory.push(category);
+      }
+    }
 
     return (
       <div className="LushProducts">
         <div className="toolTipCategory">
-          <li className="tooltip">
+          <div className="tooltip">
             <Link className="navTitle" to="/list">
               제품
             </Link>
             <div className="tooltipWindow">
-              {subNav.map((el, id) => (
+              {productCategory.map((category, id) => (
                 <LushProductsList
                   key={id}
-                  title={el.title}
-                  elements={el.elements}
+                  catagoryName={category.catagoryName}
+                  subCategories={category.subCategories}
                 />
               ))}
             </div>
-          </li>
+          </div>
         </div>
       </div>
     );

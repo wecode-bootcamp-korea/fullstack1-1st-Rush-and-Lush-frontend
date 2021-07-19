@@ -4,20 +4,23 @@ import "./LushProductsList.scss";
 
 class LushProductsList extends Component {
   render() {
-    const { title, elements } = this.props;
+    const { catagoryName, subCategories } = this.props;
 
     return (
       <div className="LushProductsList">
         <ul className="productList">
           <li>
             <Link className="title" to="/">
-              {title}
+              {catagoryName}
             </Link>
           </li>
-          {elements.map(el => (
-            <li key={el.id}>
-              <Link className="elements" to={`/list?subCategoryId=${el.id}`}>
-                {el.sub_title}
+          {subCategories.map(category => (
+            <li key={category.id}>
+              <Link
+                className="elements"
+                to={`/list?subCategoryId=${category.id}`}
+              >
+                {category.name}
               </Link>
             </li>
           ))}

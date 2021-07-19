@@ -25,34 +25,33 @@ class Nav extends Component {
 
   showModal = () => {
     this.setState({ modalVisible: !this.state.modalVisible });
-    console.log(this.state.modalVisible);
   };
 
   render() {
+    const { showModal } = this;
+    const { modalVisible } = this.state;
+
     return (
       <nav className="Nav">
-        <Modal
-          showModal={this.showModal}
-          modalVisible={this.state.modalVisible}
-        />
+        <Modal showModal={showModal} modalVisible={modalVisible} />
         <Link className="mainLogo" to="/main">
           WESH
         </Link>
-        <ul className="category">
+        <div className="category">
           <LushProducts />
           <LushIntro />
           {CATEGORY.map((category, id) => {
             return (
-              <li className="tooltip" key={id}>
+              <div className="tooltip" key={id}>
                 <Link className="navTitle" to={category.link}>
                   {category.subTitle}
                 </Link>
-              </li>
+              </div>
             );
           })}
-        </ul>
+        </div>
         <ul className="headerIcon">
-          <li className="navIcon" onClick={this.showModal}>
+          <li className="navIcon" onClick={showModal}>
             <IoMdSearch className="icon" />
           </li>
           <li className="navIcon2">
