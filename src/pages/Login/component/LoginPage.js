@@ -27,17 +27,15 @@ class LoginPage extends Component {
       }),
     })
       .then(response => response.json())
-      .then(result => console.log("로그인 response: ", result))
-      .catch(error => console.log(error));
+      .then(result => result)
+      .catch(error => error);
   };
 
   handleIdInput = event => {
-    console.log(event.target.value);
     this.setState({ idValue: event.target.value });
   };
 
   handlePwInput = event => {
-    console.log(event.target.value);
     this.setState({ pwValue: event.target.value });
   };
 
@@ -57,9 +55,9 @@ class LoginPage extends Component {
     return (
       <div className="Login">
         <div className="loginWrap">
-          <form className="loginForm">
+          <div className="loginForm">
             <div className="LoginInput">
-              <form className="loginForm">
+              <div className="loginForm">
                 <span className="loginIconContainer">
                   <FaUserCircle size="24" className="userIcon" />
                   <input
@@ -75,7 +73,7 @@ class LoginPage extends Component {
                   <span className="loginIconContainer">
                     <MdLock size="24" className="lockIcon" />
                     <input
-                      id="inputIDValue"
+                      id="inputPWValue"
                       onChange={this.handlePwInput}
                       className={pwValue.length >= 8 ? "pwActive" : "pwInput"}
                       type="password"
@@ -102,7 +100,7 @@ class LoginPage extends Component {
                     로그인
                   </button>
                 </div>
-              </form>
+              </div>
             </div>
             <div className="loginMenu">
               <Link to="signup">
@@ -119,8 +117,7 @@ class LoginPage extends Component {
                 <em>비밀번호 찾기</em>
               </button>
             </div>
-            <a
-              href
+            <button
               onClick={() => alert("여러분 미안하고 고맙습니다..")}
               className="naverLogin"
             >
@@ -132,8 +129,8 @@ class LoginPage extends Component {
                 />
               </div>
               네이버 아이디로 로그인
-            </a>
-          </form>
+            </button>
+          </div>
         </div>
       </div>
     );
