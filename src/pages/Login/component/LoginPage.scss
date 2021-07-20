@@ -1,58 +1,54 @@
 .Login {
-  .LoginInput {
-    .loginForm {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding-top: 55px;
+  .loginForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 55px;
+    align-items: center;
 
-      .loginIconContainer {
-        .idInput {
-          width: 335px;
-          height: 50px;
-          font-size: 16px;
-          text-align: center;
+    .idInput {
+      width: 335px;
+      height: 50px;
+      font-size: 16px;
+      text-align: center;
 
-          &:focus {
-            outline: none;
-          }
-        }
+      &:focus {
+        outline: none;
+      }
+    }
 
-        .idActive {
-          width: 335px;
-          height: 50px;
-          font-size: 16px;
-          text-align: center;
-          border: 1px solid #78ed64;
+    .idActive {
+      width: 335px;
+      height: 50px;
+      font-size: 16px;
+      text-align: center;
+      border: 1px solid #78ed64;
 
-          &:focus {
-            outline: none;
-          }
-        }
+      &:focus {
+        outline: none;
+      }
+    }
 
-        .pwInput {
-          width: 335px;
-          height: 50px;
-          font-size: 16px;
-          text-align: center;
+    .pwInput {
+      width: 335px;
+      height: 50px;
+      font-size: 16px;
+      text-align: center;
 
-          &:focus {
-            outline: none;
-          }
-        }
+      &:focus {
+        outline: none;
+      }
+    }
 
-        .pwActive {
-          width: 335px;
-          height: 50px;
-          font-size: 16px;
-          text-align: center;
-          border: 1px solid #78ed64;
+    .pwActive {
+      width: 335px;
+      height: 50px;
+      font-size: 16px;
+      text-align: center;
+      border: 1px solid #78ed64;
 
-          &:focus {
-            outline: none;
-          }
-        }
+      &:focus {
+        outline: none;
       }
     }
 
@@ -60,15 +56,15 @@
       position: relative;
 
       .userIcon {
-        margin-left: 15px;
         position: absolute;
+        margin-left: 15px;
         top: 50%;
         transform: translate(0, -50%);
       }
 
       .lockIcon {
-        margin-left: 15px;
         position: absolute;
+        margin-left: 15px;
         top: 50%;
         transform: translate(0, -50%);
       }
@@ -78,19 +74,16 @@
       padding-top: 10px;
     }
   }
-  .loginForm {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+
   .saveCheckBoxWrap {
     padding-top: 20px;
     width: 335px;
     color: #8f8f8f;
+
     .idCheckBoxText {
       font-size: 14px;
     }
+
     .inputCheckbox {
       margin: 0 7px 0 0;
       width: 20px;
@@ -121,8 +114,6 @@
 
   .loginMenu {
     padding-top: 20px;
-    width: 335px;
-    text-align: center;
 
     .divider {
       display: inline;
@@ -149,12 +140,14 @@
       color: #8f8f8f;
       cursor: pointer;
     }
+
     .findId {
       border: 0;
       outline: 0;
       background-color: white;
       color: #8f8f8f;
     }
+
     .findPw {
       border: 0;
       outline: 0;
@@ -165,13 +158,13 @@
 
   .naverLogin {
     position: relative;
-    text-align: left;
     margin: 45px 0 150px 0;
     border: 1px solid #c3c3c3;
-    height: 50px;
     width: 335px;
+    height: 50px;
     text-decoration: none;
     color: #8f8f8f;
+    text-align: left;
     font-size: 13px;
     background-color: white;
     cursor: pointer;

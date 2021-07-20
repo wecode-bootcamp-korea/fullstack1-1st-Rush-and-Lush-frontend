@@ -1,7 +1,7 @@
 import { Component } from "react";
 import "./Login.scss";
 import LoginPage from "./component/LoginPage";
-import NonMembersLogin from "./NonMembersLogin";
+import NonMembersLogin from "./component/NonMembersLogin";
 
 class Login extends Component {
   constructor() {
