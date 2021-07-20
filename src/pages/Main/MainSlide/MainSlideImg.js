@@ -4,16 +4,15 @@ import "./MainSlideImg.scss";
 
 class MainSlideImg extends Component {
   render() {
+    const { imgIndex, id, img } = this.props;
     return (
       <div className="MainSlideImg">
         <Link className="mainSlideClick" to="/">
           <img
             className={
-              this.props.imgIndex === this.props.id
-                ? "mainSlideImgs active"
-                : "mainSlideImgs"
+              imgIndex === id ? "mainSlideImgs active" : "mainSlideImgs"
             }
-            src={this.props.img}
+            src={img}
             alt="mainSlideImg"
           />
         </Link>

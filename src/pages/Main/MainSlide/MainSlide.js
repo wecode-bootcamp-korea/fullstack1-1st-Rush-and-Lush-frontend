@@ -1,6 +1,6 @@
 import { Component } from "react";
-import ItemCard from "../ItemCard/ItemCard";
 import MainSlideImg from "./MainSlideImg";
+import ItemCard from "./ItemCard/ItemCard";
 import SideSlide from "./SideSlide/SideSlide";
 import "./MainSlide.scss";
 
@@ -29,13 +29,14 @@ class MainSlide extends Component {
   };
 
   componentDidMount() {
-    fetch("http://localhost:3000/mainSlideData.json")
+    fetch("http://localhost:3000/data/mainSlideData.json")
       .then(res => res.json())
       .then(data => {
         this.setState({
           mainSlides: data.mainSlideData,
         });
       });
+
     setInterval(this.imgSlideNext, 3000);
   }
 
@@ -44,9 +45,10 @@ class MainSlide extends Component {
       <div className="MainSlide">
         <div className="mainSlideWrap">
           <div className="mainSlideImageWrap">
-            {this.state.mainSlides.map(slide => {
+            {this.state.mainSlides.map((slide, index) => {
               return (
                 <MainSlideImg
+                  key={index}
                   id={slide.id}
                   img={slide.img}
                   imgIndex={this.state.imgIndex}

@@ -40,7 +40,7 @@ class ItemCard extends Component {
   };
 
   componentDidMount() {
-    fetch("http://localhost:3000/itemCardData.json")
+    fetch("http://localhost:3000/data/itemCardData.json")
       .then(res => res.json())
       .then(data => {
         this.setState({
