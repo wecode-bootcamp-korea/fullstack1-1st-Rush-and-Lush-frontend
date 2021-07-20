@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 
 import Main from "./pages/Main/Main.js";
 import List from "./pages/List/List.js";
@@ -15,12 +20,12 @@ class Routes extends React.Component {
       <Router>
         <Nav />
         <Switch>
-          <Route exact path="/main" component={Main} />
+          <Route exact path="/" component={Main} />
           <Route exact path="/list" component={List} />
-          <Route exact path="/detail" component={Detail} />
           <Route exact path="/detail:id" component={Detail} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
+          <Redirect path="*" to="/" />
         </Switch>
         <Footer />
       </Router>
