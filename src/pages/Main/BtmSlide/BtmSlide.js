@@ -27,7 +27,6 @@ class BtmSlide extends Component {
     this.setState({
       scrollTop,
     });
-    console.log(this.state.scrollTop);
   };
 
   componentDidMount() {

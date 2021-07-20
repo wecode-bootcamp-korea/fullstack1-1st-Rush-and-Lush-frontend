@@ -1,7 +1,7 @@
 import { Component } from "react";
-import "./GridImg.scss";
+import "./MidEventGridImg.scss";
 
-class GridImg extends Component {
+class MidEventGridImg extends Component {
   constructor() {
     super();
     this.state = {
@@ -27,7 +27,11 @@ class GridImg extends Component {
   render() {
     return (
       <div
-        className={this.state.scrollTop > 650 ? "GridImg active" : "GridImg"}
+        className={
+          this.state.scrollTop > 650
+            ? "MidEventGridImg active"
+            : "MidEventGridImg"
+        }
       >
         <div className="imgLeft">
           <a href="/">
@@ -52,4 +56,4 @@ class GridImg extends Component {
   }
 }
 
-export default GridImg;
+export default MidEventGridImg;
