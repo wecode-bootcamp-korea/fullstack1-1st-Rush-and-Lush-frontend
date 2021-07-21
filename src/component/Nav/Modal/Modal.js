@@ -13,7 +13,7 @@ class Modal extends Component {
             <IoSearch color="#fff" size="30" />
           </div>
         </form>
-        <div className="loginBg" onClick={this.props.showModal}></div>
+        <div className="loginBg" onClick={this.props.toggleModal}></div>
       </div>
     );
   }
