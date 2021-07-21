@@ -9,6 +9,7 @@ class LushProducts extends Component {
     super();
     this.state = {
       subNav: [],
+      productCategory: [],
     };
   }
 
@@ -17,18 +18,23 @@ class LushProducts extends Component {
       .then(res => res.json())
       .then(res => {
         this.setState({ subNav: res.categories });
+
+        const { subNav } = this.state;
+        const { productCategory } = this.state;
+
+        for (let category of subNav) {
+          if (category.menuId === 1) {
+            productCategory.push(category);
+          }
+        }
+
+        const thisIsLushProducts = productCategory;
+        this.setState({ thisIsLushProducts });
       });
   }
 
   render() {
-    const { subNav } = this.state;
-    const productCategory = [];
-
-    for (let category of subNav) {
-      if (category.menuId === 1) {
-        productCategory.push(category);
-      }
-    }
+    const { productCategory } = this.state;
 
     return (
       <div className="LushProducts">

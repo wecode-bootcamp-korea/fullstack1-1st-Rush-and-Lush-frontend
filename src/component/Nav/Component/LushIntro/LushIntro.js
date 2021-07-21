@@ -9,6 +9,7 @@ class LushIntro extends Component {
     super();
     this.state = {
       subNav: [],
+      lushIntroCategory: [],
     };
   }
 
@@ -17,18 +18,23 @@ class LushIntro extends Component {
       .then(res => res.json())
       .then(res => {
         this.setState({ subNav: res.categories });
+
+        const { subNav } = this.state;
+        const { lushIntroCategory } = this.state;
+
+        for (let category of subNav) {
+          if (category.menuId === 2) {
+            lushIntroCategory.push(category);
+          }
+        }
+
+        const thisIsLushIntro = lushIntroCategory;
+        this.setState({ thisIsLushIntro });
       });
   }
 
   render() {
-    const { subNav } = this.state;
-    const introCategory = [];
-
-    for (let category of subNav) {
-      if (category.menuId === 2) {
-        introCategory.push(category);
-      }
-    }
+    const { lushIntroCategory } = this.state;
 
     return (
       <div className="LushIntro">
@@ -38,7 +44,7 @@ class LushIntro extends Component {
               러쉬 소개
             </Link>
             <div className="tooltipWindow">
-              {introCategory.map((category, id) => (
+              {lushIntroCategory.map((category, id) => (
                 <LushProductsList
                   key={id}
                   catagoryName={category.catagoryName}
