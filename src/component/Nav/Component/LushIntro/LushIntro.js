@@ -28,8 +28,8 @@ class LushIntro extends Component {
           }
         }
 
-        const thisIsLushIntro = lushIntroCategory;
-        this.setState({ thisIsLushIntro });
+        const LushIntro = lushIntroCategory;
+        this.setState({ LushIntro });
       });
   }
 

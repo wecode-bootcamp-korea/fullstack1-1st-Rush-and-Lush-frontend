@@ -28,8 +28,8 @@ class LushProducts extends Component {
           }
         }
 
-        const thisIsLushProducts = productCategory;
-        this.setState({ thisIsLushProducts });
+        const LushProducts = productCategory;
+        this.setState({ LushProducts });
       });
   }
 
