@@ -14,7 +14,8 @@ class FooterSubWrapRight extends Component {
   }
 
   handleInput = event => {
-    this.setState({ [event.target.name]: event.target.value });
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
   };
 
   onKeyDown = keyEvent => {
@@ -33,13 +34,13 @@ class FooterSubWrapRight extends Component {
     }
   };
 
+  isValidatedEmail = email => {
+    return email.includes("@") && email.length >= 8;
+  };
+
   render() {
     const { inputEmail } = this.state;
-    const { handleInput, onKeyDown, subScribeByEmail } = this;
-
-    const isValidatedEmail = () => {
-      return inputEmail.includes("@") && inputEmail.length >= 8;
-    };
+    const { handleInput, onKeyDown, subScribeByEmail, isValidatedEmail } = this;
 
     return (
       <div className="subWrapRight">
@@ -70,7 +71,9 @@ class FooterSubWrapRight extends Component {
             />
             <button
               type="submit"
-              className={isValidatedEmail() ? "emailBtn active" : "emailBtn "}
+              className={
+                isValidatedEmail(inputEmail) ? "emailBtn active" : "emailBtn "
+              }
             >
               구독하기
             </button>
