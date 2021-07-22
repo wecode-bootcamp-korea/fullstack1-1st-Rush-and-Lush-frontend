@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./ListNavCategory.scss";
-import ListNavCategoryListData from "./ListNavCategoryListData";
 import ListNavCategoryList from "./ListNavCategoryList";
+import ListNavCategoryListData from "./ListNavCategoryListData";
+import "./ListNavCategory.scss";
 
 class ListNavCategory extends Component {
   render() {

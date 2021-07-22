@@ -21,9 +21,7 @@
     height: 27px;
 
     .listProductTagBtnBox {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include display;
       height: 33px;
     }
 

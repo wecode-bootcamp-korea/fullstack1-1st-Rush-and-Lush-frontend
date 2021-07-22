@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-import "./ListNavTitle.scss";
 
-class ListNavTitle extends Component {
+class ListNavSelect extends Component {
   render() {
     return (
-      <div className="listNavTitle">
-        <h2>솝</h2>
+      <div className="ListNavSelect">
         <form>
           <select>
             <option value="">추천순</option>
@@ -17,4 +15,4 @@ class ListNavTitle extends Component {
     );
   }
 }
-export default ListNavTitle;
+export default ListNavSelect;

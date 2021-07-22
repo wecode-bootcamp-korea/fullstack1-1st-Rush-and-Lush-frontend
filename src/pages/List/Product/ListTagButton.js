@@ -4,7 +4,7 @@ import "./ListTagButton.scss";
 class ListTagBtn extends Component {
   render() {
     const newPage = () => {
-      document.location.href = "http://www.lush.co.kr";
+      document.location.href = "/";
     };
 
     return (
