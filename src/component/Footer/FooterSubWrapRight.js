@@ -34,9 +34,7 @@ class FooterSubWrapRight extends Component {
     }
   };
 
-  isValidatedEmail = email => {
-    return email.includes("@") && email.length >= 8;
-  };
+  isValidatedEmail = email => email.includes("@") && email.length >= 8;
 
   render() {
     const { inputEmail } = this.state;
