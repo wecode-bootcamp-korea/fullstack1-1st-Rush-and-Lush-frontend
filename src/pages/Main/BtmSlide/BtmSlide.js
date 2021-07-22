@@ -6,20 +6,20 @@ class BtmSlide extends Component {
   constructor() {
     super();
     this.state = {
-      imgIndex: 1,
+      imgId: 1,
       scrollTop: 0,
       btmSlides: [],
     };
   }
 
   fadeSlide = () => {
-    this.state.imgIndex > 1
-      ? this.setState({ imgIndex: 1 })
-      : this.setState({ imgIndex: this.state.imgIndex + 1 });
+    const { imgId } = this.state;
+
+    this.setState(imgId > 1 ? { imgId: 1 } : { imgId: imgId + 1 });
   };
 
   handleScroll = e => {
-    const scrollTop = ("scroll", e.srcElement.scrollingElement.scrollTop);
+    const scrollTop = ("scroll", e.target.scrollingElement.scrollTop);
     this.setState({
       scrollTop,
     });
@@ -43,10 +43,13 @@ class BtmSlide extends Component {
   };
 
   render() {
-    const { scrollTop, imgIndex } = this.state;
+    const { scrollTop, imgId } = this.state;
+    const showImgScrollTop = 1330;
     return (
       <div
-        className={scrollTop > 1330 ? "BtmSlide active" : "BtmSlide"}
+        className={
+          scrollTop > showImgScrollTop ? "BtmSlide active" : "BtmSlide"
+        }
         onScroll={this.handleScroll}
       >
         <dl>
@@ -63,7 +66,7 @@ class BtmSlide extends Component {
                   key={index}
                   id={slide.id}
                   img={slide.img}
-                  imgIndex={imgIndex}
+                  imgId={imgId}
                 />
               );
             })}

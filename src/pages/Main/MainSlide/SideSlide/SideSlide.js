@@ -13,28 +13,30 @@ class SideSlide extends Component {
   }
 
   slideLeft = () => {
-    if (this.state.imgIndex > 1) {
+    const { imgIndex } = this.state;
+    if (imgIndex > 1) {
       this.setState({
         imgIndex: 1,
       });
     } else {
       this.setState({
-        imgIndex: this.state.imgIndex + 1,
+        imgIndex: imgIndex + 1,
       });
     }
   };
 
   slideRight = () => {
+    const { imgIndex, sideSlides } = this.state;
     this.setState({
-      imgIndex: 2,
+      imgIndex: sideSlides.length,
     });
-    if (this.state.imgIndex <= 1) {
+    if (imgIndex <= 1) {
       this.setState({
-        imgIndex: 2,
+        imgIndex: sideSlides.length,
       });
     } else {
       this.setState({
-        imgIndex: this.state.imgIndex - 1,
+        imgIndex: imgIndex - 1,
       });
     }
   };
@@ -47,7 +49,6 @@ class SideSlide extends Component {
           sideSlides: data.sideSlideData,
         });
       });
-
     setInterval(this.slideLeft, 4000);
   }
 
@@ -56,9 +57,7 @@ class SideSlide extends Component {
     return (
       <div className="SideSlide">
         <div
-          className={
-            imgIndex === 1 ? "sideImgWrap first" : "sideImgWrap second"
-          }
+          className={"sideImgWrap" + (imgIndex === 1 ? " first" : " second")}
         >
           {sideSlides.map((slide, index) => {
             return <SideSlideImg key={index} img={slide.img} />;

@@ -24,10 +24,13 @@ class MidEventGridImg extends Component {
 
   render() {
     const { scrollTop } = this.state;
+    const showImgScrollTop = 650;
     return (
       <div
         className={
-          scrollTop > 650 ? "MidEventGridImg active" : "MidEventGridImg"
+          scrollTop > showImgScrollTop
+            ? "MidEventGridImg active"
+            : "MidEventGridImg"
         }
       >
         <div className="imgLeft">

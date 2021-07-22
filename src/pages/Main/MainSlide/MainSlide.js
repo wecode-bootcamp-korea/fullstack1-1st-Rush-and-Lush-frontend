@@ -1,31 +1,39 @@
 import { Component } from "react";
 import MainSlideImg from "./MainSlideImg";
-import ItemCard from "./ItemCard/ItemCard";
 import SideSlide from "./SideSlide/SideSlide";
+import MainSlideBtn from "./MainSlideBtn";
+import ItemCard from "./ItemCard/ItemCard";
 import "./MainSlide.scss";
 
 class MainSlide extends Component {
   constructor() {
     super();
     this.state = {
-      imgIndex: 1,
+      imgId: 1,
       mainSlides: [],
     };
   }
 
   imgSlideNext = () => {
-    this.state.imgIndex > 2
-      ? this.setState({ imgIndex: 1 })
-      : this.setState({ imgIndex: this.state.imgIndex + 1 });
+    const { imgId, mainSlides } = this.state;
+
+    this.setState(
+      imgId > mainSlides.length - 1 ? { imgId: 1 } : { imgId: imgId + 1 }
+    );
   };
 
   imgSlidePrev = () => {
+    const { imgId, mainSlides } = this.state;
+
     this.setState({
-      imgIndex: 3,
+      imgId: mainSlides.length,
     });
-    this.state.imgIndex <= 1
-      ? this.setState({ imgIndex: 3 })
-      : this.setState({ imgIndex: this.state.imgIndex - 1 });
+
+    this.setState(
+      this.state.imgId <= 1
+        ? { imgId: mainSlides.length }
+        : { imgId: imgId - 1 }
+    );
   };
 
   componentDidMount() {
@@ -36,7 +44,6 @@ class MainSlide extends Component {
           mainSlides: data.mainSlideData,
         });
       });
-
     setInterval(this.imgSlideNext, 3000);
   }
 
@@ -51,38 +58,18 @@ class MainSlide extends Component {
                   key={index}
                   id={slide.id}
                   img={slide.img}
-                  imgIndex={this.state.imgIndex}
+                  imgId={this.state.imgId}
                 />
               );
             })}
           </div>
-          <div className="mainSlideBtn">
-            <ul>
-              <li>
-                <button
-                  className="mainBtn1st"
-                  type="button"
-                  onClick={this.imgSlidePrev}
-                >
-                  <img src="./images/mainUpArrow.png" alt="mainUpArrow" />
-                </button>
-              </li>
-              <li>
-                <button
-                  className="mainBtn2nd"
-                  type="button"
-                  onClick={this.imgSlideNext}
-                >
-                  <img src="./images/mainDownArrow.png" alt="mainDownArrow" />
-                </button>
-              </li>
-            </ul>
-          </div>
+          <MainSlideBtn
+            imgSlideNext={this.imgSlideNext}
+            imgSlidePrev={this.imgSlidePrev}
+          />
           <SideSlide />
         </div>
-        <div>
-          <ItemCard />
-        </div>
+        <ItemCard />
       </div>
     );
   }

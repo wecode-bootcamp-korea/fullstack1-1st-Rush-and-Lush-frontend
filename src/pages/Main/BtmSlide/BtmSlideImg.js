@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 class BtmSlideImg extends Component {
   render() {
-    const { imgIndex, id, img } = this.props;
+    const { imgId, id, img } = this.props;
     return (
-      <Link className={imgIndex === id ? "btmSlide active" : "btmSlide"} to="/">
+      <Link className={"btmSlide" + (imgId === id ? " active" : "")} to="/">
         <img src={img} alt="btmSlide" />
       </Link>
     );
