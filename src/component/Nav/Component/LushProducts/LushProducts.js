@@ -10,6 +10,7 @@ class LushProducts extends Component {
     this.state = {
       subNav: [],
       productCategory: [],
+      lushProducts: [],
     };
   }
 
@@ -28,13 +29,13 @@ class LushProducts extends Component {
           }
         }
 
-        const LushProducts = productCategory;
-        this.setState({ LushProducts });
+        const lushProducts = productCategory;
+        this.setState({ lushProducts });
       });
   }
 
   render() {
-    const { productCategory } = this.state;
+    const { lushProducts } = this.state;
 
     return (
       <div className="LushProducts">
@@ -44,7 +45,7 @@ class LushProducts extends Component {
               제품
             </Link>
             <div className="tooltipWindow">
-              {productCategory.map((category, id) => (
+              {lushProducts.map((category, id) => (
                 <LushProductsList
                   key={id}
                   catagoryName={category.catagoryName}

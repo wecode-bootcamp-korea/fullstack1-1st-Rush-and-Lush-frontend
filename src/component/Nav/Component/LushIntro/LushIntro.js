@@ -10,6 +10,7 @@ class LushIntro extends Component {
     this.state = {
       subNav: [],
       lushIntroCategory: [],
+      lushIntro: [],
     };
   }
 
@@ -28,13 +29,13 @@ class LushIntro extends Component {
           }
         }
 
-        const LushIntro = lushIntroCategory;
-        this.setState({ LushIntro });
+        const lushIntro = lushIntroCategory;
+        this.setState({ lushIntro });
       });
   }
 
   render() {
-    const { lushIntroCategory } = this.state;
+    const { lushIntro } = this.state;
 
     return (
       <div className="LushIntro">
@@ -44,7 +45,7 @@ class LushIntro extends Component {
               러쉬 소개
             </Link>
             <div className="tooltipWindow">
-              {lushIntroCategory.map((category, id) => (
+              {lushIntro.map((category, id) => (
                 <LushProductsList
                   key={id}
                   catagoryName={category.catagoryName}
