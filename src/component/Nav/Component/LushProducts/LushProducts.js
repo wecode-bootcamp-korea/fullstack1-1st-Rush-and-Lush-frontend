@@ -14,7 +14,7 @@ class LushProducts extends Component {
     };
   }
 
-  componentDidMount() {
+  getCategoryData = async () => {
     fetch(`${API}${CATEGORY_PATH}`)
       .then(res => res.json())
       .then(res => {
@@ -32,6 +32,10 @@ class LushProducts extends Component {
         const lushProducts = productCategory;
         this.setState({ lushProducts });
       });
+  };
+
+  componentDidMount() {
+    this.getCategoryData();
   }
 
   render() {

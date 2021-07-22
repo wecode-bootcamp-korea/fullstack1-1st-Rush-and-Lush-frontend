@@ -14,7 +14,7 @@ class LushIntro extends Component {
     };
   }
 
-  componentDidMount() {
+  getCategoryData = () => {
     fetch(`${API}${CATEGORY_PATH}`)
       .then(res => res.json())
       .then(res => {
@@ -32,6 +32,10 @@ class LushIntro extends Component {
         const lushIntro = lushIntroCategory;
         this.setState({ lushIntro });
       });
+  };
+
+  componentDidMount() {
+    this.getCategoryData();
   }
 
   render() {
