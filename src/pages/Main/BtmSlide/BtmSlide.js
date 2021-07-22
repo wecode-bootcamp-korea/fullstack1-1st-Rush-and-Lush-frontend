@@ -1,36 +1,39 @@
 import { Component } from "react";
+import BtmSlideImg from "./BtmSlideImg";
 import "./BtmSlide.scss";
 
 class BtmSlide extends Component {
   constructor() {
     super();
     this.state = {
-      imgIndex: 1,
+      imgId: 1,
       scrollTop: 0,
+      btmSlides: [],
     };
   }
 
   fadeSlide = () => {
-    if (this.state.imgIndex > 1) {
-      this.setState({
-        imgIndex: 1,
-      });
-    } else {
-      this.setState({
-        imgIndex: this.state.imgIndex + 1,
-      });
-    }
+    const { imgId } = this.state;
+
+    this.setState(imgId > 1 ? { imgId: 1 } : { imgId: imgId + 1 });
   };
 
   handleScroll = e => {
-    const scrollTop = ("scroll", e.srcElement.scrollingElement.scrollTop);
+    const scrollTop = ("scroll", e.target.scrollingElement.scrollTop);
     this.setState({
       scrollTop,
     });
-    console.log(this.state.scrollTop);
   };
 
   componentDidMount() {
+    fetch("http://localhost:3000/data/btmSlideData.json")
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          btmSlides: data.btmSlideData,
+        });
+      });
+
     window.addEventListener("scroll", this.handleScroll);
     setInterval(this.fadeSlide, 5000);
   }
@@ -40,9 +43,13 @@ class BtmSlide extends Component {
   };
 
   render() {
+    const { scrollTop, imgId } = this.state;
+    const showImgScrollTop = 1330;
     return (
       <div
-        className={this.state.scrollTop > 1330 ? "BtmSlide active" : "BtmSlide"}
+        className={
+          scrollTop > showImgScrollTop ? "BtmSlide active" : "BtmSlide"
+        }
         onScroll={this.handleScroll}
       >
         <dl>
@@ -53,28 +60,16 @@ class BtmSlide extends Component {
         </dl>
         <div className="btmSlideContainer">
           <div className="btmSlideImg">
-            <a
-              className={
-                this.state.imgIndex === 1 ? "btmSlide active" : "btmSlide"
-              }
-              href="/"
-            >
-              <img
-                src="https://media0.giphy.com/media/jGd1iZ5LTgTI4Ba80O/giphy.gif?cid=ecf05e47jd65rv8l4f22g5s4htmp63mnlpgsay0k3lm5u3jl&rid=giphy.gif&ct=g"
-                alt="마지막 슬라이드"
-              />
-            </a>
-            <a
-              className={
-                this.state.imgIndex === 2 ? "btmSlide active" : "btmSlide"
-              }
-              href="/"
-            >
-              <img
-                src="https://media2.giphy.com/media/EsnC3oNRj1Ej8jqSqF/giphy.gif?cid=ecf05e47me0rk58n80mcnvw8r1f7bjiyahhg3j0snclr8nyn&rid=giphy.gif&ct=g"
-                alt="마지막 슬라이드"
-              />
-            </a>
+            {this.state.btmSlides.map((slide, index) => {
+              return (
+                <BtmSlideImg
+                  key={index}
+                  id={slide.id}
+                  img={slide.img}
+                  imgId={imgId}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

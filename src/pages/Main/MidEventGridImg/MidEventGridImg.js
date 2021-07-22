@@ -1,7 +1,7 @@
 import { Component } from "react";
-import "./GridImg.scss";
+import "./MidEventGridImg.scss";
 
-class GridImg extends Component {
+class MidEventGridImg extends Component {
   constructor() {
     super();
     this.state = {
@@ -10,10 +10,8 @@ class GridImg extends Component {
   }
 
   handleScroll = e => {
-    const scrollTop = ("scroll", e.srcElement.scrollingElement.scrollTop);
-    this.setState({
-      scrollTop,
-    });
+    const scrollTop = ("scroll", e.target.scrollingElement.scrollTop);
+    this.setState({ scrollTop });
   };
 
   componentDidMount() {
@@ -25,9 +23,15 @@ class GridImg extends Component {
   };
 
   render() {
+    const { scrollTop } = this.state;
+    const showImgScrollTop = 650;
     return (
       <div
-        className={this.state.scrollTop > 650 ? "GridImg active" : "GridImg"}
+        className={
+          scrollTop > showImgScrollTop
+            ? "MidEventGridImg active"
+            : "MidEventGridImg"
+        }
       >
         <div className="imgLeft">
           <a href="/">
@@ -52,4 +56,4 @@ class GridImg extends Component {
   }
 }
 
-export default GridImg;
+export default MidEventGridImg;

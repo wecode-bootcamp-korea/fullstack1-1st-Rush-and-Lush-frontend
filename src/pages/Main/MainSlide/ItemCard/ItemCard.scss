@@ -1,3 +1,5 @@
+@import "../../../../styles/common.scss";
+
 @mixin flex {
   display: flex;
   justify-content: center;
@@ -20,7 +22,7 @@
       font-weight: 700;
       letter-spacing: 5px;
       color: rgb(66, 66, 66);
-      background-color: #78ed64;
+      background-color: $key-color;
     }
 
     .wholeItemSlideWrap {
@@ -91,7 +93,7 @@
         transition: all 0.18s ease-in-out;
 
         &:hover {
-          color: #78ed64;
+          color: $key-color;
         }
       }
     }

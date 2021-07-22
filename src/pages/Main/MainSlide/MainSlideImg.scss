@@ -1,0 +1,17 @@
+.MainSlideImg {
+  .mainSlideClick {
+    .mainSlideImgs {
+      height: 580px !important;
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+    }
+
+    .active {
+      opacity: 1;
+    }
+  }
+}
