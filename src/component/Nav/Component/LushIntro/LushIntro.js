@@ -18,20 +18,24 @@ class LushIntro extends Component {
     fetch(`${API}${CATEGORY_PATH}`)
       .then(res => res.json())
       .then(res => {
-        this.setState({ subNav: res.categories });
-
-        const { subNav } = this.state;
-        const { lushIntroCategory } = this.state;
-
-        for (let category of subNav) {
-          if (category.menuId === 2) {
-            lushIntroCategory.push(category);
-          }
-        }
-
-        const lushIntro = lushIntroCategory;
-        this.setState({ lushIntro });
+        this.setState({ subNav: res.categories }, () => {
+          this.manufactureCategory();
+        });
       });
+  };
+
+  manufactureCategory = () => {
+    const { subNav } = this.state;
+    const { lushIntroCategory } = this.state;
+
+    for (let category of subNav) {
+      if (category.menuId === 2) {
+        lushIntroCategory.push(category);
+      }
+    }
+
+    const lushIntro = lushIntroCategory;
+    this.setState({ lushIntro });
   };
 
   componentDidMount() {

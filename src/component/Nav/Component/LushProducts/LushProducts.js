@@ -18,20 +18,24 @@ class LushProducts extends Component {
     fetch(`${API}${CATEGORY_PATH}`)
       .then(res => res.json())
       .then(res => {
-        this.setState({ subNav: res.categories });
-
-        const { subNav } = this.state;
-        const { productCategory } = this.state;
-
-        for (let category of subNav) {
-          if (category.menuId === 1) {
-            productCategory.push(category);
-          }
-        }
-
-        const lushProducts = productCategory;
-        this.setState({ lushProducts });
+        this.setState({ subNav: res.categories }, () => {
+          this.manufactureCategory();
+        });
       });
+  };
+
+  manufactureCategory = () => {
+    const { subNav } = this.state;
+    const { productCategory } = this.state;
+
+    for (let category of subNav) {
+      if (category.menuId === 1) {
+        productCategory.push(category);
+      }
+    }
+
+    const lushProducts = productCategory;
+    this.setState({ lushProducts });
   };
 
   componentDidMount() {
