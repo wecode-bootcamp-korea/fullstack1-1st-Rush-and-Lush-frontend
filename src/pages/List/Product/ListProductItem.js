@@ -19,7 +19,7 @@ class ListProductItem extends Component {
           <div className="listProductInfoBox">
             <div className="listProductTagBtnBox">
               {this.props.tags?.map(tag => (
-                <ListTagButton tagButton={tag}></ListTagButton>
+                <ListTagButton tagButton={tag} />
               ))}
             </div>
 

@@ -20,7 +20,7 @@ class List extends Component {
 
   componentDidMount() {
     console.log(this.props.location.search);
-    fetch(`http://10.89.1.179:8000/products`)
+    fetch(`http://:8000/products`)
       .then(res => res.json())
       .then(data => {
         this.setState({
