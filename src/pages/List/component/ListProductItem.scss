@@ -32,10 +32,11 @@
         text-decoration: none;
       }
 
-      .listProduct .listProductName {
+      .listProductName {
         @include display;
         height: 21px;
         font-size: 16px;
+        text-decoration: none;
         color: #333333;
       }
 
