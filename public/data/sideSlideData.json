@@ -1,0 +1,12 @@
+{
+  "sideSlideData": [
+    {
+      "id": 1,
+      "img": "./images/side_slide_3.jpg"
+    },
+    {
+      "id": 2,
+      "img": "./images/side_slide_4.jpg"
+    }
+  ]
+}
