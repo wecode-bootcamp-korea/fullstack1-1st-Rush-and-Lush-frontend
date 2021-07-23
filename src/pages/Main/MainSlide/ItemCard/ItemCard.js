@@ -48,7 +48,11 @@ class ItemCard extends Component {
         });
       });
 
-    setInterval(this.imgSlideLeft, 5000);
+    this.interval = setInterval(this.imgSlideLeft, 5000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   render() {

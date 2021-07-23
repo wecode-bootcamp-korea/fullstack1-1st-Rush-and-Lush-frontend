@@ -35,11 +35,12 @@ class BtmSlide extends Component {
       });
 
     window.addEventListener("scroll", this.handleScroll);
-    setInterval(this.fadeSlide, 5000);
+    this.interval = setInterval(this.fadeSlide, 5000);
   }
 
   componentWillUnMount = () => {
     window.removeEventListener("scroll", this.handleScroll);
+    clearInterval(this.interval);
   };
 
   render() {
