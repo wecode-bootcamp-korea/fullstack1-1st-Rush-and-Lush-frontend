@@ -1,8 +1,8 @@
-.SideSlide{
+.SideSlide {
   z-index: 1px;
   position: absolute;
   top: 500px;
-  left : 70%;
+  left: 70%;
   width: 280px;
   overflow: hidden;
 
@@ -25,37 +25,37 @@
     transition-delay: 0.3s;
   }
 
-  .sideSlideCount {
+  .indexIndicator {
     display: flex;
     z-index: 2px;
     position: absolute;
     top: 620px;
-    left : 60%;
+    left: 60%;
 
     .sideSlideBtn {
       padding-right: 10px;
       border: none;
       background-color: transparent;
-      color: rgba(255, 255, 255, 0.6)
-    };
+      color: rgba(255, 255, 255, 0.6);
+    }
 
-    .counter{
+    .counter {
       display: flex;
       padding-top: 7px;
 
       .sideSlideIdxPrev {
         color: white;
         padding-right: 5px;
-      };
-  
+      }
+
       .part {
         color: white;
         padding-right: 5px;
       }
-  
+
       .sideSlideIdxNext {
         color: white;
-      };
-    };
-  };
-};
+      }
+    }
+  }
+}

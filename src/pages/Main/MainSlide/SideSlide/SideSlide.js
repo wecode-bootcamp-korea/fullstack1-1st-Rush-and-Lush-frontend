@@ -1,82 +1,73 @@
 import { Component } from "react";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import SideSlideImg from "./SideSlideImg";
+import IndexIndicator from "./IndexIndicator";
 import "./SideSlide.scss";
 
 class SideSlide extends Component {
   constructor() {
     super();
     this.state = {
-      img: 1,
+      imgIndex: 1,
+      sideSlides: [],
     };
   }
 
   slideLeft = () => {
-    if (this.state.img > 1) {
+    const { imgIndex } = this.state;
+    if (imgIndex > 1) {
       this.setState({
-        img: 1,
+        imgIndex: 1,
       });
     } else {
       this.setState({
-        img: this.state.img + 1,
+        imgIndex: imgIndex + 1,
       });
     }
   };
 
   slideRight = () => {
+    const { imgIndex, sideSlides } = this.state;
     this.setState({
-      list: 2,
+      imgIndex: sideSlides.length,
     });
-    if (this.state.list <= 1) {
+    if (imgIndex <= 1) {
       this.setState({
-        list: 2,
+        imgIndex: sideSlides.length,
       });
     } else {
       this.setState({
-        list: this.state.list - 1,
+        imgIndex: imgIndex - 1,
       });
     }
   };
 
   componentDidMount() {
+    fetch("http://localhost:3000/data/sideSlideData.json")
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          sideSlides: data.sideSlideData,
+        });
+      });
     setInterval(this.slideLeft, 4000);
   }
 
   render() {
+    const { imgIndex, sideSlides } = this.state;
     return (
       <div className="SideSlide">
         <div
-          className={
-            this.state.img === 1 ? "sideImgWrap first" : "sideImgWrap second"
-          }
+          className={"sideImgWrap" + (imgIndex === 1 ? " first" : " second")}
         >
-          <a href="/">
-            <img src="./images/side_slide_3.jpg" alt="사이드 슬라이드" />
-          </a>
-          <a href="/">
-            <img src="./images/side_slide_4.jpg" alt="사이드 슬라이드" />
-          </a>
+          {sideSlides.map((slide, index) => {
+            return <SideSlideImg key={index} img={slide.img} />;
+          })}
         </div>
-        <div className="sideSlideCount">
-          <button
-            className="sideSlideBtn"
-            type="button"
-            onClick={this.slideLeft}
-          >
-            <IoIosArrowBack size="24" />
-          </button>
-          <div className="counter">
-            <div className="sideSlideIdxPrev">{this.state.img}</div>
-            <div className="part"> / </div>
-            <div className="sideSlideIdxNext">2</div>
-          </div>
-          <button
-            className="sideSlideBtn"
-            type="button"
-            onClick={this.slideRight}
-          >
-            <IoIosArrowForward size="24" />
-          </button>
-        </div>
+        <IndexIndicator
+          imgIndex={imgIndex}
+          slideLeft={this.slideLeft}
+          slideRight={this.slideRight}
+        />
       </div>
     );
   }
