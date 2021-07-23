@@ -8,25 +8,19 @@ class Login extends Component {
   constructor() {
     super();
     this.state = {
-      isMemberLogin: false,
       currentId: 1,
     };
   }
 
-  // changeId = () => {
-  //   const { isMemberLogin } = this.state;
-  //   if (isMemberLogin === false) {
-  //     this.setState({ isMemberLogin: true, currentId: 2 });
-  //   } else {
-  //     this.setState({ isMemberLogin: false, currentId: 1 });
-  //   }
-  // };
+  changeId = id => {
+    this.setState({ currentId: id });
+  };
 
   render() {
     const { currentId } = this.state;
     return (
       <div>
-        <MemberNav />
+        <MemberNav changeId={this.changeId} currentId={this.state.currentId} />
         {currentId === 1 && <LoginPage />}
         {currentId === 2 && <NonMembersLogin />}
       </div>

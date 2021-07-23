@@ -4,22 +4,13 @@ import "./MemberNav.scss";
 class MemberNav extends Component {
   constructor() {
     super();
-    this.state = {
-      isMemberLogin: false,
-      currentId: 1,
-    };
+    this.state = {};
   }
 
-  changeId = () => {
-    if (this.state.isMemberLogin === false) {
-      this.setState({ isMemberLogin: true, currentId: 2 });
-    } else {
-      this.setState({ isMemberLogin: false, currentId: 1 });
-    }
-  };
-
   render() {
-    const { isMemberLogin } = this.state;
+    const { changeId } = this.props;
+    const { currentId } = this.props;
+
     return (
       <div className="MemberNav">
         <div className="loginTitle">
@@ -30,8 +21,8 @@ class MemberNav extends Component {
             <li>
               <button
                 type="button"
-                className={isMemberLogin ? "nonmemberActive" : "memberActive"}
-                onClick={this.changeId}
+                className={currentId === 1 ? "memberActive" : "nonmemberActive"}
+                onClick={() => changeId(1)}
               >
                 회원
               </button>
@@ -39,8 +30,8 @@ class MemberNav extends Component {
             <li>
               <button
                 type="button"
-                className={isMemberLogin ? "memberActive" : "nonmemberActive"}
-                onClick={this.changeId}
+                className={currentId === 2 ? "memberActive" : "nonmemberActive"}
+                onClick={() => changeId(2)}
               >
                 비회원
               </button>
