@@ -1,15 +1,19 @@
 @import "../../styles/common.scss";
+// @import
 
 .Footer {
   .iconWesh {
-    width: 1920px;
     width: 100%;
     height: 170px;
-    background: url(http://img.lush.co.kr/images/core/footer-icons.svg);
-    background-color: #f2f2f2;
-    background-repeat: no-repeat;
-    background-position: center;
-    // background-size: cover;
+    line-height: 14;
+    padding-left: 150px;
+    padding-bottom: 20px;
+    background: $footer-image-color center no-repeat;
+
+    img {
+      width: 90%;
+      margin-top: 15px;
+    }
   }
 
   .footerWrap {
