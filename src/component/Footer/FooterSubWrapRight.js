@@ -61,7 +61,6 @@ class FooterSubWrapRight extends Component {
           >
             <input
               type="email"
-              id="inputEmail"
               name="inputEmail"
               className="emailInput"
               placeholder="이메일 주소를 입력해 주세요."
