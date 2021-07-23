@@ -23,7 +23,6 @@ class ListProductItem extends Component {
                   <ListTagButton tagButton={tag}></ListTagButton>
                 ))}
             </div>
-
             <div className="listProductNameBox">
               <Link to="/detail">
                 <p className="listProductName">{this.props.name}</p>

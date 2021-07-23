@@ -42,7 +42,7 @@ class SideSlide extends Component {
   };
 
   componentDidMount() {
-    fetch("http://localhost:3000/data/sideSlideData.json")
+    fetch("data/sideSlideData.json")
       .then(res => res.json())
       .then(data => {
         this.setState({

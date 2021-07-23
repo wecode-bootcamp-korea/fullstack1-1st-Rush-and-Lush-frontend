@@ -15,8 +15,8 @@ class LoginPage extends Component {
 
   goToLogin = event => {
     const { idValue, pwValue } = this.state;
-    event.preventDefault();
-    fetch("http://10.89.1.164:8000/users/login", {
+    // event.preventDefault();
+    fetch("http://10.89.6.238:8000/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -29,21 +29,21 @@ class LoginPage extends Component {
       .then(res => res.json())
       .then(json => {
         if (json.token) {
-          alert("로그인 마 됬다~");
+          alert("로그인에 성공하셨습니다.");
           this.props.history.push("/main");
         } else {
-          alert("로그인 안됬음 ㅅㄱ");
+          alert("로그인에 실패하셨습니다.");
         }
       });
   };
 
   handleIdInput = event => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     this.setState({ idValue: event.target.value });
   };
 
   handlePwInput = event => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     this.setState({ pwValue: event.target.value });
   };
 
