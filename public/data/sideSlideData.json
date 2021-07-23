@@ -2,11 +2,11 @@
   "sideSlideData": [
     {
       "id": 1,
-      "img": "./images/side_slide_3.jpg"
+      "img": "https://i.postimg.cc/VLFgfg2R/side-slide-3.jpg"
     },
     {
       "id": 2,
-      "img": "./images/side_slide_4.jpg"
+      "img": "https://i.postimg.cc/PxZbBQm1/side-slide-4.jpg"
     }
   ]
 }
