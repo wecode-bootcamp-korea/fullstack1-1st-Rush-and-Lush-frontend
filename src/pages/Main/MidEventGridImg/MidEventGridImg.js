@@ -35,19 +35,31 @@ class MidEventGridImg extends Component {
       >
         <div className="imgLeft">
           <a href="/">
-            <img src="./images/img_left_2.jpg" alt="left" />
+            <img
+              src="https://i.postimg.cc/7YyCsyss/img-left-2.jpg"
+              alt="left"
+            />
           </a>
         </div>
         <div className="imgRightUp">
           <a href="/">
-            <img src="./images/img_right_up_2.jpg" alt="right" />
+            <img
+              src="https://i.postimg.cc/W3gNgdv2/img-right-up-2.jpg"
+              alt="right"
+            />
           </a>
           <div className="imgRightBtm">
             <a href="/">
-              <img src="./images/img_right_btm_3.jpg" alt="right_bottom" />
+              <img
+                src="https://i.postimg.cc/Gm6nKbz9/img-right-btm-3.jpg"
+                alt="right_bottom"
+              />
             </a>
             <a href="/">
-              <img src="./images/img_right_btm_4.jpg" alt="right_bottom" />
+              <img
+                src="https://i.postimg.cc/zB5M2vhD/img-right-btm-4.jpg"
+                alt="right_bottom"
+              />
             </a>
           </div>
         </div>

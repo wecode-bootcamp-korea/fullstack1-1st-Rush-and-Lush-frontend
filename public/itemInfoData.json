@@ -2,7 +2,7 @@
   "itemInfoData": [
     {
       "id": 1,
-      "img":".images/card_1.jpg",
+      "img": "https://i.postimg.cc/zf2742n9/card-1.jpg",
       "name": "허니 제스트",
       "price": 9000,
       "weight": 90,

@@ -2,15 +2,15 @@
   "mainSlideData": [
     {
       "id": 1,
-      "img": "./images/main_slide_1.jpg"
+      "img": "https://i.postimg.cc/xC7GZFJf/main-slide-1.jpg"
     },
     {
       "id": 2,
-      "img": "./images/main_slide_2.jpg"
+      "img": "https://i.postimg.cc/bwTxPvDF/main-slide-2.jpg"
     },
     {
       "id": 3,
-      "img": "./images/main_slide_3.jpg"
+      "img": "https://i.postimg.cc/0Q6D7dtL/main-slide-3.jpg"
     }
   ]
 }
