@@ -15,15 +15,14 @@ class LoginPage extends Component {
 
   goToLogin = event => {
     const { idValue, pwValue } = this.state;
-    if (this.state.idValue === "") {
+    if (idValue === "") {
       return alert("아이디를 입력하세요.");
     }
-    if (!this.state.idValue.includes("@")) {
+    if (!idValue.includes("@")) {
       alert("@를 포함한 아이디를 입력하세요.");
-    } else if (this.state.pwValue === "") {
+    } else if (pwValue === "") {
       alert("비밀번호를 입력하세요.");
-    } else if (this.state.pwValue.length < 8)
-      alert("비빌번호는 8자 이상 입력하세요.");
+    } else if (pwValue.length < 8) alert("비빌번호는 8자 이상 입력하세요.");
 
     event.preventDefault();
     fetch("http://10.89.0.248:8000/users/login", {

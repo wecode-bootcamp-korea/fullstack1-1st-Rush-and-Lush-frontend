@@ -6,14 +6,15 @@ class MemberNav extends Component {
     super();
     this.state = {
       isMemberLogin: false,
+      currentId: 1,
     };
   }
 
   changeId = () => {
     if (this.state.isMemberLogin === false) {
-      this.setState({ isMemberLogin: true });
+      this.setState({ isMemberLogin: true, currentId: 2 });
     } else {
-      this.setState({ isMemberLogin: false });
+      this.setState({ isMemberLogin: false, currentId: 1 });
     }
   };
 
