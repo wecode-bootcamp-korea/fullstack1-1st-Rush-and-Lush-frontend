@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import LushProductsList from "../LushProducts/LushProductsList";
 import "../../Component/LushProducts/LushProductsList.scss";
-import { API, CATEGORY_PATH } from "../../../../utils/api";
+import { API, CATEGORY_PATH } from "../../../../config";
 
 class LushIntro extends Component {
   constructor() {
