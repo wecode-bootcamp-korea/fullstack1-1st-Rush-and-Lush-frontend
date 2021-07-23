@@ -1,15 +1,20 @@
 import { Component } from "react";
+import ListPageHeader from "./Header/ListPageHeader";
+import ListNavTitle from "./Nav/ListNavTitle";
+import ListNavCategory from "./Nav/ListNavCategory";
+import ListProductItem from "./Product/ListProductItem";
+import ListPaging from "./Page/ListPaging";
 import "./List.scss";
-import ListProductItem from "./component/ListProductItem";
-import ListNavCategory from "./component/ListNav/ListNavCategory";
-import ListNavTitle from "./component/ListNav/ListNavTitle";
-import ListPageHeader from "./component/ListPageHeader";
 
 class List extends Component {
   constructor() {
     super();
     this.state = {
       products: [],
+      headerTxt: {
+        title: "솝",
+        desc: " 향기를 머금은 거품으로 구석구석 꼼꼼하게",
+      },
     };
   }
 
@@ -18,7 +23,6 @@ class List extends Component {
     fetch(`http://10.89.1.179:8000/products`)
       .then(res => res.json())
       .then(data => {
-        // console.log("이거", data.products, data);
         this.setState({
           products: data.products,
         });
@@ -28,7 +32,10 @@ class List extends Component {
   render() {
     return (
       <div className="List">
-        <ListPageHeader />
+        <ListPageHeader
+          title={this.state.headerTxt.title}
+          desc={this.state.headerTxt.desc}
+        />
         <div className="listPageContainer">
           <div className="listNav">
             <ListNavTitle />
@@ -46,15 +53,7 @@ class List extends Component {
                 />
               ))}
             </div>
-            <div className="ListPaging">
-              <nav>
-                <ul className="ListPagination">
-                  <li>
-                    <span>1</span>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+            <ListPaging />
           </div>
         </div>
       </div>

@@ -11,23 +11,14 @@
 
   &.NEW {
     background-color: #007a29;
-    &:hover {
-      background-color: #03c75a;
-    }
   }
 
   &.VEGAN {
     background-color: #92ac00;
-    &:hover {
-      background-color: rgb(30, 173, 230);
-    }
   }
 
   &.SOLD.OUT {
-    background-color: rgb(228, 108, 61);
+    background-color: #e46c3d;
     font-size: 10px;
-    &:hover {
-      background-color: rgb(255, 72, 0);
-    }
   }
 }

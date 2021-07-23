@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import "./ListNavCategoryList.scss";
 
 class ListNavCategoryList extends Component {
   render() {

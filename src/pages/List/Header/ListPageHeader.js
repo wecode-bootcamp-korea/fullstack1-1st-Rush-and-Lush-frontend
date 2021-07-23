@@ -5,10 +5,8 @@ class ListPageHeader extends Component {
   render() {
     return (
       <div className="listPageHeader">
-        <p className="listPageHeaderTxt">솝</p>
-        <p className="listPageHeaderTxt2">
-          향기를 머금은 거품으로 구석구석 꼼꼼하게
-        </p>
+        <p className="listPageHeaderTxt">{this.props.title}</p>
+        <p className="listPageHeaderTxt2">{this.props.desc}</p>
       </div>
     );
   }
