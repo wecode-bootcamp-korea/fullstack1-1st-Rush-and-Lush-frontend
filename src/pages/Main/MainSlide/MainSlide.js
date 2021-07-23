@@ -37,7 +37,7 @@ class MainSlide extends Component {
   };
 
   componentDidMount() {
-    fetch("http://localhost:3000/data/mainSlideData.json")
+    fetch("data/mainSlideData.json")
       .then(res => res.json())
       .then(data => {
         this.setState({
