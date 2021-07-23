@@ -28,7 +28,6 @@ class FooterSubWrapRight extends Component {
     const { inputEmail } = this.state;
     if (!inputEmail) {
       alert("이메일이 없네요? 입력 부탁드립니다 ✨");
-      event.target.reset();
     } else if (inputEmail) {
       alert("현재 지원되지 않는 기능입니다. 조금만 기다려주세요! ⏰");
     }
