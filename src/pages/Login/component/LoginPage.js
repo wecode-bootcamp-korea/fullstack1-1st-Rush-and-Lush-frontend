@@ -38,12 +38,10 @@ class LoginPage extends Component {
   };
 
   handleIdInput = event => {
-    // console.log(event.target.value);
     this.setState({ idValue: event.target.value });
   };
 
   handlePwInput = event => {
-    // console.log(event.target.value);
     this.setState({ pwValue: event.target.value });
   };
 
