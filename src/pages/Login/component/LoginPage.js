@@ -15,6 +15,16 @@ class LoginPage extends Component {
 
   goToLogin = event => {
     const { idValue, pwValue } = this.state;
+    if (this.state.idValue === "") {
+      return alert("아이디를 입력하세요.");
+    }
+    if (!this.state.idValue.includes("@")) {
+      alert("@를 포함한 아이디를 입력하세요.");
+    } else if (this.state.pwValue === "") {
+      alert("비밀번호를 입력하세요.");
+    } else if (this.state.pwValue.length < 8)
+      alert("비빌번호는 8자 이상 입력하세요.");
+
     event.preventDefault();
     fetch("http://10.89.0.248:8000/users/login", {
       method: "POST",
@@ -33,18 +43,6 @@ class LoginPage extends Component {
 
   handleInput = event => {
     this.setState({ [event.target.name]: event.target.value });
-  };
-
-  loginAlert = () => {
-    if (this.state.idValue === "") {
-      return alert("아이디를 입력하세요.");
-    }
-    if (!this.state.idValue.includes("@")) {
-      alert("@를 포함한 아이디를 입력하세요.");
-    } else if (this.state.pwValue === "") {
-      alert("비밀번호를 입력하세요.");
-    } else if (this.state.pwValue.length < 8)
-      alert("비빌번호는 8자 이상 입력하세요.");
   };
 
   render() {
@@ -86,7 +84,7 @@ class LoginPage extends Component {
             </div>
             <div className="loginButtonWrap">
               <button
-                onClick={(this.goToLogin, this.loginAlert)}
+                onClick={this.goToLogin}
                 type="button"
                 className="loginButton"
               >

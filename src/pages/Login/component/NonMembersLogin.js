@@ -7,7 +7,7 @@ class NonMembersLogin extends Component {
   render() {
     return (
       <div className="NonMembersLogin">
-        <form className="loginForm">
+        <div className="loginForm">
           <div className="LoginInput">
             <span className="loginIconContainer">
               <FaUserCircle size="24" className="userIcon" />
@@ -31,7 +31,7 @@ class NonMembersLogin extends Component {
             주문번호와 비밀번호를 잊으신 경우, 고객센터로 문의하여 주시기
             바랍니다.
           </p>
-        </form>
+        </div>
       </div>
     );
   }
