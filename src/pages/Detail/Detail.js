@@ -5,7 +5,7 @@ import Info from "./Info/Info";
 import ItemTab from "./ItemTab/ItemTab";
 import ItemDetail from "./ItemDetail/ItemDetail";
 import ItemTab2 from "./ItemTab2/ItemTab2";
-import Review from "./Review/Review";
+// import Review from "./Review/Review";
 import "./Detail.scss";
 
 class Detail extends Component {
@@ -52,7 +52,7 @@ class Detail extends Component {
         <ItemTab />
         <ItemDetail />
         <ItemTab2 />
-        <Review />
+        {/* <Review /> */}
       </div>
     );
   }
