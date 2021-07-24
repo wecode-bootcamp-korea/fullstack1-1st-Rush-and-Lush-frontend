@@ -1,7 +1,7 @@
 import { Component } from "react";
-import { Link } from "react-router-dom";
-import { RiHome5Fill } from "react-icons/ri";
-// import { IoIosArrowForward } from "react-icons/io";
+// import { Link } from "react-router-dom";
+// import { RiHome5Fill } from "react-icons/ri";
+import { IoIosArrowForward } from "react-icons/io";
 import "./DetailNav.scss";
 
 class DetailNav extends Component {
@@ -9,10 +9,10 @@ class DetailNav extends Component {
     return (
       <div className="DetailNav">
         <nav>
-          <Link to="/main">
-            <RiHome5Fill size="14" />
-          </Link>
-          <p>{/* <IoIosArrowForward /> */}</p>
+          {/* <Link to="/main"><RiHome5Fill size="14" /></Link> */}
+          <p>
+            <IoIosArrowForward />
+          </p>
           <select name="subCagory">
             <option value="베쓰">베쓰</option>
             <option value="샤워" selected="selected">
@@ -21,7 +21,9 @@ class DetailNav extends Component {
             <option value="보디">보디</option>
             <option value="페이스">페이스</option>
           </select>
-          <p>{/* <IoIosArrowForward /> */}</p>
+          <p>
+            <IoIosArrowForward />
+          </p>
           <select name="product">
             <option value="솝">솝</option>
             <option value="샤워젤 젤리">샤워젤 젤리</option>
