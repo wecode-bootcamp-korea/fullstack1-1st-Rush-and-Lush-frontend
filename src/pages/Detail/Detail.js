@@ -1,5 +1,5 @@
 import { Component } from "react";
-// import DetailNav from "./DetailNav/DetailNav";
+import DetailNav from "./DetailNav/DetailNav";
 import Banner from "./Banner/Banner";
 import Info from "./Info/Info";
 import ItemTab from "./ItemTab/ItemTab";
@@ -30,7 +30,7 @@ class Detail extends Component {
     return (
       <div className="Detail">
         <div className="itemInfo">
-          {/* <DetailNav /> */}
+          <DetailNav />
           <div className="detailInfoWrap">
             <Banner />
             {this.state.products.map(
