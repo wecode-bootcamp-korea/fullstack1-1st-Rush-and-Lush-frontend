@@ -11,21 +11,18 @@ class Signup extends Component {
     };
   }
   getIdValue = event => {
-    console.log(event.target.value);
     this.setState({
       idValue: event.target.value,
     });
   };
 
   getPwValue = event => {
-    console.log(event.target.value);
     this.setState({
       pwValue: event.target.value,
     });
   };
 
   getPwCheckValue = event => {
-    console.log(event.target.value);
     this.setState({
       pwCheckValue: event.target.value,
     });
@@ -34,7 +31,7 @@ class Signup extends Component {
   goToSignUp = event => {
     const { idValue, pwValue } = this.state;
     event.preventDefault();
-    fetch("http://10.89.1.164:8000/users/signup", {
+    fetch("http://10.89.6.238:8000/users/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

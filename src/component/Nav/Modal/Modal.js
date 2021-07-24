@@ -4,16 +4,20 @@ import "./Modal.scss";
 
 class Modal extends Component {
   render() {
+    const { modalVisible, toggleModal } = this.props;
+
     return (
-      <div className={this.props.modalVisible ? "Modal" : "hideModal"}>
-        <h1>지금 많이 찾는 제품</h1>
-        <form>
-          <input type="text" placeholder="#위코드풀스택  #1기화이팅" />
-          <div>
-            <IoSearch color="#fff" size="30" />
-          </div>
+      <div className={modalVisible ? "Modal" : "hideModal"}>
+        <h1 className="modalText">지금 많이 찾는 제품</h1>
+        <form className="modalTextForm">
+          <input
+            className="modalTextInput"
+            type="text"
+            placeholder="#위코드풀스택  #1기화이팅"
+          />
+          <IoSearch className="icon" />
         </form>
-        <div className="loginBg" onClick={this.props.showModal}></div>
+        <div className="loginBg" onClick={toggleModal} />
       </div>
     );
   }

@@ -1,51 +1,50 @@
-.Modal {
+@import "../../../styles/variables.scss";
+
+%modal-position {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.Modal {
+  @extend %modal-position;
   z-index: 1;
 
-  h1 {
+  .modalText {
     text-align: center;
-    color: rgb(231, 231, 231);
+    color: $nav-modal-text-color;
   }
 
-  form {
+  .modalTextForm {
     display: flex;
     align-items: center;
 
-    input {
+    .modalTextInput {
       margin-left: 20px;
       padding: 20px;
-      text-align: center;
-      color: #fff;
-      outline: none;
-
-      font: {
-        size: 30px;
-        weight: 700;
-      }
-
-      background: none;
       border: 0;
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid $white-color;
+      background: none;
+      color: $white-color;
+      font-size: $font-modal-size;
+      font-weight: $font-modal-weight;
+      text-align: center;
+      outline: none;
       z-index: 2;
-      cursor: text;
     }
 
-    span {
-      margin-top: 10px;
+    .icon {
+      color: $white-color;
+      font-size: $font-modal-size;
     }
   }
 
   .loginBg {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @extend %modal-position;
     width: 300vh;
     height: 300vh;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: $nav-modal-background-color;
     z-index: -1;
   }
 }
