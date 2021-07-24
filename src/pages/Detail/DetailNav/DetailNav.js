@@ -1,6 +1,6 @@
 import { Component } from "react";
-// import { Link } from "react-router-dom";
-import { RiHome5Fill } from "react-icons/ri";
+import { Link } from "react-router-dom";
+// import { RiHome5Fill } from "react-icons/ri";
 import { IoIosArrowForward } from "react-icons/io";
 import "./DetailNav.scss";
 
@@ -9,9 +9,7 @@ class DetailNav extends Component {
     return (
       <div className="DetailNav">
         <nav>
-          {/* <Link to="/main"> */}
-          <RiHome5Fill size="14" />
-          {/* </Link> */}
+          <Link to="/main">{/* <RiHome5Fill size="14" /> */}</Link>
           <p>
             <IoIosArrowForward />
           </p>
