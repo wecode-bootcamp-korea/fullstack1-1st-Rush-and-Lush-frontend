@@ -1,7 +1,7 @@
 import { Component } from "react";
 import DetailNav from "./DetailNav/DetailNav";
 import Banner from "./Banner/Banner";
-// import Info from "./Info/Info";
+import Info from "./Info/Info";
 import ItemTab from "./ItemTab/ItemTab";
 import ItemDetail from "./ItemDetail/ItemDetail";
 import ItemTab2 from "./ItemTab2/ItemTab2";
@@ -17,7 +17,7 @@ class Detail extends Component {
   }
 
   componentDidMount() {
-    fetch("itemInfoData.json")
+    fetch("data/itemInfoData.json")
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -33,7 +33,7 @@ class Detail extends Component {
           <DetailNav />
           <div className="detailInfoWrap">
             <Banner />
-            {/* {this.state.products.map(
+            {this.state.products.map(
               ({ img, name, price, weight, description }, index) => {
                 return (
                   <Info
@@ -46,7 +46,7 @@ class Detail extends Component {
                   />
                 );
               }
-            )} */}
+            )}
           </div>
         </div>
         <ItemTab />
