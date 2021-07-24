@@ -1,5 +1,6 @@
 # Rush & Lush
 
+<img width="1440" alt="스크린샷 2021-07-24 오후 4 40 58" src="https://user-images.githubusercontent.com/84323353/126861337-fe97c483-e272-4bbc-8966-7af7026a9b72.png">
 🙋🏻‍♀️🙋🏻‍♂️ 🏔⛰ 🕊🐥
 
 `사람, 환경, 동물이 조화로운 세상을 함께 만들어요!`  
