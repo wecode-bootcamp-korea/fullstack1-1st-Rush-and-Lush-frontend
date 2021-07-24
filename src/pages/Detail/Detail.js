@@ -1,6 +1,6 @@
 import { Component } from "react";
 import DetailNav from "./DetailNav/DetailNav";
-import Banner from "./Banner/Banner";
+// import Banner from "./Banner/Banner";
 import Info from "./Info/Info";
 import ItemTab from "./ItemTab/ItemTab";
 import ItemDetail from "./ItemDetail/ItemDetail";
@@ -32,7 +32,7 @@ class Detail extends Component {
         <div className="itemInfo">
           <DetailNav />
           <div className="detailInfoWrap">
-            <Banner />
+            {/* <Banner /> */}
             {this.state.products.map(
               ({ img, name, price, weight, description }, index) => {
                 return (
