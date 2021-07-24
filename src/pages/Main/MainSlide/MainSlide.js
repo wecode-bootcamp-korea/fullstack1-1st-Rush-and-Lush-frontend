@@ -44,7 +44,11 @@ class MainSlide extends Component {
           mainSlides: data.mainSlideData,
         });
       });
-    setInterval(this.imgSlideNext, 3000);
+    this.interval = setInterval(this.imgSlideNext, 3000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   render() {

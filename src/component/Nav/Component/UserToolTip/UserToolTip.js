@@ -13,11 +13,11 @@ class UserToolTip extends Component {
     return (
       <div className="UserToolTip">
         <div className="userToolTip">
-          {USER_TOOLTIP.map((el, id) => {
+          {USER_TOOLTIP.map((userTooltip, id) => {
             return (
               <div key={id} className="userToolTipList">
-                <Link className="usersLink" to={el.link}>
-                  {el.subTitle}
+                <Link className="usersLink" to={userTooltip.link}>
+                  {userTooltip.subTitle}
                 </Link>
               </div>
             );

@@ -49,7 +49,11 @@ class SideSlide extends Component {
           sideSlides: data.sideSlideData,
         });
       });
-    setInterval(this.slideLeft, 4000);
+    this.interval = setInterval(this.slideLeft, 4000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   render() {

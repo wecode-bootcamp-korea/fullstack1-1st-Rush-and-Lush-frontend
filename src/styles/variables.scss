@@ -5,7 +5,9 @@ $tooltip-font-color: #b5b5b5;
 $tooltip-background-color: #333333;
 $usertooltip-border-bottom-color: #dadadaf6;
 $usertooltip-background-color: #fbfafafb;
-$footer-image-color: #f2f2f2;
+$nav-modal-text-color: #e7e7e7;
+$nav-modal-background-color: rgba(0, 0, 0, 0.9);
+$footer-image-color: #e7e7e7;
 
 /* Font Size Navigation bar*/
 $font-logo-size: 40px;
@@ -16,6 +18,7 @@ $font-icon-title: 20px;
 $font-usertooltip: 16px;
 $font-usertooltip-icon: 25px;
 $font-usertooltiplist: 12px;
+$font-modal-size: 30px;
 
 /* Font Stack Navigation bar*/
 $font-logo-stack: sans-serif;
@@ -23,6 +26,7 @@ $font-logo-stack: sans-serif;
 /* Font Weight Navigation bar*/
 $font-tooltip-title-weight: 600;
 $font-logo-weight: 800;
+$font-modal-weight: 700;
 
 /* Font Size Footer */
 $font-footer-size: 14px;

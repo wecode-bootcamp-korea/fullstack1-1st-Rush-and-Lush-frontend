@@ -2,41 +2,66 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import LushProductsList from "../LushProducts/LushProductsList";
 import "../../Component/LushProducts/LushProductsList.scss";
+import { API, CATEGORY_PATH } from "../../../../config";
 
 class LushIntro extends Component {
   constructor() {
     super();
     this.state = {
       subNav: [],
+      lushIntroCategory: [],
+      lushIntro: [],
     };
   }
 
-  componentDidMount() {
-    fetch("/data/productsList.json")
+  getCategoryData = () => {
+    fetch(`${API}${CATEGORY_PATH}`)
       .then(res => res.json())
-      .then(res => this.setState({ subNav: res.LUSH_INTRO }));
+      .then(res => {
+        this.setState({ subNav: res.categories }, () => {
+          this.manufactureCategory();
+        });
+      });
+  };
+
+  manufactureCategory = () => {
+    const { subNav } = this.state;
+    const { lushIntroCategory } = this.state;
+
+    for (let category of subNav) {
+      if (category.menuId === 2) {
+        lushIntroCategory.push(category);
+      }
+    }
+
+    const lushIntro = lushIntroCategory;
+    this.setState({ lushIntro });
+  };
+
+  componentDidMount() {
+    this.getCategoryData();
   }
 
   render() {
-    const { subNav } = this.state;
+    const { lushIntro } = this.state;
 
     return (
       <div className="LushIntro">
         <div className="toolTipCategory">
-          <li className="tooltip">
+          <div className="tooltip">
             <Link className="navTitle" to="/">
               러쉬 소개
             </Link>
             <div className="tooltipWindow">
-              {subNav.map((el, id) => (
+              {lushIntro.map((category, id) => (
                 <LushProductsList
                   key={id}
-                  title={el.title}
-                  elements={el.elements}
+                  catagoryName={category.catagoryName}
+                  subCategories={category.subCategories}
                 />
               ))}
             </div>
-          </li>
+          </div>
         </div>
       </div>
     );

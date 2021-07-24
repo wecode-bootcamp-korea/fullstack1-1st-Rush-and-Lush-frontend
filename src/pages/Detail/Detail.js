@@ -17,7 +17,7 @@ class Detail extends Component {
   }
 
   componentDidMount() {
-    fetch("itemInfoData.json")
+    fetch("data/itemInfoData.json")
       .then(res => res.json())
       .then(data => {
         this.setState({

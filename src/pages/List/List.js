@@ -14,7 +14,6 @@ class List extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props.location.search);
     fetch(`http://10.89.7.26:8000/products${this.props.location.search}`)
       .then(res => res.json())
       .then(data => {
@@ -33,7 +32,6 @@ class List extends Component {
             <ListNavTitle />
             <ListNavCategory />
             <div className="listProductContainer">
-              {console.log("data: ", this.state.products)}
               {this.state.products.map(listItems => (
                 <ListProductItem
                   key={listItems.id}
