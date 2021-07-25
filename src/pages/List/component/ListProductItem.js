@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import "./ListProductItem.scss";
-import ListTagButton from "./ListTagButton";
+// import ListTagButton from "./ListTagButton";
 
 class ListProductItem extends Component {
   render() {
@@ -17,12 +17,12 @@ class ListProductItem extends Component {
             </Link>
           </div>
           <div className="listProductInfoBox">
-            <div className="listProductTagBtnBox">
+            {/* <div className="listProductTagBtnBox">
               {this.props.tags &&
                 this.props.tags.map(tag => (
                   <ListTagButton tagButton={tag}></ListTagButton>
                 ))}
-            </div>
+            </div> */}
             <div className="listProductNameBox">
               <Link to="/detail">
                 <p className="listProductName">{this.props.name}</p>

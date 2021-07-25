@@ -1,9 +1,9 @@
 import { Component } from "react";
-import "./List.scss";
 import ListProductItem from "./component/ListProductItem";
 import ListNavCategory from "./component/ListNav/ListNavCategory";
 import ListNavTitle from "./component/ListNav/ListNavTitle";
 import ListPageHeader from "./component/ListPageHeader";
+import "./List.scss";
 
 class List extends Component {
   constructor() {
@@ -14,7 +14,7 @@ class List extends Component {
   }
 
   componentDidMount() {
-    fetch(`http://10.89.7.26:8000/products${this.props.location.search}`)
+    fetch(`http://172.30.1.9:8000/products${this.props.location.search}`)
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -40,7 +40,6 @@ class List extends Component {
                   name={listItems.name}
                   subName={listItems.description}
                   price={listItems.price}
-                  tagButton={listItems.tags}
                 />
               ))}
             </div>
