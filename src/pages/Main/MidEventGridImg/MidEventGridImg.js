@@ -10,6 +10,7 @@ class MidEventGridImg extends Component {
   }
 
   handleScroll = e => {
+    // eslint-disable-next-line
     const scrollTop = ("scroll", e.target.scrollingElement.scrollTop);
     this.setState({ scrollTop });
   };
